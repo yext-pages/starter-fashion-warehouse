@@ -1,0 +1,9 @@
+node_modules/
+sites-rendered-output/
+dist/
+.yext
+.artifact-output
+sites-config/features.json
+*.local
+
+.DS_Store
