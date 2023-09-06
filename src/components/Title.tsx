@@ -79,7 +79,7 @@ const Title = ({
       className={`not-prose mt-4 ${topMarginVariants[topMargin]} ${bottomMarginVariants[bottomMargin]}`}
     >
       <h1
-        className={`${sizeVariants[textSize]} ${weightVariants[fontWeight]} tracking-tight text-gray-900`}
+        className={`${sizeVariants[textSize]} ${weightVariants[fontWeight]} font-display tracking-tight text-gray-900`}
         style={{ color: textColor }}
       >
         {value}

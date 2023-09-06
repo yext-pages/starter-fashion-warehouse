@@ -14,3 +14,15 @@ article p {
   margin: revert !important;
   line-height: 2 !important;
 }
+
+
+@font-face {
+  font-family: "Open-Sans";
+  src: url(./assets/fonts/OpenSans-VariableFont_wdth.ttf);
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url(./assets/fonts/Oswald-VariableFont_wght.ttf);
+}
+

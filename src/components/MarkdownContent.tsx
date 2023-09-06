@@ -1,5 +1,5 @@
-import { Markdown } from "@yext/react-components";
-import React from "react";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
 interface MarkdownContentProps {
   content: string;
@@ -7,8 +7,8 @@ interface MarkdownContentProps {
 
 const MarkdownContent = ({ content }: MarkdownContentProps) => {
   return (
-    <article className="prose lg:prose-xl">
-      <Markdown content={content} />
+    <article className="font-body">
+      <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
     </article>
   );
 };
