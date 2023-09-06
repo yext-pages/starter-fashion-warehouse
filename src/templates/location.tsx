@@ -1,3 +1,4 @@
+import AspectImage from "@/components/AspectImage";
 import {
   GetHeadConfig,
   GetPath,
@@ -13,7 +14,7 @@ import "../index.css";
 export const config: TemplateConfig = {
   stream: {
     $id: "location",
-    localization: { locales: ["en"], primary: false },
+    localization: { locales: ["en"] },
     fields: ["slug"],
     filter: { entityTypes: ["location"] },
   },
@@ -32,10 +33,21 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-export default function Blog({ document, __meta }: TemplateProps) {
+export default function Location({ document, __meta }: TemplateProps) {
   return (
     <MainLayout backgroundColor="#FFFFFF">
-      <FlexContainer />
+      <FlexContainer>
+        <AspectImage
+          image={{
+            image: {
+              url: "https://a.mktgcdn.com/p-sandbox/SPRRm-cAcTNOv8T8o2EpJ3z5N1nl0x3yL8YAK753KVc/300x300.png",
+              width: 150,
+              height: 150,
+              alternateText: "Placeholder",
+            },
+          }}
+        />
+      </FlexContainer>
     </MainLayout>
   );
 }

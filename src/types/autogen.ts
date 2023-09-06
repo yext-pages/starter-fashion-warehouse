@@ -4,7 +4,7 @@ export interface ImageThumbnail {
   height: number;
 }
 
-export interface Image {
+export interface ImageType {
   url: string;
   width: number;
   height: number;
@@ -12,8 +12,8 @@ export interface Image {
   alternateText: string;
 }
 
-export interface ComplexImage {
-  image: Image;
+export interface ComplexImageType {
+  image: ImageType;
   details?: string;
   description?: string;
   clickthroughUrl?: string;
@@ -23,7 +23,7 @@ export interface BlogType {
   name: string;
   slug: string;
   datePosted: string;
-  primaryPhoto: ComplexImage;
+  primaryPhoto: ComplexImageType;
   blogStarter_body: any;
   blogStarter_blogAuthor: string;
   blogStarter_description: string;
@@ -35,7 +35,7 @@ export interface BlogStarter_featuredBlogs {
   id?: string;
   name?: string;
   slug?: string;
-  primaryPhoto?: ComplexImage;
+  primaryPhoto?: ComplexImageType;
   blogStarter_description?: string;
   datePosted?: string;
 }
@@ -43,7 +43,7 @@ export interface BlogStarter_featuredBlogs {
 export interface Home {
   id: string;
   name: string;
-  blogStarter_coverPhoto: ComplexImage;
+  blogStarter_coverPhoto: ComplexImageType;
   blogStarter_heading: string;
   blogStarter_subHeading: string;
   slug: string;

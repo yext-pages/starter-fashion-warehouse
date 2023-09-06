@@ -9,10 +9,6 @@ export default {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-    // fontFamily: {
-    //   display: ["Oswald"],
-    //   body: ["Open-Sans"],
-    // },
     // container: {
     //   center: true,
     //   padding: "2rem",
@@ -41,6 +37,10 @@ export default {
         "neutral-light": "#F9FAFB",
         "neutral-middle": "#777777",
         "neutral-dark": "#333333",
+      },
+      fontFamily: {
+        display: ["Oswald"],
+        body: ["Open-Sans"],
       },
     },
   },
