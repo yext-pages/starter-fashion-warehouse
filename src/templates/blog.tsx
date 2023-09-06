@@ -18,7 +18,7 @@ import HorizontalDivider from "../components/HorizontalDivider";
 import Footer from "../components/Footer";
 import Date from "../components/Date";
 import ComplexHeader from "../components/ComplexHeader";
-// import { AnalyticsProvider } from "@yext/pages/components";
+// import { AnalyticsProvider } from "@yext/sites-components";
 
 export const config: TemplateConfig = {
   stream: {
@@ -45,7 +45,7 @@ export const config: TemplateConfig = {
 };
 
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return document.slug ?? document.entityId.toString();
+  return document.slug ?? document?.entityId.toString();
 };
 
 export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (

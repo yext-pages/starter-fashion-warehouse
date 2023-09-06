@@ -17,7 +17,7 @@ import "../index.css";
 import FeaturedBlog from "../components/FeaturedBlog";
 import { BlogStarter_featuredBlogs } from "../types/autogen";
 import ComplexHeader from "../components/ComplexHeader";
-// import { AnalyticsProvider } from "@yext/pages/components";
+// import { AnalyticsProvider } from "@yext/sites-components";
 
 export const config: TemplateConfig = {
   stream: {

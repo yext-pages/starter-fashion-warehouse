@@ -1,5 +1,6 @@
 import { AspectImagePropType } from "../types/component";
 import { ComplexImageType } from "../types/autogen";
+// import { ComplexImageType } from "@yext/sites-components";
 import { Image } from "@yext/sites-components";
 
 export interface AspectImageProps {

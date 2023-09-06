@@ -7,15 +7,8 @@
   "type": "module",
   "scripts": {
     "dev": "pages dev",
+    "prod": "pages prod",
     "build:local": "pages build",
-    "build": "yext pages build && yext pages generate-test-data && yext pages render",
-    "build:serve": "npm run build && yext pages serve",
-    "serve": "yext pages serve",
-    "features": "pages generate features",
-    "fmt": "prettier -w .",
-    "lint": "eslint .",
-    "clean": "rm -rf .artifact-output .yext/ dist/ localData sites-rendered-output",
-    "generate-notices": "generate-license-file --input package.json --output ./THIRD-PARTY-NOTICES --overwrite",
     "studio": "studio"
   },
   "engines": {
@@ -27,7 +20,7 @@
     "@radix-ui/react-navigation-menu": "^1.1.3",
     "@radix-ui/react-slot": "^1.0.2",
     "@vitejs/plugin-react": "^4.0.2",
-    "@yext/sites-components": "1.0.0-rc.2",
+    "@yext/sites-components": "^1.0.0-rc.2",
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.3.2",
     "clsx": "^1.2.1",

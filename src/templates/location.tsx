@@ -1,4 +1,3 @@
-import AspectImage from "@/components/AspectImage";
 import {
   GetHeadConfig,
   GetPath,
@@ -7,6 +6,7 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
+import AspectImage from "../components/AspectImage";
 import FlexContainer from "../components/FlexContainer";
 import MainLayout from "../components/MainLayout";
 import "../index.css";
@@ -15,10 +15,11 @@ export const config: TemplateConfig = {
   stream: {
     $id: "location",
     localization: { locales: ["en"] },
-    fields: ["slug"],
+    fields: ["slug", "id", "name", "hours", "photoGallery", "address"],
     filter: { entityTypes: ["location"] },
   },
 };
+
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
   return document.slug ?? document.entityId.toString();
 };
@@ -33,7 +34,7 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
   };
 };
 
-export default function Location({ document, __meta }: TemplateProps) {
+const Location = ({ document, __meta }: TemplateProps) => {
   return (
     <MainLayout backgroundColor="#FFFFFF">
       <FlexContainer>
@@ -50,4 +51,6 @@ export default function Location({ document, __meta }: TemplateProps) {
       </FlexContainer>
     </MainLayout>
   );
-}
+};
+
+export default Location;
