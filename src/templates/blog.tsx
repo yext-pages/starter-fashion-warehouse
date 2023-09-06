@@ -61,10 +61,6 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = (
 export default function Blog({ document, __meta }: TemplateProps) {
   return (
     <MainLayout backgroundColor="#FFFFFF">
-      {/* <AnalyticsProvider
-        templateData={{ document: document, __meta: __meta }}
-        enableDebugging={true}
-      > */}
       <ComplexHeader
         backgroundColor="#FFFFFF"
         textColor="#000000"
@@ -131,7 +127,6 @@ export default function Blog({ document, __meta }: TemplateProps) {
         textColor="#000000"
         hoverColor="light"
       />
-      {/* </AnalyticsProvider> */}
     </MainLayout>
   );
 }
