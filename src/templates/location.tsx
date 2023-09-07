@@ -9,7 +9,7 @@ import {
 import AspectImage from "../components/AspectImage";
 import FlexContainer from "../components/FlexContainer";
 import LocationInfoCard from "../components/LocationInfoCard";
-import MainLayout from "../components/MainLayout";
+import LocationLayout from "../components/LocationLayout";
 import "../index.css";
 
 export const config: TemplateConfig = {
@@ -36,8 +36,11 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
 
 const Location = ({ document }: TemplateProps) => {
   return (
-    <MainLayout backgroundColor="#FFFFFF">
-      <FlexContainer backgroundColor="bg-neutral-light">
+    <LocationLayout backgroundColor="#ffffff">
+      <FlexContainer
+        backgroundColor="bg-neutral-light"
+        containerClassname={`py-16`}
+      >
         <AspectImage
           image={{
             image: {
@@ -69,7 +72,7 @@ const Location = ({ document }: TemplateProps) => {
           containerClassname={`justify-center`}
         />
       </FlexContainer>
-    </MainLayout>
+    </LocationLayout>
   );
 };
 

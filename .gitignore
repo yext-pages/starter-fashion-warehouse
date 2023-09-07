@@ -6,6 +6,7 @@ dist/
 sites-config/features.json
 *.local
 localData/
+.env
 
 
 .DS_Store

@@ -110,7 +110,7 @@ const LocationInfoCard = ({
         containerClassname
       )}
     >
-      <h2 className="text-2xl font-bold text-red-600">{name}</h2>
+      <h2 className="text-3xl font-bold text-red-600">{name}</h2>
       <h1 className="text-5xl font-bold text-zinc-800">{city}</h1>
       {hours && (
         <div className="inline-flex items-center justify-start gap-3">

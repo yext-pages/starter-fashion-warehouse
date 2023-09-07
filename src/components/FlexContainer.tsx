@@ -14,7 +14,12 @@ const FlexContainer = ({
 }: FlexContainerProps) => {
   return (
     <div className={backgroundColor}>
-      <div className="mx-auto flex max-w-7xl flex-col gap-20 px-2 md:flex-row lg:px-8">
+      <div
+        className={twMerge(
+          "mx-auto flex max-w-7xl flex-col gap-20 px-2 md:flex-row lg:px-8",
+          containerClassname
+        )}
+      >
         {children}
       </div>
     </div>
