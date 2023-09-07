@@ -1,5 +1,5 @@
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+// import ReactMarkdown from "react-markdown";
+// import remarkGfm from "remark-gfm";
 
 interface MarkdownContentProps {
   content: string;
@@ -8,7 +8,7 @@ interface MarkdownContentProps {
 const MarkdownContent = ({ content }: MarkdownContentProps) => {
   return (
     <article className="font-body">
-      <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} />
+      {/* <ReactMarkdown children={content} remarkPlugins={[remarkGfm]} /> */}
     </article>
   );
 };

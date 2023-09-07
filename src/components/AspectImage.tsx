@@ -5,7 +5,19 @@ import { Image } from "@yext/sites-components";
 
 export interface AspectImageProps {
   image: ComplexImageType;
-  imageProps?: AspectImagePropType;
+  imageClassname?: string;
+  aspectRatio?:
+    | "1:1"
+    | "4:3"
+    | "3:2"
+    | "5:3"
+    | "16:9"
+    | "3:1"
+    | "2:3"
+    | "5:7"
+    | "4:5"
+    | "4:1"
+    | "16:10";
 }
 
 export const initialProps: AspectImageProps = {
@@ -17,10 +29,28 @@ export const initialProps: AspectImageProps = {
       alternateText: "Placeholder",
     },
   },
+  imageClassname: "",
+  aspectRatio: "1:1",
 };
 
-const AspectImage = ({ image, imageProps }: AspectImageProps) => {
-  return <Image image={image} layout="aspect" aspectRatio={1} />;
+const AspectImage = ({
+  image,
+  aspectRatio,
+  imageClassname,
+}: AspectImageProps) => {
+  // split aspectRatio into width and height and convert to number
+  const [width, height] = aspectRatio?.split(":").map((x) => Number(x)) ?? [
+    1, 1,
+  ];
+
+  return (
+    <Image
+      image={image}
+      className={imageClassname}
+      layout="aspect"
+      aspectRatio={width / height}
+    />
+  );
 };
 
 export default AspectImage;

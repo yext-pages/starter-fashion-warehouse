@@ -1,3 +1,8 @@
+export interface BlogStarter_headerLinks {
+  label?: string;
+  uRL?: string;
+}
+
 export interface ImageThumbnail {
   url: string;
   width: number;
@@ -9,7 +14,7 @@ export interface ImageType {
   width: number;
   height: number;
   thumbnails?: ImageThumbnail[];
-  alternateText: string;
+  alternateText?: string;
 }
 
 export interface ComplexImageType {
@@ -19,7 +24,18 @@ export interface ComplexImageType {
   clickthroughUrl?: string;
 }
 
-export interface BlogType {
+export interface BlogStarter_footerLinks {
+  label?: string;
+  uRL?: string;
+}
+
+export interface SiteEntity {
+  blogStarter_headerLinks: BlogStarter_headerLinks[];
+  logo: ComplexImageType;
+  blogStarter_footerLinks: BlogStarter_footerLinks[];
+}
+
+export interface Blog {
   name: string;
   slug: string;
   datePosted: string;
@@ -48,4 +64,54 @@ export interface Home {
   blogStarter_subHeading: string;
   slug: string;
   blogStarter_featuredBlogs: BlogStarter_featuredBlogs[];
+}
+
+export interface Interval {
+  start: string;
+  end: string;
+}
+
+export interface DayHour {
+  openIntervals?: Interval[];
+  isClosed?: boolean;
+}
+
+export interface HolidayHours {
+  date: string;
+  openIntervals?: Interval[];
+  isClosed?: boolean;
+  isRegularHours?: boolean;
+}
+
+export interface Hours {
+  monday?: DayHour;
+  tuesday?: DayHour;
+  wednesday?: DayHour;
+  thursday?: DayHour;
+  friday?: DayHour;
+  saturday?: DayHour;
+  sunday?: DayHour;
+  holidayHours?: HolidayHours[];
+  reopenDate?: string;
+}
+
+export interface Address {
+  line1?: string;
+  line2?: string;
+  line3?: string;
+  sublocality?: string;
+  city?: string;
+  region?: string;
+  postalCode?: string;
+  extraDescription?: string;
+  countryCode?: string;
+}
+
+export interface Location {
+  slug: string;
+  id: string;
+  name: string;
+  hours: Hours;
+  photoGallery: ComplexImage[];
+  address: Address;
 }
