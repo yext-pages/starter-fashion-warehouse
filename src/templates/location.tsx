@@ -7,9 +7,13 @@ import {
   TemplateRenderProps,
 } from "@yext/pages";
 import AspectImage from "../components/AspectImage";
-import FlexContainer from "../components/FlexContainer";
+import HorizontalStack from "../components/HorizontalStack";
 import LocationInfoCard from "../components/LocationInfoCard";
 import LocationLayout from "../components/LocationLayout";
+import VerticalStack from "../components/VerticalStack";
+import Button from "../components/atoms/Button";
+import FlexContainer from "../components/atoms/FlexContainer";
+import HeadingText from "../components/atoms/HeadingText";
 import "../index.css";
 
 export const config: TemplateConfig = {
@@ -71,6 +75,51 @@ const Location = ({ document }: TemplateProps) => {
           city={`${document.address.city}`}
           containerClassname={`justify-center`}
         />
+      </FlexContainer>
+      <FlexContainer containerClassname={`py-16`}>
+        <AspectImage
+          image={{
+            image: {
+              url: `${document.photoGallery[1].image.url}`,
+              width: 150,
+              height: 150,
+              alternateText: "Placeholder",
+            },
+          }}
+          imageClassname={`rounded-3xl`}
+          aspectRatio="3:2"
+        />
+        <VerticalStack
+          spacing="3"
+          topMargin="0"
+          bottomMargin="0"
+          leftMargin="0"
+          rightMargin="0"
+          alignment="left"
+        >
+          <HeadingText
+            text={`${document.name}`}
+            type="Section"
+            color="Secondary"
+          />
+          <HeadingText
+            text={`${document.address.city}`}
+            color="Primary"
+            type="Page"
+          />
+          <HorizontalStack
+            spacing="3"
+            leftMargin="0"
+            rightMargin="0"
+            topMargin="0"
+            bottomMargin="0"
+            alignment="top"
+            verticalOnMobile="true"
+          >
+            <Button buttonLabel={`Get Directions`} type="primary" />
+            <Button buttonLabel={`Order Online`} type="secondary" />
+          </HorizontalStack>
+        </VerticalStack>
       </FlexContainer>
     </LocationLayout>
   );
