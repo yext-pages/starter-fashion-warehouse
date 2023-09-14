@@ -15,19 +15,23 @@ import {
   MarginYMobile,
 } from "../../sharedVarients";
 
-const flexContainerVarients = cva("flex mx-auto", {
+const gridContainerVarients = cva("grid mx-auto", {
   variants: {
-    DesktopLayout: {
-      Row: "lg:flex-row",
-      Column: "lg:flex-col",
+    DesktopColumns: {
+      "1": "lg:grid-cols-1",
+      "2": "lg:grid-cols-2",
+      "3": "lg:grid-cols-3",
+      "4": "lg:grid-cols-4",
     },
-    TabletLayout: {
-      Row: "sm:flex-row",
-      Column: "sm:flex-col",
+    TabletColumns: {
+      "1": "sm:grid-cols-1",
+      "2": "sm:grid-cols-2",
+      "8": "sm:grid-cols-8",
     },
-    MobileLayout: {
-      Row: "flex-row",
-      Column: "flex-col",
+    MobileColumns: {
+      "1": "grid-cols-1",
+      "2": "grid-cols-2",
+      "4": "grid-cols-4",
     },
     GapXDesktop,
     GapXTablet,
@@ -45,12 +49,12 @@ const flexContainerVarients = cva("flex mx-auto", {
 });
 
 export interface GridContainerVarients
-  extends VariantProps<typeof flexContainerVarients> {}
+  extends VariantProps<typeof gridContainerVarients> {}
 
-const flexContainer = ({
-  DesktopLayout,
-  TabletLayout,
-  MobileLayout,
+const gridContainer = ({
+  DesktopColumns,
+  TabletColumns,
+  MobileColumns,
   GapXDesktop,
   GapXTablet,
   GapXMobile,
@@ -65,10 +69,10 @@ const flexContainer = ({
   MarginYMobile,
 }: GridContainerVarients) =>
   twMerge(
-    flexContainerVarients({
-      DesktopLayout,
-      TabletLayout,
-      MobileLayout,
+    gridContainerVarients({
+      DesktopColumns,
+      TabletColumns,
+      MobileColumns,
       GapXDesktop,
       GapXTablet,
       GapXMobile,
@@ -84,11 +88,11 @@ const flexContainer = ({
     })
   );
 
-export interface FlexContainerProps {
+export interface GridContainerProps {
   children?: React.ReactNode;
-  DesktopLayout: "Row" | "Column";
-  TabletLayout: "Row" | "Column";
-  MobileLayout: "Row" | "Column";
+  DesktopColumns?: "1" | "2" | "3" | "4";
+  TabletColumns?: "1" | "2" | "8";
+  MobileColumns?: "1" | "2" | "4";
   GapXDesktop?: "0" | "2" | "4" | "8" | "16";
   GapXTablet?: "0" | "2" | "4" | "8" | "16";
   GapXMobile?: "0" | "2" | "4" | "8" | "16";
@@ -103,16 +107,16 @@ export interface FlexContainerProps {
   MarginYMobile?: "0" | "2" | "4" | "8" | "16";
 }
 
-export const initialProps: FlexContainerProps = {
-  DesktopLayout: "Row",
-  TabletLayout: "Row",
-  MobileLayout: "Row",
-  GapXDesktop: "0",
-  GapXTablet: "0",
-  GapXMobile: "0",
-  GapYDesktop: "0",
-  GapYTablet: "0",
-  GapYMobile: "0",
+export const initialHeadingProps: GridContainerProps = {
+  DesktopColumns: "3",
+  TabletColumns: "2",
+  MobileColumns: "1",
+  GapXDesktop: "4",
+  GapXTablet: "4",
+  GapXMobile: "4",
+  GapYDesktop: "8",
+  GapYTablet: "8",
+  GapYMobile: "8",
   MarginXDesktop: "0",
   MarginXTablet: "0",
   MarginXMobile: "0",
@@ -121,11 +125,10 @@ export const initialProps: FlexContainerProps = {
   MarginYMobile: "0",
 };
 
-const FlexContainer = ({
-  children,
-  DesktopLayout,
-  TabletLayout,
-  MobileLayout,
+const GridContainer = ({
+  DesktopColumns,
+  TabletColumns,
+  MobileColumns,
   GapXDesktop,
   GapXTablet,
   GapXMobile,
@@ -138,13 +141,14 @@ const FlexContainer = ({
   MarginYDesktop,
   MarginYTablet,
   MarginYMobile,
-}: FlexContainerProps) => {
+  children,
+}: GridContainerProps) => {
   return (
     <div
-      className={flexContainer({
-        DesktopLayout,
-        TabletLayout,
-        MobileLayout,
+      className={gridContainer({
+        DesktopColumns,
+        TabletColumns,
+        MobileColumns,
         GapXDesktop,
         GapXTablet,
         GapXMobile,
@@ -164,4 +168,4 @@ const FlexContainer = ({
   );
 };
 
-export default FlexContainer;
+export default GridContainer;
