@@ -8,9 +8,9 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon, StarIcon } from "@heroicons/react/20/solid";
-import { textColors } from "../../sharedVarients";
+import { textColors } from "../../sharedVariants";
 
-const iconVarients = cva("", {
+const iconVariants = cva("", {
   variants: {
     size: {
       small: ["w-5", "h-5"],
@@ -24,10 +24,10 @@ const iconVarients = cva("", {
   },
 });
 
-export interface IconVarients extends VariantProps<typeof iconVarients> {}
+export interface IconVariants extends VariantProps<typeof iconVariants> {}
 
-const icon = ({ size, color }: IconVarients) =>
-  twMerge(iconVarients({ size, color }));
+const icon = ({ size, color }: IconVariants) =>
+  twMerge(iconVariants({ size, color }));
 
 export interface IconProps {
   size?: "small" | "base";

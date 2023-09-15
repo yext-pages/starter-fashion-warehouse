@@ -1,11 +1,11 @@
 import { type VariantProps, cva } from "class-variance-authority";
-import { cn } from "../../utils/cn";
+import { cn } from "../../utils";
 import React from "react";
 
 const containerVariants = cva("px-4 py-5 gap-y-3 sm:p-6", {
   variants: {
     layout: {
-      flex: "flex flex-col sm:flex-row",
+      flex: "flex flex-col lg:flex-row",
       grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
       row: "flex flex-row",
       column: "flex flex-col",

@@ -1,23 +1,20 @@
 import { LexicalRichText } from "@yext/react-components";
 import { VariantProps, cva } from "cva";
-import { twMerge } from "tailwind-merge";
-import { textColors, textSizes } from "../../sharedVarients";
+import { textColors, textSizes } from "../../sharedVariants";
+import { cn } from "../../utils";
 
 const rtfVariants = cva("", {
   variants: {
-    Size: textSizes,
-    Color: textColors,
+    size: textSizes,
+    color: textColors,
   },
 });
 
-export interface rtfVariants extends VariantProps<typeof rtfVariants> {}
-
-const rtf = ({ Size, Color }: rtfVariants) =>
-  twMerge(rtfVariants({ Size, Color }));
+// export interface rtfVariants extends VariantProps<typeof rtfVariants> {}
 
 export interface RTFProps {
-  Size?: "Small" | "Medium" | "Large" | "XLarge" | "XXLarge";
-  Color?:
+  size?: "Small" | "Medium" | "Large" | "XLarge" | "XXLarge";
+  color?:
     | "Gray 900"
     | "Gray 800"
     | "Gray 700"
@@ -27,17 +24,19 @@ export interface RTFProps {
     | "Gray 100"
     | "Indigo"
     | "White";
+  className?: string;
 }
 
 export const initialProps: RTFProps = {
-  Size: "Medium",
-  Color: "Gray 900",
+  size: "Medium",
+  color: "Gray 900",
+  className: "",
 };
 
 // How would I represent styling for all the different nodeClassnames of the RTF component?
-const RTF = ({ Size, Color }: RTFProps) => {
+const RTF = ({ size, color, className }: RTFProps) => {
   return (
-    <div className={rtf({ Size, Color })}>
+    <div className={cn(rtfVariants({ size, color, className }))}>
       <LexicalRichText serializedAST={JSON.stringify(productDescription)} />
     </div>
   );

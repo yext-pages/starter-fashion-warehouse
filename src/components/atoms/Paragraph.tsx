@@ -1,20 +1,20 @@
 import { type VariantProps, cva } from "cva";
-import { twMerge } from "tailwind-merge";
-import { textColors, textSizes } from "../../sharedVarients";
+import { textColors, textSizes } from "../../sharedVariants";
+import { cn } from "../../utils";
 
-const paragraphVarients = cva("", {
+const paragraphVariants = cva("", {
   variants: {
-    Size: textSizes,
-    Weight: {
+    size: textSizes,
+    weight: {
       Medium: ["font-medium"],
       Bold: ["font-bold"],
     },
-    Align: {
+    align: {
       Left: ["text-left"],
       Center: ["text-center"],
       Right: ["text-right"],
     },
-    Color: textColors,
+    color: textColors,
   },
   // compoundVariants: [{ intent: "primary", size: "medium", class: "uppercase" }],
 
@@ -25,11 +25,11 @@ const paragraphVarients = cva("", {
   // },
 });
 
-export interface StyledTextVariants
-  extends VariantProps<typeof paragraphVarients> {}
+// export interface StyledTextVariants
+//   extends VariantProps<typeof paragraphVariants> {}
 
-const paragraph = ({ Size, Weight, Align, Color }: StyledTextVariants) =>
-  twMerge(paragraphVarients({ Size, Weight, Align, Color }));
+// const paragraph = ({ Size, Weight, Align, Color }: StyledTextVariants) =>
+//   twMerge(paragraphVariants({ Size, Weight, Align, Color }));
 
 // I wish that I could do this:
 // export interface StyledTextProps extends StyledTextVariants {
@@ -38,11 +38,11 @@ const paragraph = ({ Size, Weight, Align, Color }: StyledTextVariants) =>
 
 // But I have to do this:
 export interface StyledTextProps {
-  Text?: string;
-  Size?: "Small" | "Medium" | "Large" | "XLarge" | "XXLarge";
-  Weight?: "Medium" | "Bold";
-  Align?: "Left" | "Center" | "Right";
-  Color?:
+  text?: string;
+  size?: "Small" | "Medium" | "Large" | "XLarge" | "XXLarge";
+  weight?: "Medium" | "Bold";
+  align?: "Left" | "Center" | "Right";
+  color?:
     | "Gray 900"
     | "Gray 800"
     | "Gray 700"
@@ -52,18 +52,35 @@ export interface StyledTextProps {
     | "Gray 100"
     | "Indigo"
     | "White";
+  className?: string;
 }
 
 export const initialProps: StyledTextProps = {
-  Text: "Text goes here",
-  Size: "Medium",
-  Weight: "Medium",
-  Align: "Left",
-  Color: "Gray 900",
+  text: "Text goes here",
+  size: "Medium",
+  weight: "Medium",
+  align: "Left",
+  color: "Gray 900",
+  className: "",
 };
 
-const Paragraph = ({ Size, Weight, Color, Align, Text }: StyledTextProps) => {
-  return <p className={paragraph({ Size, Weight, Color, Align })}>{Text}</p>;
+const Paragraph = ({
+  size,
+  weight,
+  color,
+  align,
+  text,
+  className,
+}: StyledTextProps) => {
+  return (
+    <p
+      className={cn(
+        paragraphVariants({ size, weight, color, align, className })
+      )}
+    >
+      {text}
+    </p>
+  );
 };
 
 export default Paragraph;

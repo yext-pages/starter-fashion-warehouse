@@ -1,5 +1,7 @@
 import { cva } from "cva";
 import { cn } from "../../utils";
+import { Image } from "@yext/sites-components";
+import { ImageType } from "../../types/autogen";
 
 const studioImageVariants = cva("h-full w-full object-cover object-center", {
   variants: {
@@ -23,9 +25,7 @@ const studioImageVariants = cva("h-full w-full object-cover object-center", {
 });
 
 export interface StudioImageProps {
-  image: {
-    url: string;
-  };
+  image?: ImageType;
   className?: string;
   aspectRatio?:
     | "1:1"
@@ -44,17 +44,24 @@ export interface StudioImageProps {
 export const initialProps: StudioImageProps = {
   image: {
     url: "https://a.mktgcdn.com/p-sandbox/SPRRm-cAcTNOv8T8o2EpJ3z5N1nl0x3yL8YAK753KVc/300x300.png",
+    height: 300,
+    width: 300,
   },
   className: "",
   aspectRatio: "1:1",
 };
 
 const StudioImage = ({ image, aspectRatio, className }: StudioImageProps) => {
+  if (!image) {
+    return null;
+  }
+
   return (
     <div className={cn(studioImageVariants({ aspectRatio, className }))}>
-      <img
+      <Image
         className="h-full w-full object-cover object-center"
-        src={image.url}
+        image={image}
+        // layout="aspect"
       />
     </div>
   );

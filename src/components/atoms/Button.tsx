@@ -1,35 +1,41 @@
-import * as React from "react";
-import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import { twMerge } from "tailwind-merge";
+import { cn } from "../../utils";
 
-const buttonVariants = cva("", {
-  variants: {
-    intent: {
-      primary:
-        "mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
-      secondary:
-        "mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
+const buttonVariants = cva(
+  "bg-indigo-600 font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
+  {
+    variants: {
+      size: {
+        small: "rounded px-2 py-1 text-xs",
+        base: "rounded px-2 py-1 text-sm",
+        large: "rounded-md px-2.5 py-1.5 text-sm",
+        xlarge: "rounded-md px-3 py-2 text-sm font-semibold",
+        xxlarge: "px-4 py-4 rounded-md text-base",
+      },
     },
-  },
-});
+  }
+);
 
-export interface ButtonVarients extends VariantProps<typeof buttonVariants> {}
-
-const button = ({ intent }: ButtonVarients) =>
-  twMerge(buttonVariants({ intent }));
+// export interface ButtonVarients extends VariantProps<typeof buttonVariants> {}
 
 export interface ButtonProps {
-  children?: React.ReactNode;
-  intent?: "primary" | "secondary";
+  size?: "small" | "base" | "large" | "xlarge" | "xxlarge";
+  text?: string;
+  className?: string;
 }
 
 export const initialProps: ButtonProps = {
-  intent: "primary",
+  size: "base",
+  text: "Button",
+  className: "",
 };
 
-const Button = ({ children, intent }: ButtonProps) => {
-  return <button className={button({ intent })}>{children}</button>;
+const Button = ({ size, text, className }: ButtonProps) => {
+  return (
+    <button type="button" className={cn(buttonVariants({ size, className }))}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

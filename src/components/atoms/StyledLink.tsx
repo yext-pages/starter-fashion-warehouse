@@ -1,38 +1,24 @@
 import { Link } from "@yext/sites-components";
 import { VariantProps, cva } from "cva";
-import { fontWeights, textSizes } from "../../sharedVarients";
-import { twMerge } from "tailwind-merge";
+import { fontWeights, textSizes } from "../../sharedVariants";
+import { cn } from "../../utils";
 
-const styledLinkVarients = cva("", {
+const styledLinkVariants = cva("", {
   variants: {
     type: {
       Primary: "text-indigo-600 hover:text-indigo-500",
       Secondary: "text-gray-500 hover:text-gray-900",
-      // breadcrumb: "mr-2 text-sm font-medium text-gray-900",
-      // currentProduct: "font-medium text-gray-500 hover:text-gray-600",
-      // review: "ml-3 text-sm font-medium text-indigo-600 hover:text-indigo-500",
-      // sizeGuide: "text-sm font-medium text-indigo-600 hover:text-indigo-500",
     },
     size: textSizes,
     weight: fontWeights,
   },
-  // compoundVariants: [{ intent: "primary", size: "medium", className: "uppercase" }],
-
-  // I don't think there is any point in using these in Studio
-  // defaultVariants: {
-  //   type: "Page",
-  //   color: "Primary",
-  // },
 });
 
-export interface StyledLinkVarients
-  extends VariantProps<typeof styledLinkVarients> {}
-
-const styledLink = ({ type, size, weight }: StyledLinkVarients) =>
-  twMerge(styledLinkVarients({ type, size, weight }));
+// export interface StyledLinkVariants
+//   extends VariantProps<typeof styledLinkVariants> {}
 
 // I wish that I could do this:
-// export interface StyledLinkProps extends StyledLinkVarients {
+// export interface StyledLinkProps extends StyledLinkVariants {
 //   href?: string;
 //   label?: string;
 // }
@@ -44,6 +30,7 @@ export interface StyledLinkProps {
   type?: "Primary" | "Secondary";
   size?: "Small" | "Medium" | "Large" | "XLarge" | "XXLarge";
   weight?: "Normal" | "Bold";
+  className?: string;
 }
 
 export const initialProps: StyledLinkProps = {
@@ -52,11 +39,22 @@ export const initialProps: StyledLinkProps = {
   type: "Primary",
   size: "Medium",
   weight: "Normal",
+  className: "",
 };
 
-const StyledLink = ({ label, href, type, size, weight }: StyledLinkProps) => {
+const StyledLink = ({
+  label,
+  href,
+  type,
+  size,
+  weight,
+  className,
+}: StyledLinkProps) => {
   return (
-    <Link href={href} className={styledLink({ type, size, weight })}>
+    <Link
+      href={href}
+      className={cn(styledLinkVariants({ type, size, weight, className }))}
+    >
       {label}
     </Link>
   );

@@ -6,13 +6,14 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
+import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
-import FlexStack from "../components/atoms/FlexStack";
 import HeadingText from "../components/atoms/HeadingText";
+import Paragraph from "../components/atoms/Paragraph";
 import RTF from "../components/atoms/RTF";
-import StudioImage from "../components/atoms/StudioImage";
 import StyledLink from "../components/atoms/StyledLink";
 import Main from "../components/layouts/Main";
+import ImageGallery from "../components/molecules/ImageGallery";
 import Stars from "../components/molecules/Stars";
 import "../index.css";
 
@@ -43,54 +44,49 @@ export const getHeadConfig: GetHeadConfig<
 export default function Product({ document }: TemplateProps) {
   return (
     <Main>
-      <FlexStack gapX="0" gapY="0" />
-      <Container layout="grid" className={`lg:gap-x-8 lg:px-8`}>
-        <StudioImage
-          image={{
-            url: `https://tailwindui.com/img/ecommerce-images/product-page-02-secondary-product-shot.jpg`,
-          }}
-          className={`rounded-lg`}
-          aspectRatio="4:3"
-        />
-        <Container layout="column" className={`px-0 sm:p-0`}>
-          <StudioImage
-            image={{
-              url: `https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-01.jpg`,
-            }}
-            className=""
-            aspectRatio="2:3"
-          />
-          <StudioImage
-            image={{
-              url: `https://tailwindui.com/img/ecommerce-images/product-page-02-tertiary-product-shot-02.jpg`,
-            }}
-            className={`rounded-lg`}
-            aspectRatio="2:3"
+      <ImageGallery
+        images={[
+          {
+            url: `https://a.mktgcdn.com/p/obhFRB-XF9B3UBToXyvSyxlxbaM_wpuSZVmkVeFo-gc/3174x2381.jpg`,
+            height: 2381,
+            width: 3174,
+          },
+          {
+            url: `https://a.mktgcdn.com/p/7ENAw-8kSY4qxFfpGlHOC0Az_uHuLhBTeNmSkys3zdM/3024x4032.jpg`,
+            height: 4032,
+            width: 3024,
+          },
+          {
+            url: `https://a.mktgcdn.com/p/qNLtBLoGUvwYjTAf8CPHxt9sRr9GEbc4TIO8xX5IuTM/3174x4232.jpg`,
+            height: 4232,
+            width: 3174,
+          },
+          {
+            url: `https://a.mktgcdn.com/p/UzUZb3YGor8oaW8pd_KtqcCTSmjRacnN7jN5dtXYXaw/3174x2381.jpg`,
+            height: 2381,
+            width: 3174,
+          },
+        ]}
+      />
+      <Container layout="flex" className={`mx-auto max-w-2xl sm:p-0 lg:mx-0`}>
+        <Container layout="flex">
+          <Paragraph
+            text={`${document.name}`}
+            size="XXLarge"
+            weight="Bold"
+            align="Left"
+            color="Gray 900"
+            className={`f`}
           />
         </Container>
-        <StudioImage
-          image={{
-            url: `https://tailwindui.com/img/ecommerce-images/product-page-02-featured-product-shot.jpg`,
-          }}
-          className=""
-          aspectRatio="4:3"
-        />
-      </Container>
-      <Container layout="grid">
-        <Container layout="column" columnSpan="2">
-          <HeadingText level="Heading 1" text={`${document.name}`} />
-          <RTF Size="Medium" Color="Gray 900" />
-        </Container>
-        <Container layout="column" className={``}>
+        <Container layout="column" className={`gap-y-2`}>
           <HeadingText
             level="Heading 1"
             text={`$ ${document.price.value}`}
             color="Gray 400"
+            fontWeight="base"
           />
-          <Container
-            layout="flex"
-            className={`gap-x-3 px-0 sm:p-0 items-center`}
-          >
+          <Container layout="row" className={` gap-x-3 px-0 py-0 sm:p-0`}>
             <Stars rating={5} />
             <StyledLink
               href="#"
@@ -100,6 +96,10 @@ export default function Product({ document }: TemplateProps) {
               weight="Normal"
             />
           </Container>
+          <Button size="xxlarge" text={`Add To Cart`} className={`mt-10`} />
+        </Container>
+        <Container layout="column" columnSpan="2">
+          <RTF size="Medium" color="Gray 900" />
         </Container>
       </Container>
     </Main>
