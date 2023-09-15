@@ -9,7 +9,9 @@
     "dev": "pages dev",
     "prod": "pages prod",
     "build:local": "pages build",
-    "studio": "studio"
+    "studio": "npm run features && npm run localData && studio",
+    "features": "pages generate features",
+    "localData": "yext pages generate-test-data -a"
   },
   "engines": {
     "node": "18"

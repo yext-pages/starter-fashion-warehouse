@@ -5,8 +5,10 @@ import { twMerge } from "tailwind-merge";
 
 const buttonVariants = cva("", {
   variants: {
-    type: {
+    intent: {
       primary:
+        "mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
+      secondary:
         "mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2",
     },
   },
@@ -14,28 +16,20 @@ const buttonVariants = cva("", {
 
 export interface ButtonVarients extends VariantProps<typeof buttonVariants> {}
 
-const button = ({ type }: ButtonVarients) => twMerge(buttonVariants({ type }));
+const button = ({ intent }: ButtonVarients) =>
+  twMerge(buttonVariants({ intent }));
 
 export interface ButtonProps {
   children?: React.ReactNode;
-  type?: "primary";
+  intent?: "primary" | "secondary";
 }
 
-export const initialHeadingProps: ButtonProps = {
-  children: "Sample Heading",
-  type: "primary",
+export const initialProps: ButtonProps = {
+  intent: "primary",
 };
 
-const Button = ({ children, type }: ButtonProps) => {
-  // const Comp = asChild ? Slot : "button";
-  // return (
-  //   <Comp
-  //     className={buttonVariants({ variant, size, className })}
-  //     ref={ref}
-  //     {...props}
-  //   />
-  // );
-  return <button className={button({ type })}>{children}</button>;
+const Button = ({ children, intent }: ButtonProps) => {
+  return <button className={button({ intent })}>{children}</button>;
 };
 
 export default Button;
