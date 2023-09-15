@@ -12,25 +12,25 @@ import { textColors } from "../../sharedVarients";
 
 const iconVarients = cva("", {
   variants: {
-    Size: {
-      Small: ["w-5", "h-5"],
-      Base: ["w-6", "h-6"],
+    size: {
+      small: ["w-5", "h-5"],
+      base: ["w-6", "h-6"],
     },
     color: textColors,
   },
-  // defaultVariants: {
-  //   size: "md",
-  //   color: "Primary",
-  // },
+  defaultVariants: {
+    size: "base",
+    color: "Gray 900",
+  },
 });
 
 export interface IconVarients extends VariantProps<typeof iconVarients> {}
 
-const icon = ({ Size, color }: IconVarients) =>
-  twMerge(iconVarients({ Size, color }));
+const icon = ({ size, color }: IconVarients) =>
+  twMerge(iconVarients({ size, color }));
 
 export interface IconProps {
-  size?: "Small" | "Base";
+  size?: "small" | "base";
   color?:
     | "Gray 900"
     | "Gray 800"
@@ -53,7 +53,7 @@ export interface IconProps {
 }
 
 export const initialProps: IconProps = {
-  size: "Base",
+  size: "base",
   color: "Gray 900",
   name: "Star",
 };
@@ -63,27 +63,21 @@ const Icon = ({ size, color, name }: IconProps) => {
   const renderIcon = () => {
     switch (name) {
       case "Star":
-        return <StarIcon className={icon({ Size: size, color: color })} />;
+        return <StarIcon className={icon({ size, color })} />;
       case "Bars3":
-        return <Bars3Icon className={icon({ Size: size, color: color })} />;
+        return <Bars3Icon className={icon({ size, color })} />;
       case "MagnifyingGlass":
-        return (
-          <MagnifyingGlassIcon className={icon({ Size: size, color: color })} />
-        );
+        return <MagnifyingGlassIcon className={icon({ size, color })} />;
       case "ShoppingCart":
-        return (
-          <ShoppingCartIcon className={icon({ Size: size, color: color })} />
-        );
+        return <ShoppingCartIcon className={icon({ size, color })} />;
       case "User":
-        return <UserIcon className={icon({ Size: size, color: color })} />;
+        return <UserIcon className={icon({ size, color })} />;
       case "XMark":
-        return <XMarkIcon className={icon({ Size: size, color: color })} />;
+        return <XMarkIcon className={icon({ size, color })} />;
       case "ChevronDown":
-        return (
-          <ChevronDownIcon className={icon({ Size: size, color: color })} />
-        );
+        return <ChevronDownIcon className={icon({ size, color })} />;
       default:
-        return <StarIcon className={icon({ Size: size, color: color })} />;
+        return <StarIcon className={icon({ size, color })} />;
     }
   };
 

@@ -1,14 +1,16 @@
 import { VariantProps, cva } from "cva";
 import { twMerge } from "tailwind-merge";
+import { textColors } from "../../sharedVarients";
+import { cn } from "../../utils";
 
 const styledHeadingVarients = cva("", {
   variants: {
     heading: {
-      "Heading 1":
-        "text-2xl  font-bold tracking-tight text-gray-900 sm:text-3xl",
-      "Heading 2": "text-sm font-medium text-gray-900",
-      "Heading 3": "text-sm font-medium text-gray-900",
+      "Heading 1": "text-2xl font-bold tracking-tight sm:text-3xl",
+      "Heading 2": "text-lg font-bold ",
+      "Heading 3": "text-sm font-bold ",
     },
+    color: textColors,
   },
 });
 
@@ -21,25 +23,43 @@ const styledHeading = ({ heading }: StyledHeadingVarients) =>
 export interface HeadingTextProps {
   text?: string;
   level: "Heading 1" | "Heading 2" | "Heading 3";
+  color?:
+    | "Gray 900"
+    | "Gray 800"
+    | "Gray 700"
+    | "Gray 500"
+    | "Gray 400"
+    | "Gray 300"
+    | "Gray 100"
+    | "Indigo"
+    | "White"
+    | "Yellow 500";
 }
 
 export const initialProps: HeadingTextProps = {
   level: "Heading 1",
+  color: "Gray 900",
   text: "Heading Text",
 };
 
-const HeadingText = ({ text, level }: HeadingTextProps) => {
-  const className = styledHeading({ heading: level });
-
+const HeadingText = ({ text, level, color }: HeadingTextProps) => {
   switch (level) {
     case "Heading 1":
-      return <h1 className={className}>{text}</h1>;
+      return (
+        <h1 className={cn(styledHeading({ heading: level, color }))}>{text}</h1>
+      );
     case "Heading 2":
-      return <h2 className={className}>{text}</h2>;
+      return (
+        <h2 className={cn(styledHeading({ heading: level, color }))}>{text}</h2>
+      );
     case "Heading 3":
-      return <h3 className={className}>{text}</h3>;
+      return (
+        <h3 className={cn(styledHeading({ heading: level, color }))}>{text}</h3>
+      );
     default:
-      return <h1 className={className}>{text}</h1>;
+      return (
+        <h1 className={cn(styledHeading({ heading: level, color }))}>{text}</h1>
+      );
   }
 };
 
