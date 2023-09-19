@@ -2,25 +2,28 @@ import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "../../utils";
 import React from "react";
 
-const containerVariants = cva("px-4 py-5 gap-y-3 sm:p-6", {
-  variants: {
-    layout: {
-      flex: "flex flex-col lg:flex-row",
-      grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
-      row: "flex flex-row",
-      column: "flex flex-col",
+const containerVariants = cva(
+  "px-4 py-5 gap-y-3 max-w-2xl sm:max-w-7xl sm:p-6",
+  {
+    variants: {
+      layout: {
+        flex: "flex flex-col lg:flex-row",
+        grid: "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+        row: "flex flex-row",
+        column: "flex flex-col",
+      },
+      columnSpan: {
+        "1": "col-span-1",
+        "2": "col-span-2",
+        "3": "col-span-3",
+      },
     },
-    columnSpan: {
-      "1": "col-span-1",
-      "2": "col-span-2",
-      "3": "col-span-3",
+    defaultVariants: {
+      layout: "flex",
+      columnSpan: "1",
     },
-  },
-  defaultVariants: {
-    layout: "flex",
-    columnSpan: "1",
-  },
-});
+  }
+);
 
 // export interface ContainerProps
 //   extends React.HTMLAttributes<HTMLDivElement>,

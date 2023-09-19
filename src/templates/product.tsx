@@ -68,8 +68,11 @@ export default function Product({ document }: TemplateProps) {
           },
         ]}
       />
-      <Container layout="flex" className={`mx-auto max-w-2xl sm:p-0 lg:mx-0`}>
-        <Container layout="flex">
+      <Container
+        layout="grid"
+        className={`mx-auto sm:grid-cols-1 sm:p-0 lg:mx-0 `}
+      >
+        <Container layout="flex" className="lg:col-span-2">
           <Paragraph
             text={`${document.name}`}
             size="XXLarge"
@@ -98,9 +101,9 @@ export default function Product({ document }: TemplateProps) {
           </Container>
           <Button size="xxlarge" text={`Add To Cart`} className={`mt-10`} />
         </Container>
-        <Container layout="column" columnSpan="2">
-          <RTF size="Medium" color="Gray 900" />
-        </Container>
+      </Container>
+      <Container layout="flex" className={`mx-auto`}>
+        <RTF size="Medium" color="Gray 900" className="" />
       </Container>
     </Main>
   );
