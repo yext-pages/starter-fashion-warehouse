@@ -6,14 +6,15 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
+import ProductList from "../components/ProductList";
 import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
-import HeadingText from "../components/atoms/HeadingText";
-import Paragraph from "../components/atoms/Paragraph";
+import Heading from "../components/atoms/Heading";
 import RTF from "../components/atoms/RTF";
 import StyledLink from "../components/atoms/StyledLink";
 import Main from "../components/layouts/Main";
 import ImageGallery from "../components/molecules/ImageGallery";
+import Reviews from "../components/molecules/Reviews";
 import Stars from "../components/molecules/Stars";
 import "../index.css";
 
@@ -68,26 +69,27 @@ export default function Product({ document }: TemplateProps) {
           },
         ]}
       />
-      <Container
-        layout="grid"
-        className={`mx-auto sm:grid-cols-1 sm:p-0 lg:mx-0 `}
-      >
-        <Container layout="flex" className="lg:col-span-2">
-          <Paragraph
+      <Container layout="grid" className={`mx-auto sm:grid-cols-1 sm:p-0`}>
+        <Container layout="column" className="lg:col-span-2">
+          <Heading
             text={`${document.name}`}
-            size="XXLarge"
-            weight="Bold"
+            rank="1"
+            size="XXL"
             align="Left"
             color="Gray 900"
-            className={`f`}
+            fontWeight="Bold"
+            className=""
           />
+          <Container layout="flex" className={`px-0 sm:px-0`}>
+            <RTF size="Medium" color="Gray 900" className="" />
+          </Container>
         </Container>
         <Container layout="column" className={`gap-y-2`}>
-          <HeadingText
-            level="Heading 1"
+          <Heading
+            rank="1"
             text={`$ ${document.price.value}`}
             color="Gray 400"
-            fontWeight="base"
+            fontWeight="Base"
           />
           <Container layout="row" className={` gap-x-3 px-0 py-0 sm:p-0`}>
             <Stars rating={5} />
@@ -102,9 +104,35 @@ export default function Product({ document }: TemplateProps) {
           <Button size="xxlarge" text={`Add To Cart`} className={`mt-10`} />
         </Container>
       </Container>
-      <Container layout="flex" className={`mx-auto`}>
-        <RTF size="Medium" color="Gray 900" className="" />
-      </Container>
+      <Reviews
+        entityId="ENTITY_ID_HERE"
+        titleProps={{
+          text: "Recent Reviews",
+          rank: "2",
+          fontWeight: "Bold",
+          color: "Gray 900",
+        }}
+        reviewContentTextProps={{
+          size: "Small",
+          color: "Gray 500",
+          align: "Left",
+          weight: "Medium",
+        }}
+        reviewDateTimeTextProps={{
+          dateTime: "",
+          size: "Small",
+          weight: "Medium",
+          align: "Left",
+          color: "Gray 500",
+        }}
+        authorNameTextProps={{
+          size: "Medium",
+          color: "Gray 900",
+          align: "Left",
+          weight: "Medium",
+        }}
+      />
+      <ProductList />
     </Main>
   );
 }

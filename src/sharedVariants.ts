@@ -12,11 +12,11 @@ export const textColors = {
 };
 
 export const textSizes = {
-  Small: ["text-sm"],
-  Medium: ["text-base"],
-  Large: ["text-xl"],
-  XLarge: ["text-2xl"],
-  XXLarge: ["text-3xl"],
+  S: "text-sm",
+  M: "text-base",
+  L: "text-xl",
+  XL: "text-2xl",
+  XXL: "text-3xl",
 };
 
 export const textAlignment = {

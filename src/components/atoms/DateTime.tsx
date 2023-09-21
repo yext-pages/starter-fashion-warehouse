@@ -1,6 +1,6 @@
-import { type VariantProps, cva } from "cva";
+import { cva } from "cva";
 import { textColors, textSizes } from "../../sharedVariants";
-import { cn } from "../../utils";
+import { cn, formatDateTime, isValidUTCDateString } from "../../utils";
 
 const paragraphVariants = cva("", {
   variants: {
@@ -16,29 +16,10 @@ const paragraphVariants = cva("", {
     },
     color: textColors,
   },
-  // compoundVariants: [{ intent: "primary", size: "medium", class: "uppercase" }],
-
-  // I don't think there is any point in using these in Studio
-  // defaultVariants: {
-  //   type: "Page",
-  //   color: "Primary",
-  // },
 });
 
-// export interface ParagraphVariants
-//   extends VariantProps<typeof paragraphVariants> {}
-
-// const paragraph = ({ Size, Weight, Align, Color }: ParagraphVariants) =>
-//   twMerge(paragraphVariants({ Size, Weight, Align, Color }));
-
-// I wish that I could do this:
-// export interface ParagraphProps extends ParagraphVariants {
-//   Text?: string;
-// }
-
-// But I have to do this:
-export interface ParagraphProps {
-  text?: string;
+export interface DateTimeProps {
+  dateTime: string;
   size?: "Small" | "Medium" | "Large" | "XLarge" | "XXLarge";
   weight?: "Medium" | "Bold";
   align?: "Left" | "Center" | "Right";
@@ -55,8 +36,8 @@ export interface ParagraphProps {
   className?: string;
 }
 
-export const initialProps: ParagraphProps = {
-  text: "Text goes here",
+export const initialProps: DateTimeProps = {
+  dateTime: "2023-01-01T00:00:00Z",
   size: "Medium",
   weight: "Medium",
   align: "Left",
@@ -64,23 +45,31 @@ export const initialProps: ParagraphProps = {
   className: "",
 };
 
-const Paragraph = ({
+const DateTime = ({
+  dateTime,
   size,
   weight,
   color,
   align,
-  text,
   className,
-}: ParagraphProps) => {
+}: DateTimeProps) => {
   return (
-    <p
+    <time
+      dateTime={dateTime}
       className={cn(
         paragraphVariants({ size, weight, color, align, className })
       )}
     >
-      {text}
-    </p>
+      {isValidUTCDateString(dateTime) ? (
+        formatDateTime(dateTime)
+      ) : (
+        <span className="text-red-500">
+          Please provide a valid ISO 8601 date string (e.g.
+          2023-01-01T00:00:00Z)
+        </span>
+      )}
+    </time>
   );
 };
 
-export default Paragraph;
+export default DateTime;

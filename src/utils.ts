@@ -99,3 +99,28 @@ export const formatDate = (date?: string) => {
     year: "numeric",
   });
 };
+
+export const formatDateTime = (dateTime?: string) => {
+  if (!dateTime) {
+    return "";
+  }
+
+  const dateObj = new Date(dateTime);
+  return dateObj.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+};
+
+export const isValidUTCDateString = (dateString: string): boolean => {
+  // Regular expression for ISO 8601 format
+  const regex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$/;
+
+  if (!regex.test(dateString)) {
+    return false;
+  }
+
+  const date = new Date(dateString);
+  return !isNaN(date.getTime());
+};

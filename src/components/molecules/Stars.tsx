@@ -10,7 +10,7 @@ const Stars = ({ rating, classname }: StarsProps) => {
   const stars = [];
   for (let i = 0; i < 5; i++) {
     if (i < rating) {
-      stars.push(<Icon key={i} color="Gray 700" name="Star" size="small" />);
+      stars.push(<Icon key={i} color="Yellow 500" name="Star" size="small" />);
     } else {
       stars.push(<Icon key={i} color="Gray 300" name="Star" size="small" />);
     }
