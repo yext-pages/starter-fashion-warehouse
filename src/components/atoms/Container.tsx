@@ -3,7 +3,7 @@ import { cn } from "../../utils";
 import React from "react";
 
 const containerVariants = cva(
-  "px-4 py-5 gap-y-3 max-w-2xl sm:max-w-7xl sm:p-6",
+  "px-4 py-5 gap-y-3 max-w-2xl lg:max-w-7xl sm:p-6",
   {
     variants: {
       layout: {

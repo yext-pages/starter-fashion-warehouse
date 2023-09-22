@@ -1,5 +1,5 @@
 import Container, { ContainerProps } from "./atoms/Container";
-import Paragraph from "./atoms/Paragraph";
+import Paragraph from "./atoms/StyledText";
 import PublicImage from "./atoms/PublicImage";
 import StudioImage, { StudioImageProps } from "./atoms/StudioImage";
 

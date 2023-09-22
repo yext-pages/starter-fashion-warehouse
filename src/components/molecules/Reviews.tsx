@@ -3,7 +3,7 @@ import Stars from "./Stars";
 import { YextContent, YextResponse, Review } from "../../types/api";
 import { useEffect, useState } from "react";
 import Heading, { HeadingProps } from "../atoms/Heading";
-import Paragraph, { ParagraphProps } from "../atoms/Paragraph";
+import StyledText, { StyledTextProps } from "../atoms/StyledText";
 import DateTime, {
   DateTimeProps,
   initialProps as initialDateTimeProps,
@@ -44,9 +44,9 @@ const fetchReviews = async ({
 export interface ReviewsProps {
   entityId: string;
   titleProps: HeadingProps;
-  reviewContentTextProps: ParagraphProps;
+  reviewContentTextProps: StyledTextProps;
   reviewDateTimeTextProps: DateTimeProps;
-  authorNameTextProps: ParagraphProps;
+  authorNameTextProps: StyledTextProps;
 }
 
 export const initialProps: ReviewsProps = {
@@ -58,7 +58,7 @@ export const initialProps: ReviewsProps = {
     color: "Gray 900",
   },
   reviewContentTextProps: {
-    size: "Small",
+    size: "S",
     color: "Gray 500",
     align: "Left",
     weight: "Medium",
@@ -71,7 +71,7 @@ export const initialProps: ReviewsProps = {
     color: "Gray 500",
   },
   authorNameTextProps: {
-    size: "Medium",
+    size: "M",
     color: "Gray 900",
     align: "Left",
     weight: "Medium",
@@ -134,7 +134,7 @@ const Reviews = ({
               </div>
 
               <div className="mt-4 lg:mt-6 xl:col-span-2 xl:mt-0">
-                <Paragraph
+                <StyledText
                   color={reviewContentTextProps.color}
                   size={reviewContentTextProps.size}
                   text={review.content}
@@ -145,7 +145,7 @@ const Reviews = ({
             </div>
             <div className="mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3">
               {/* <p className="font-medium text-gray-900">{review.authorName}</p> */}
-              <Paragraph
+              <StyledText
                 text={review.authorName}
                 color={authorNameTextProps.color}
                 size={reviewContentTextProps.size}

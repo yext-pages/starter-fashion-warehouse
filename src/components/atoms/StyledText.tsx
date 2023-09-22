@@ -2,7 +2,7 @@ import { type VariantProps, cva } from "cva";
 import { textColors, textSizes } from "../../sharedVariants";
 import { cn } from "../../utils";
 
-const paragraphVariants = cva("", {
+const styledTextVariants = cva("tracking-tight", {
   variants: {
     size: textSizes,
     weight: {
@@ -33,13 +33,13 @@ const paragraphVariants = cva("", {
 
 // I wish that I could do this:
 // export interface ParagraphProps extends ParagraphVariants {
-//   Text?: string;
+//   StyledText?: string;
 // }
 
 // But I have to do this:
-export interface ParagraphProps {
+export interface StyledTextProps {
   text?: string;
-  size?: "Small" | "Medium" | "Large" | "XLarge" | "XXLarge";
+  size?: "S" | "M" | "L" | "XL" | "XXL";
   weight?: "Medium" | "Bold";
   align?: "Left" | "Center" | "Right";
   color?:
@@ -55,27 +55,27 @@ export interface ParagraphProps {
   className?: string;
 }
 
-export const initialProps: ParagraphProps = {
+export const initialProps: StyledTextProps = {
   text: "Text goes here",
-  size: "Medium",
+  size: "M",
   weight: "Medium",
   align: "Left",
   color: "Gray 900",
   className: "",
 };
 
-const Paragraph = ({
+const StyledText = ({
   size,
   weight,
   color,
   align,
   text,
   className,
-}: ParagraphProps) => {
+}: StyledTextProps) => {
   return (
     <p
       className={cn(
-        paragraphVariants({ size, weight, color, align, className })
+        styledTextVariants({ size, weight, color, align, className })
       )}
     >
       {text}
@@ -83,4 +83,4 @@ const Paragraph = ({
   );
 };
 
-export default Paragraph;
+export default StyledText;

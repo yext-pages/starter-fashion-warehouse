@@ -7,22 +7,17 @@ import {
   TemplateRenderProps,
 } from "@yext/pages";
 import ProductList from "../components/ProductList";
-import Button from "../components/atoms/Button";
-import Container from "../components/atoms/Container";
-import Heading from "../components/atoms/Heading";
-import RTF from "../components/atoms/RTF";
-import StyledLink from "../components/atoms/StyledLink";
 import Main from "../components/layouts/Main";
 import ImageGallery from "../components/molecules/ImageGallery";
+import ProductOverview from "../components/molecules/ProductOverview";
 import Reviews from "../components/molecules/Reviews";
-import Stars from "../components/molecules/Stars";
 import "../index.css";
 
 export const config: TemplateConfig = {
   stream: {
     $id: "product",
     localization: { locales: ["en"] },
-    fields: ["name", "price", "slug"],
+    fields: ["name", "c_productDescription", "price", "slug"],
     filter: { entityTypes: ["product"] },
   },
 };
@@ -69,41 +64,31 @@ export default function Product({ document }: TemplateProps) {
           },
         ]}
       />
-      <Container layout="grid" className={`mx-auto sm:grid-cols-1 sm:p-0`}>
-        <Container layout="column" className="lg:col-span-2">
-          <Heading
-            text={`${document.name}`}
-            rank="1"
-            size="XXL"
-            align="Left"
-            color="Gray 900"
-            fontWeight="Bold"
-            className=""
-          />
-          <Container layout="flex" className={`px-0 sm:px-0`}>
-            <RTF size="Medium" color="Gray 900" className="" />
-          </Container>
-        </Container>
-        <Container layout="column" className={`gap-y-2`}>
-          <Heading
-            rank="1"
-            text={`$ ${document.price.value}`}
-            color="Gray 400"
-            fontWeight="Base"
-          />
-          <Container layout="row" className={` gap-x-3 px-0 py-0 sm:p-0`}>
-            <Stars rating={5} />
-            <StyledLink
-              href="#"
-              label={`119 Reviews`}
-              type="Primary"
-              size="Medium"
-              weight="Normal"
-            />
-          </Container>
-          <Button size="xxlarge" text={`Add To Cart`} className={`mt-10`} />
-        </Container>
-      </Container>
+      <ProductOverview
+        productNameProps={{
+          text: `${document.name}`,
+          rank: "1",
+          size: "XXL",
+          align: "Left",
+          color: "Gray 900",
+          fontWeight: "Bold",
+        }}
+        productDescriptionProps={{
+          text: `${document.c_productDescription}`,
+          size: "M",
+          weight: "Medium",
+          align: "Left",
+          color: "Gray 700",
+        }}
+        priceProps={{
+          text: `${document.price.value}`,
+          size: "XXL",
+          weight: "Medium",
+          align: "Left",
+          color: "Gray 900",
+        }}
+        rating={5}
+      />
       <Reviews
         entityId="ENTITY_ID_HERE"
         titleProps={{
@@ -113,7 +98,7 @@ export default function Product({ document }: TemplateProps) {
           color: "Gray 900",
         }}
         reviewContentTextProps={{
-          size: "Small",
+          size: "S",
           color: "Gray 500",
           align: "Left",
           weight: "Medium",
@@ -126,7 +111,7 @@ export default function Product({ document }: TemplateProps) {
           color: "Gray 500",
         }}
         authorNameTextProps={{
-          size: "Medium",
+          size: "M",
           color: "Gray 900",
           align: "Left",
           weight: "Medium",
