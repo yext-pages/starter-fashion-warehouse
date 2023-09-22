@@ -11,12 +11,12 @@ import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
 import Heading from "../components/atoms/Heading";
 import StyledText from "../components/atoms/StyledText";
-import Main from "../components/layouts/Main";
 import ImageGallery from "../components/molecules/ImageGallery";
 import ProductOverview from "../components/molecules/ProductOverview";
 import Reviews from "../components/molecules/Reviews";
 import Stars from "../components/molecules/Stars";
 import "../index.css";
+import Main from "../layouts/Main";
 
 export const config: TemplateConfig = {
   stream: {
