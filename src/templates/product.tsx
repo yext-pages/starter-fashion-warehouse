@@ -7,17 +7,22 @@ import {
   TemplateRenderProps,
 } from "@yext/pages";
 import ProductList from "../components/ProductList";
+import Button from "../components/atoms/Button";
+import Container from "../components/atoms/Container";
+import Heading from "../components/atoms/Heading";
+import StyledText from "../components/atoms/StyledText";
 import Main from "../components/layouts/Main";
 import ImageGallery from "../components/molecules/ImageGallery";
 import ProductOverview from "../components/molecules/ProductOverview";
 import Reviews from "../components/molecules/Reviews";
+import Stars from "../components/molecules/Stars";
 import "../index.css";
 
 export const config: TemplateConfig = {
   stream: {
     $id: "product",
     localization: { locales: ["en"] },
-    fields: ["name", "c_productDescription", "price", "slug"],
+    fields: ["name", "price", "c_productDescription", "slug"],
     filter: { entityTypes: ["product"] },
   },
 };
@@ -64,6 +69,52 @@ export default function Product({ document }: TemplateProps) {
           },
         ]}
       />
+      <Container layout="grid" className={`mx-auto sm:grid-cols-1 sm:p-0`}>
+        <Container className="lg:hidden">
+          <Heading
+            text={document.name}
+            rank="1"
+            size="XXL"
+            align="Left"
+            color="Gray 900"
+            fontWeight="Bold"
+          />
+        </Container>
+        <Container layout="column" className={`gap-y-2 py-0`}>
+          <StyledText
+            size="XL"
+            weight="Medium"
+            align="Left"
+            color="Gray 900"
+            text={`$${document.price.value}`}
+          />
+          <Container layout="row" className={`gap-x-3 px-0 py-0 sm:p-0`}>
+            <Stars rating={5} />
+          </Container>
+          <Button size="xxlarge" text={`Add To Cart`} className={`mt-4`} />
+        </Container>
+        <Container
+          layout="column"
+          className="py-2 sm:px-6 sm:py-2 lg:col-span-2 lg:row-start-1 lg:py-4"
+        >
+          <Heading
+            text={document.name}
+            rank="1"
+            size="XXL"
+            align="Left"
+            color="Gray 900"
+            fontWeight="Bold"
+            className="hidden lg:block"
+          />
+          <StyledText
+            text={document.c_productDescription}
+            color="Gray 900"
+            size="M"
+            align="Left"
+            weight="Medium"
+          />
+        </Container>
+      </Container>
       <ProductOverview
         productNameProps={{
           text: `${document.name}`,
