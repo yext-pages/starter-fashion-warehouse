@@ -3,7 +3,7 @@ import Main from "../components/Main";
 import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
 import Heading from "../components/atoms/Heading";
-import Stars from "../components/atoms/Stars";
+// import Stars from "../components/atoms/Stars";
 import StyledText from "../components/atoms/StyledText";
 import "../index.css";
 
@@ -43,9 +43,10 @@ export default function AirAscend() {
             align="Left"
             color="Gray 900"
           />
-          <Container layout="row" className={`gap-x-3 px-0 py-0 sm:p-0`}>
-            <Stars rating={5} />
-          </Container>
+          <Container
+            layout="row"
+            className={`gap-x-3 px-0 py-0 sm:p-0`}
+          ></Container>
           <Button size="xxlarge" text={`Add To Cart`} className={`mt-4`} />
         </Container>
         <Container
