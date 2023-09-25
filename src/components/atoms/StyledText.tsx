@@ -16,20 +16,10 @@ const styledTextVariants = cva("tracking-tight", {
     },
     color: textColors,
   },
-  // compoundVariants: [{ intent: "primary", size: "medium", class: "uppercase" }],
-
-  // I don't think there is any point in using these in Studio
-  // defaultVariants: {
-  //   type: "Page",
-  //   color: "Primary",
-  // },
 });
 
 // export interface ParagraphVariants
 //   extends VariantProps<typeof paragraphVariants> {}
-
-// const paragraph = ({ Size, Weight, Align, Color }: ParagraphVariants) =>
-//   twMerge(paragraphVariants({ Size, Weight, Align, Color }));
 
 // I wish that I could do this:
 // export interface ParagraphProps extends ParagraphVariants {

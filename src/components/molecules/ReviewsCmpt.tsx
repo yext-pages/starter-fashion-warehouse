@@ -1,5 +1,5 @@
 import Container from "../atoms/Container";
-import Stars from "./Stars";
+import Stars from "./StarsCmpt";
 import { YextContent, YextResponse, Review } from "../../types/api";
 import { useEffect, useState } from "react";
 import Heading, { HeadingProps } from "../atoms/Heading";

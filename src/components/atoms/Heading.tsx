@@ -18,10 +18,27 @@ const headingVariants = cva("tracking-tight", {
 //   extends VariantProps<typeof styledHeadingVariants> {}
 
 export interface HeadingProps {
+  /**
+   * @tooltip Content of the heading
+   * @displayName Text
+   */
   text: string;
+  /**
+   * @tooltip Defines whether the heading is an h1, h2, etc.
+   * @displayName Rank
+   */
   rank?: "1" | "2" | "3" | "4" | "5" | "6";
+  /**
+   * @displayName Size
+   */
   size?: "S" | "M" | "L" | "XL" | "XXL";
+  /**
+   * @displayName Font Weight
+   */
   fontWeight?: "Bold" | "Base";
+  /**
+   * @displayName Text Color
+   */
   color?:
     | "Gray 900"
     | "Gray 800"
@@ -33,7 +50,13 @@ export interface HeadingProps {
     | "Indigo"
     | "White"
     | "Yellow 500";
+  /**
+   * @displayName Text Align
+   */
   align?: "Left" | "Center" | "Right";
+  /**
+   * @tooltip Used to override the default styles
+   */
   className?: string;
 }
 
