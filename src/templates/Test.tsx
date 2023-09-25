@@ -10,20 +10,22 @@ export const config: TemplateConfig = {
     $id: "studio-stream-id-Test",
     localization: { locales: ["en"] },
     filter: { savedFilterIds: ["1342229193"] },
-    fields: ["slug"],
+    fields: ["name", "slug"],
   },
 };
-export const getPath: GetPath<TemplateProps> = ({ document }) => {
+export const getPath: GetPath<TemplateProps> = ({
+  document,
+}: TemplateProps) => {
   return `${document.slug}`;
 };
 
-export default function Test() {
+export default function Test({ document }: TemplateProps) {
   return (
     <>
       <Container layout="grid" className={`mx-auto sm:grid-cols-1 sm:p-0`}>
         <Container className="lg:hidden">
           <Heading
-            text="Product Name"
+            text={`${document.name}`}
             rank="1"
             size="XXL"
             align="Left"
