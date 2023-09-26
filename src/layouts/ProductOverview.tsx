@@ -6,7 +6,7 @@ import Stars from "../components/atoms/Stars";
 
 const ProductOverview = () => {
   return (
-    <Container layout="grid" className={`mx-auto sm:grid-cols-1 sm:p-0`}>
+    <Container layout="grid" className="sm:grid-cols-1">
       <Container className="lg:hidden">
         <Heading
           text="Product Name"
@@ -17,7 +17,7 @@ const ProductOverview = () => {
           fontWeight="Bold"
         />
       </Container>
-      <Container layout="column" className={`gap-y-2 py-0`}>
+      <Container layout="column" className="gap-y-2">
         <StyledText
           text={`$0.00`}
           size="XL"
@@ -25,15 +25,12 @@ const ProductOverview = () => {
           align="Left"
           color="Gray 900"
         />
-        <Container layout="row" className={`gap-x-3 px-0 py-0 sm:p-0`}>
+        <Container layout="row" className="gap-x-3">
           <Stars rating={5} />
         </Container>
-        <Button size="xxlarge" text={`Add To Cart`} className={`mt-4`} />
+        <Button size="xxlarge" text="Add To Cart" className="mt-4" />
       </Container>
-      <Container
-        layout="column"
-        className="py-2 sm:px-6 sm:py-2 lg:col-span-2 lg:row-start-1 lg:py-4"
-      >
+      <Container layout="column" className="lg:col-span-2 lg:row-start-1">
         <Heading
           className="hidden lg:block"
           text="Product Name"

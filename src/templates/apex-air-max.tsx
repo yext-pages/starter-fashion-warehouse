@@ -10,7 +10,6 @@ import Main from "../components/Main";
 import ProductList from "../components/molecules/ProductListCmpt";
 import ImageGallery from "../components/molecules/ImageGalleryCmpt";
 import ProductOverview from "../components/molecules/ProductOverviewCmpt";
-import Reviews from "../components/molecules/ReviewsCmpt";
 import "../index.css";
 
 export const config: TemplateConfig = {
@@ -89,34 +88,7 @@ export default function Product({ document }: TemplateProps) {
         }}
         rating={5}
       />
-      <Reviews
-        entityId="ENTITY_ID_HERE"
-        titleProps={{
-          text: "Recent Reviews",
-          rank: "2",
-          fontWeight: "Bold",
-          color: "Gray 900",
-        }}
-        reviewContentTextProps={{
-          size: "S",
-          color: "Gray 500",
-          align: "Left",
-          weight: "Medium",
-        }}
-        reviewDateTimeTextProps={{
-          dateTime: "",
-          size: "Small",
-          weight: "Medium",
-          align: "Left",
-          color: "Gray 500",
-        }}
-        authorNameTextProps={{
-          size: "M",
-          color: "Gray 900",
-          align: "Left",
-          weight: "Medium",
-        }}
-      />
+
       <ProductList imageUrls={[]} />
     </Main>
   );

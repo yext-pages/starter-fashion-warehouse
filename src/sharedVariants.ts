@@ -63,18 +63,51 @@ export const marginY = {
   "16": "my-16",
 };
 
-export const paddingX = {
-  "0": "px-0",
-  "2": "px-2",
-  "4": "px-4",
-  "8": "px-8",
-  "16": "px-16",
+export const paddingRight = {
+  none: "pr-0",
+  S: "pr-2",
+  M: "pr-4",
+  L: "pr-8",
+  XL: "pr-16",
+  XXL: "pr-24",
 };
 
-export const paddingY = {
-  "0": "py-0",
-  "2": "py-2",
-  "4": "py-4",
-  "8": "py-8",
-  "16": "py-16",
+export const paddingLeft = {
+  none: "pl-0",
+  S: "pl-2",
+  M: "pl-4",
+  L: "pl-8",
+  XL: "pl-16",
+  XXL: "pl-24",
 };
+
+export const paddingTop = {
+  none: "pt-0",
+  S: "pt-2",
+  M: "pt-4",
+  L: "pt-8",
+  XL: "pt-16",
+  XXL: "pt-24",
+};
+
+export const paddingBottom = {
+  none: "pb-0",
+  S: "pb-2",
+  M: "pb-4",
+  L: "pb-8",
+  XL: "pb-16",
+  XXL: "pb-24",
+};
+
+export const heights = {
+  S: "h-8",
+  M: "h-12",
+  L: "h-16",
+  XL: "h-20",
+  XXL: "h-24",
+};
+
+// Can't do this:
+// export type SizeVariant = keyof typeof paddingRight;
+
+export type SizeVariant = "none" | "S" | "M" | "L" | "XL" | "XXL";

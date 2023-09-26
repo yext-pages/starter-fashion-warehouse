@@ -34,10 +34,7 @@ export const initialProps: ImageGalleryProps = {
 
 const ImageGallery = ({ images }: ImageGalleryProps) => {
   return (
-    <Container
-      layout="grid"
-      className={`mx-auto mt-6 max-w-2xl px-0 py-0 sm:grid-cols-1 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8`}
-    >
+    <Container layout="grid" className={`mt-6 lg:gap-x-8 lg:px-8`}>
       <StudioImage
         image={images[0]}
         className={`aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg sm:max-h-[480px] lg:block`}

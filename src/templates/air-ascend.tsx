@@ -2,9 +2,12 @@ import { GetPath, TemplateConfig, TemplateProps } from "@yext/pages";
 import Main from "../components/Main";
 import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
+import Dropdown from "../components/atoms/Dropdown";
 import Heading from "../components/atoms/Heading";
-// import Stars from "../components/atoms/Stars";
+import Stars from "../components/atoms/Stars";
+import StudioImage from "../components/atoms/StudioImage";
 import StyledText from "../components/atoms/StyledText";
+import Reviews from "../components/molecules/Reviews";
 import "../index.css";
 
 export const config: TemplateConfig = {
@@ -24,7 +27,40 @@ export const getPath: GetPath<TemplateProps> = ({
 export default function AirAscend() {
   return (
     <Main>
-      <Container layout="grid" className={`mx-auto sm:grid-cols-1 sm:p-0`}>
+      <Container
+        layout="grid"
+        className={`mt-6 lg:gap-x-8`}
+        paddingTop="L"
+        paddingBottom="L"
+      >
+        <StudioImage
+          image={{ url: "https://placehold.co/300x612", alt: "placeholder" }}
+          className={`aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg sm:max-h-[480px] lg:block`}
+        />
+        <Container
+          layout="grid"
+          className={`hidden lg:grid lg:grid-cols-1 lg:gap-y-8 lg:py-0`}
+        >
+          <StudioImage
+            image={{ url: "https://placehold.co/300x300", alt: "placeholder" }}
+            className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:max-h-[225px]"
+          />
+          <StudioImage
+            image={{ url: "https://placehold.co/300x300", alt: "placeholder" }}
+            className={`aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:max-h-[225px]`}
+          />
+        </Container>
+        <StudioImage
+          image={{ url: "https://placehold.co/300x612", alt: "placeholder" }}
+          className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg lg:max-h-[480px]"
+        />
+      </Container>
+      <Container
+        layout="grid"
+        className="sm:grid-cols-1"
+        paddingTop="M"
+        paddingBottom="M"
+      >
         <Container className="lg:hidden">
           <Heading
             text="Product Name"
@@ -35,7 +71,12 @@ export default function AirAscend() {
             fontWeight="Bold"
           />
         </Container>
-        <Container layout="column" className={`gap-y-2 py-0`}>
+        <Container
+          layout="column"
+          className="gap-y-2"
+          paddingTop="S"
+          paddingBottom="M"
+        >
           <StyledText
             text={`$0.00`}
             size="XL"
@@ -43,16 +84,12 @@ export default function AirAscend() {
             align="Left"
             color="Gray 900"
           />
-          <Container
-            layout="row"
-            className={`gap-x-3 px-0 py-0 sm:p-0`}
-          ></Container>
-          <Button size="xxlarge" text={`Add To Cart`} className={`mt-4`} />
+          <Container layout="row" className="gap-x-3">
+            <Stars rating={5} />
+          </Container>
+          <Button size="xxlarge" text="Add To Cart" className="mt-4" />
         </Container>
-        <Container
-          layout="column"
-          className="py-2 sm:px-6 sm:py-2 lg:col-span-2 lg:row-start-1 lg:py-4"
-        >
+        <Container layout="column" className="lg:col-span-2 lg:row-start-1">
           <Heading
             className="hidden lg:block"
             text="Product Name"
@@ -70,6 +107,18 @@ export default function AirAscend() {
             color="Gray 700"
           />
         </Container>
+      </Container>
+      <Container
+        layout="column"
+        className="mx-auto"
+        paddingTop="XL"
+        paddingBottom="XL"
+      >
+        <Container layout="row" className="justify-between px-0 sm:px-0">
+          <Heading rank="3" text="Reviews" fontWeight="Bold" size="L" />
+          <Dropdown />
+        </Container>
+        <Reviews entityId="apex-air-max-1000" />
       </Container>
     </Main>
   );

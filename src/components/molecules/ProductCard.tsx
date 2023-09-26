@@ -1,5 +1,5 @@
 import Heading from "../atoms/Heading";
-import Image from "../atoms/Image";
+import Image from "../atoms/StudioImage";
 import StyledText from "../atoms/StyledText";
 
 export interface ProductCardProps {

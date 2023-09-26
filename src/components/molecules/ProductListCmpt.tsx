@@ -1,6 +1,6 @@
 import Container, { ContainerProps } from "../atoms/Container";
 import Paragraph from "../atoms/StyledText";
-import Image from "../atoms/Image";
+import Image from "../atoms/StudioImage";
 import StudioImage, { StudioImageProps } from "../atoms/StudioImage";
 
 const products = [
