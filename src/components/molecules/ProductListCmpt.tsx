@@ -1,7 +1,7 @@
-import Container, { ContainerProps } from "./atoms/Container";
-import Paragraph from "./atoms/StyledText";
-import PublicImage from "./atoms/PublicImage";
-import StudioImage, { StudioImageProps } from "./atoms/StudioImage";
+import Container, { ContainerProps } from "../atoms/Container";
+import Paragraph from "../atoms/StyledText";
+import Image from "../atoms/Image";
+import StudioImage, { StudioImageProps } from "../atoms/StudioImage";
 
 const products = [
   {
@@ -62,7 +62,7 @@ const ProductList = ({ containerProps, imageProps }: ProductListProps) => {
       >
         {products.map((item) => (
           <div key={item.id} className="group relative">
-            <PublicImage
+            <Image
               className="lg:aspect-none w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80"
               aspectRatio="1:1"
               image={{

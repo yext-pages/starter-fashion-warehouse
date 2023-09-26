@@ -7,7 +7,7 @@ import {
   TemplateRenderProps,
 } from "@yext/pages";
 import Main from "../components/Main";
-import ProductList from "../components/ProductList";
+import ProductList from "../components/molecules/ProductListCmpt";
 import ImageGallery from "../components/molecules/ImageGalleryCmpt";
 import ProductOverview from "../components/molecules/ProductOverviewCmpt";
 import Reviews from "../components/molecules/ReviewsCmpt";

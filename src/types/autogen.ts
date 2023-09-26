@@ -4,6 +4,12 @@ export default interface Product {
 
 export interface ImageType {
   url: string;
-  height: number;
+  alt?: string;
+}
+
+export interface YextImage {
+  url: string;
+  alt?: string;
   width: number;
+  height: number;
 }
