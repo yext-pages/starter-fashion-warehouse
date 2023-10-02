@@ -6,7 +6,7 @@ import {
   paddingBottom,
   paddingRight,
   paddingTop,
-  SizeVariant,
+  ContainerSizeVariant,
 } from "../../sharedVariants";
 
 const containerVariants = cva("", {
@@ -55,22 +55,22 @@ export interface ContainerProps {
    * @displayName Padding Top
    * @tooltip Defines the padding top of the container
    */
-  paddingTop?: SizeVariant;
+  paddingTop?: ContainerSizeVariant;
   /**
    * @displayName Padding Bottom
    * @tooltip Defines the padding bottom of the container
    */
-  paddingBottom?: SizeVariant;
+  paddingBottom?: ContainerSizeVariant;
   /**
    * @displayName Padding Left
    * @tooltip Defines the padding left of the container
    */
-  paddingLeft?: SizeVariant;
+  paddingLeft?: ContainerSizeVariant;
   /**
    * @displayName Padding Right
    * @tooltip Defines the padding right of the container
    */
-  paddingRight?: SizeVariant;
+  paddingRight?: ContainerSizeVariant;
   className?: string;
 }
 

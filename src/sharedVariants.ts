@@ -12,11 +12,13 @@ export const textColors = {
 };
 
 export const textSizes = {
+  XS: "text-xs",
   S: "text-sm",
   M: "text-base",
   L: "text-xl",
   XL: "text-2xl",
   XXL: "text-3xl",
+  XXXL: "text-4xl",
 };
 
 export const textAlignment = {
@@ -110,4 +112,6 @@ export const heights = {
 // Can't do this:
 // export type SizeVariant = keyof typeof paddingRight;
 
-export type SizeVariant = "none" | "S" | "M" | "L" | "XL" | "XXL";
+export type ContainerSizeVariant = "S" | "M" | "L" | "XL" | "XXL";
+export type TextSizeVariant = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
+export type TextAlignVariant = "Left" | "Center" | "Right";

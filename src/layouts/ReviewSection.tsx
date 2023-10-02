@@ -5,7 +5,12 @@ import Reviews from "../components/molecules/Reviews";
 
 const ReviewsSection = () => {
   return (
-    <Container layout="column" className="mx-auto">
+    <Container
+      layout="column"
+      className="mx-auto"
+      paddingTop="XL"
+      paddingBottom="XL"
+    >
       <Container layout="row" className="justify-between px-0 sm:px-0">
         <Heading rank="3" text="Reviews" fontWeight="Bold" size="L" />
         <Dropdown />

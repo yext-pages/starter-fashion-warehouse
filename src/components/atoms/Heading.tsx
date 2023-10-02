@@ -1,5 +1,11 @@
 import { cva } from "cva";
-import { textAlignment, textColors, textSizes } from "../../sharedVariants";
+import {
+  TextAlignVariant,
+  TextSizeVariant,
+  textAlignment,
+  textColors,
+  textSizes,
+} from "../../sharedVariants";
 import { cn } from "../../utils";
 
 const headingVariants = cva("tracking-tight", {
@@ -31,7 +37,7 @@ export interface HeadingProps {
   /**
    * @displayName Size
    */
-  size?: "S" | "M" | "L" | "XL" | "XXL";
+  size?: TextSizeVariant;
   /**
    * @displayName Font Weight
    */
@@ -53,7 +59,7 @@ export interface HeadingProps {
   /**
    * @displayName Text Align
    */
-  align?: "Left" | "Center" | "Right";
+  align?: TextAlignVariant;
   /**
    * @tooltip Used to override the default styles
    */

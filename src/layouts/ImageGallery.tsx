@@ -8,13 +8,18 @@ export interface ImageGalleryProps {
 
 const ImageGallery = ({ images }: ImageGalleryProps) => {
   return (
-    <Container layout="grid" className={`mt-6 lg:gap-x-8`}>
+    <Container
+      layout="grid"
+      paddingBottom="M"
+      className={`mt-6 sm:grid-cols-1 lg:gap-x-8`}
+    >
       <StudioImage
         image={{
           url: "https://placehold.co/300x612",
           alt: "placeholder",
         }}
-        className={`aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg sm:max-h-[480px] lg:block`}
+        aspectRatio="4:3"
+        className={`mx-auto hidden overflow-hidden rounded-lg lg:block lg:max-h-[480px]`}
       />
       <Container
         layout="grid"
@@ -25,14 +30,16 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             url: "https://placehold.co/300x300",
             alt: "placeholder",
           }}
-          className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:max-h-[225px]"
+          aspectRatio="3:2"
+          className="overflow-hidden rounded-lg lg:max-h-[225px]"
         />
         <StudioImage
           image={{
             url: "https://placehold.co/300x300",
             alt: "placeholder",
           }}
-          className={`aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:max-h-[225px]`}
+          aspectRatio="3:2"
+          className={`overflow-hidden rounded-lg lg:max-h-[225px]`}
         />
       </Container>
       <StudioImage
@@ -40,7 +47,8 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
           url: "https://placehold.co/300x612",
           alt: "placeholder",
         }}
-        className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg lg:max-h-[480px]"
+        aspectRatio="5:4"
+        className="lg:aspect-h-4 lg:aspect-w-3 max-h-[480px] sm:overflow-hidden sm:rounded-lg"
       />
     </Container>
   );

@@ -1,5 +1,10 @@
 import { type VariantProps, cva } from "cva";
-import { textColors, textSizes } from "../../sharedVariants";
+import {
+  TextAlignVariant,
+  TextSizeVariant,
+  textColors,
+  textSizes,
+} from "../../sharedVariants";
 import { cn } from "../../utils";
 
 const styledTextVariants = cva("tracking-tight", {
@@ -29,9 +34,9 @@ const styledTextVariants = cva("tracking-tight", {
 // But I have to do this:
 export interface StyledTextProps {
   text?: string;
-  size?: "S" | "M" | "L" | "XL" | "XXL";
+  size?: TextSizeVariant;
   weight?: "Medium" | "Bold";
-  align?: "Left" | "Center" | "Right";
+  align?: TextAlignVariant;
   color?:
     | "Gray 900"
     | "Gray 800"

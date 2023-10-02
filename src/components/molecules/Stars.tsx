@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import Icon from "./Icon";
+import Icon from "../atoms/Icon";
 
 export interface StarsProps {
   rating: number;

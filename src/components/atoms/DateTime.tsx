@@ -1,5 +1,10 @@
 import { cva } from "cva";
-import { textColors, textSizes } from "../../sharedVariants";
+import {
+  TextAlignVariant,
+  TextSizeVariant,
+  textColors,
+  textSizes,
+} from "../../sharedVariants";
 import { cn, formatDateTime, isValidUTCDateString } from "../../utils";
 
 const paragraphVariants = cva("", {
@@ -20,9 +25,9 @@ const paragraphVariants = cva("", {
 
 export interface DateTimeProps {
   dateTime: string;
-  size?: "Small" | "Medium" | "Large" | "XLarge" | "XXLarge";
+  size?: TextSizeVariant;
   weight?: "Medium" | "Bold";
-  align?: "Left" | "Center" | "Right";
+  align?: TextAlignVariant;
   color?:
     | "Gray 900"
     | "Gray 800"
@@ -38,7 +43,7 @@ export interface DateTimeProps {
 
 export const initialProps: DateTimeProps = {
   dateTime: "2023-01-01T00:00:00Z",
-  size: "Medium",
+  size: "M",
   weight: "Medium",
   align: "Left",
   color: "Gray 900",

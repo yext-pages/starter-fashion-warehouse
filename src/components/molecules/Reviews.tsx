@@ -1,43 +1,58 @@
 import Container from "../atoms/Container";
-import { YextContent, YextResponse, Review } from "../../types/api";
-import { useEffect, useState } from "react";
 import StyledText, { StyledTextProps } from "../atoms/StyledText";
 import DateTime, {
   DateTimeProps,
   initialProps as initialDateTimeProps,
 } from "../atoms/DateTime";
-import Stars from "../atoms/Stars";
+import Stars from "./Stars";
 
-const initialReviews = [
+const reviews = [
   {
     $key: {
-      primary_key: "1",
       locale: "",
+      primary_key: "1354108583",
     },
+    authorName: "Andrew S.",
+    content:
+      "These shoes are an absolute dream! From the impeccable design to the perfect fit, every detail is just right. They are the epitome of what I look for in footwear, truly a 5 out of 5 in every sense.",
     entity: {
-      id: "entity-1",
+      id: "apex-air-max-1000",
     },
-    title: "Can't say enough good things",
     rating: 5,
-    content: `I was really pleased with the overall shopping experience.`,
-    authorName: "John D.",
     reviewDate: "2023-07-16T04:00:00Z",
     reviewId: 1354108583,
   },
-  // More reviews...
+  {
+    $key: {
+      locale: "",
+      primary_key: "1354108453",
+    },
+    authorName: "Luc M.",
+    content:
+      "I really love the style and fit of these shoes; they're almost perfect for me. However, there's a small detail that keeps me from rating them a full 5 out of 5. It's a minor gripe, but it does make a difference in how I feel about them overall.",
+    entity: {
+      id: "apex-air-max-1000",
+    },
+    rating: 4,
+    reviewDate: "2023-09-01T04:00:00Z",
+    reviewId: 1354108453,
+  },
+  {
+    $key: {
+      locale: "",
+      primary_key: "1354108087",
+    },
+    authorName: "Aaron P.",
+    content:
+      "The product quality is amazing, it looks and feel even better than I had anticipated. Brilliant stuff! I would gladly recommend this store to my friends. And, now that I think of it... I actually have, many times!",
+    entity: {
+      id: "apex-air-max-1000",
+    },
+    rating: 5,
+    reviewDate: "2023-08-08T04:00:00Z",
+    reviewId: 1354108087,
+  },
 ];
-
-const fetchReviews = async ({
-  entityId,
-}: {
-  entityId: string;
-}): Promise<YextResponse<YextContent<Review>>> => {
-  const res = await fetch(
-    `https://cdn.yextapis.com/v2/accounts/me/content/productReviews?api_key=4a7567a5e8923bbffd81eb43fb4d9247&v=20230915&entity.id=${entityId}`
-  );
-  const json = await res.json();
-  return json as YextResponse<YextContent<Review>>;
-};
 
 export interface ReviewsProps {
   entityId: string;
@@ -56,7 +71,7 @@ export const initialProps: ReviewsProps = {
   },
   reviewDateTimeTextProps: {
     dateTime: "",
-    size: "Small",
+    size: "S",
     weight: "Medium",
     align: "Left",
     color: "Gray 500",
@@ -73,23 +88,12 @@ const Reviews = ({
   reviewContentTextProps,
   authorNameTextProps,
 }: ReviewsProps) => {
-  const [reviews, setReviews] = useState<Review[]>([]);
-
-  // useEffect on mount to fetch reviews
-  useEffect(() => {
-    fetchReviews({ entityId: "apex-air-max-1000" }).then((res) => {
-      if (res.response.docs) {
-        setReviews(res.response.docs);
-      } else {
-        setReviews(initialReviews);
-      }
-    });
-  }, []);
-
   return (
     <Container
       layout="column"
-      className="mt-6 space-y-10 divide-y divide-gray-200 border-b border-t border-gray-200 pb-10 sm:p-0 sm:px-0"
+      paddingTop="XL"
+      paddingBottom="XL"
+      className="mt-6 space-y-10 divide-y divide-gray-200 border-b border-t border-gray-200 "
     >
       {reviews.map((review) => (
         <Container

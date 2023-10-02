@@ -2,11 +2,16 @@ import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
 import Heading from "../components/atoms/Heading";
 import StyledText from "../components/atoms/StyledText";
-import Stars from "../components/atoms/Stars";
+import Stars from "../components/molecules/Stars";
 
 const ProductOverview = () => {
   return (
-    <Container layout="grid" className="sm:grid-cols-1">
+    <Container
+      layout="grid"
+      className="sm:grid-cols-1"
+      paddingTop="XL"
+      paddingBottom="XL"
+    >
       <Container className="lg:hidden">
         <Heading
           text="Product Name"
@@ -28,9 +33,18 @@ const ProductOverview = () => {
         <Container layout="row" className="gap-x-3">
           <Stars rating={5} />
         </Container>
-        <Button size="xxlarge" text="Add To Cart" className="mt-4" />
+        <Button
+          type="primary"
+          size="xxlarge"
+          text="Add To Cart"
+          className="mt-4"
+        />
       </Container>
-      <Container layout="column" className="lg:col-span-2 lg:row-start-1">
+      <Container
+        layout="column"
+        className="lg:col-span-2 lg:row-start-1"
+        paddingRight="M"
+      >
         <Heading
           className="hidden lg:block"
           text="Product Name"

@@ -4,7 +4,7 @@ import ProductCard from "../components/molecules/ProductCard";
 
 const RelatedProducts = () => {
   return (
-    <>
+    <Container layout="column" paddingTop="XL" paddingBottom="XL">
       <Container>
         <Heading
           rank="4"
@@ -17,7 +17,7 @@ const RelatedProducts = () => {
       </Container>
       <Container
         layout="grid"
-        className="mt-6 gap-x-6 gap-y-10 lg:grid-cols-4 xl:gap-x-8"
+        className="mt-6 gap-x-6 gap-y-16 lg:grid-cols-4 xl:gap-x-8"
       >
         <ProductCard
           name="Basic Tee"
@@ -52,7 +52,7 @@ const RelatedProducts = () => {
           color="Iso Dots"
         />
       </Container>
-    </>
+    </Container>
   );
 };
 

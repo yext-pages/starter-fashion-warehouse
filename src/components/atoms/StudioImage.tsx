@@ -2,12 +2,13 @@ import { cva } from "cva";
 import { cn } from "../../utils";
 import { ImageType } from "../../types/autogen";
 
-const studioImageVariants = cva("h-full w-full object-cover object-center", {
+const studioImageVariants = cva("", {
   variants: {
     aspectRatio: {
       "1:1": "aspect-w-1 aspect-h-1",
       "4:3": "aspect-w-4 aspect-h-3",
       "3:2": "aspect-w-3 aspect-h-2",
+      "5:4": "aspect-w-5 aspect-h-4",
       "5:3": "aspect-w-5 aspect-h-3",
       "16:9": "aspect-w-16 aspect-h-9",
       "3:1": "aspect-w-3 aspect-h-1",
@@ -31,6 +32,7 @@ export interface StudioImageProps {
     | "4:3"
     | "3:2"
     | "5:3"
+    | "5:4"
     | "16:9"
     | "3:1"
     | "2:3"
