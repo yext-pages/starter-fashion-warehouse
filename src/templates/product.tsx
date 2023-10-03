@@ -1,4 +1,11 @@
-import { GetPath, TemplateConfig, TemplateProps } from "@yext/pages";
+import {
+  GetHeadConfig,
+  GetPath,
+  HeadConfig,
+  TemplateConfig,
+  TemplateProps,
+  TemplateRenderProps,
+} from "@yext/pages";
 import Button from "../components/atoms/Button";
 import Container from "../components/atoms/Container";
 import Dropdown from "../components/atoms/Dropdown";
@@ -7,6 +14,8 @@ import Main from "../components/atoms/Main";
 import Page from "../components/atoms/Page";
 import StudioImage from "../components/atoms/StudioImage";
 import StyledText from "../components/atoms/StyledText";
+import Footer from "../components/molecules/Footer";
+import Header from "../components/molecules/Header";
 import ProductCard from "../components/molecules/ProductCard";
 import Reviews from "../components/molecules/Reviews";
 import Stars from "../components/molecules/Stars";
@@ -14,37 +23,45 @@ import "../index.css";
 
 export const config: TemplateConfig = {
   stream: {
-    $id: "studio-stream-id-air-ascend",
+    $id: "product",
     localization: { locales: ["en"] },
-    filter: { entityIds: ["air-elite-ascend-7000"] },
-    fields: ["slug"],
+    fields: ["name", "price", "c_productDescription", "photoGallery", "slug"],
+    filter: { entityTypes: ["product"] },
   },
 };
 export const getPath: GetPath<TemplateProps> = ({
   document,
 }: TemplateProps) => {
-  return `${document.slug}`;
+  return document.slug;
 };
 
-export const getHeadConfig = () => {
+export const getHeadConfig: GetHeadConfig<
+  TemplateRenderProps<{ name: string }>
+> = ({ document }): HeadConfig => {
   return {
+    title: document.name,
     charset: "UTF-8",
     viewport: "width=device-width, initial-scale=1",
   };
 };
 
-export default function AirAscend() {
+export default function Product({ document }: TemplateProps) {
   return (
     <Page>
-      <Main>
+      <Header />
+      <Main className="min-h-[calc(100vh-384px)]">
         <Container
           layout="grid"
-          className={`mt-6 sm:grid-cols-1 lg:gap-x-8`}
           paddingBottom="M"
+          className={`mt-6 sm:grid-cols-1 lg:gap-x-8`}
         >
           <StudioImage
-            image={{ url: "https://placehold.co/300x612", alt: "placeholder" }}
-            className={`aspect-h-4 aspect-w-3 mx-auto hidden overflow-hidden rounded-lg lg:block lg:max-h-[480px]`}
+            image={{
+              url: document.photoGallery[1].image.url,
+              alt: "placeholder",
+            }}
+            aspectRatio="4:3"
+            className={`mx-auto hidden overflow-hidden rounded-lg lg:block lg:max-h-[480px]`}
           />
           <Container
             layout="grid"
@@ -52,22 +69,28 @@ export default function AirAscend() {
           >
             <StudioImage
               image={{
-                url: "https://placehold.co/300x300",
+                url: document.photoGallery[2].image.url,
                 alt: "placeholder",
               }}
-              className="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:max-h-[225px]"
+              aspectRatio="3:2"
+              className="overflow-hidden rounded-lg lg:max-h-[225px]"
             />
             <StudioImage
               image={{
-                url: "https://placehold.co/300x300",
+                url: document.photoGallery[3].image.url,
                 alt: "placeholder",
               }}
-              className={`aspect-h-2 aspect-w-3 overflow-hidden rounded-lg lg:max-h-[225px]`}
+              aspectRatio="3:2"
+              className={`overflow-hidden rounded-lg lg:max-h-[225px]`}
             />
           </Container>
           <StudioImage
-            image={{ url: "https://placehold.co/300x612", alt: "placeholder" }}
-            className="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 max-h-[480px] sm:overflow-hidden sm:rounded-lg"
+            image={{
+              url: document.photoGallery[0].image.url,
+              alt: "placeholder",
+            }}
+            aspectRatio="5:4"
+            className="lg:aspect-h-4 lg:aspect-w-3 max-h-[480px] sm:overflow-hidden sm:rounded-lg"
           />
         </Container>
         <Container
@@ -78,7 +101,7 @@ export default function AirAscend() {
         >
           <Container className="lg:hidden">
             <Heading
-              text="Product Name"
+              text={`${document.name}`}
               rank="1"
               size="XXL"
               align="Left"
@@ -86,14 +109,9 @@ export default function AirAscend() {
               fontWeight="Bold"
             />
           </Container>
-          <Container
-            layout="column"
-            className="gap-y-2"
-            paddingTop="S"
-            paddingBottom="M"
-          >
+          <Container layout="column" className="gap-y-2">
             <StyledText
-              text={`$0.00`}
+              text={`$ ${document.price.value}`}
               size="XL"
               weight="Medium"
               align="Left"
@@ -103,10 +121,10 @@ export default function AirAscend() {
               <Stars rating={5} />
             </Container>
             <Button
+              type="primary"
               size="xxlarge"
               text="Add To Cart"
               className="mt-4"
-              type="primary"
             />
           </Container>
           <Container
@@ -116,7 +134,7 @@ export default function AirAscend() {
           >
             <Heading
               className="hidden lg:block"
-              text="Product Name"
+              text={document.name}
               rank="1"
               size="XXL"
               align="Left"
@@ -124,7 +142,7 @@ export default function AirAscend() {
               fontWeight="Bold"
             />
             <StyledText
-              text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              text={`${document.c_productDescription}`}
               size="M"
               weight="Medium"
               align="Left"
@@ -132,7 +150,19 @@ export default function AirAscend() {
             />
           </Container>
         </Container>
-        <Container layout="column">
+        <Container
+          layout="column"
+          className="mx-auto"
+          paddingTop="XL"
+          paddingBottom="XL"
+        >
+          <Container layout="row" className="justify-between px-0 sm:px-0">
+            <Heading rank="3" text="Reviews" fontWeight="Bold" size="L" />
+            <Dropdown />
+          </Container>
+          <Reviews entityId="apex-air-max-1000" />
+        </Container>
+        <Container layout="column" paddingTop="XL" paddingBottom="XL">
           <Container>
             <Heading
               rank="4"
@@ -145,7 +175,7 @@ export default function AirAscend() {
           </Container>
           <Container
             layout="grid"
-            className="mt-6 gap-x-6 gap-y-10 lg:grid-cols-4 xl:gap-x-8"
+            className="mt-6 gap-x-6 gap-y-16 lg:grid-cols-4 xl:gap-x-8"
           >
             <ProductCard
               name="Basic Tee"
@@ -181,19 +211,8 @@ export default function AirAscend() {
             />
           </Container>
         </Container>
-        <Container
-          layout="column"
-          className="mx-auto"
-          paddingTop="XL"
-          paddingBottom="XL"
-        >
-          <Container layout="row" className="justify-between px-0 sm:px-0">
-            <Heading rank="3" text="Reviews" fontWeight="Bold" size="L" />
-            <Dropdown />
-          </Container>
-          <Reviews entityId="apex-air-max-1000" />
-        </Container>
       </Main>
+      <Footer />
     </Page>
   );
 }

@@ -389,11 +389,7 @@ const Header = () => {
                   {/* Logo (lg-) */}
                   <a href="#" className="lg:hidden">
                     <span className="sr-only">Your Company</span>
-                    <img
-                      src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                      alt=""
-                      className="h-8 w-auto"
-                    />
+                    <img src={yextImg} alt="" className="h-8 w-auto" />
                   </a>
 
                   <div className="flex flex-1 items-center justify-end">

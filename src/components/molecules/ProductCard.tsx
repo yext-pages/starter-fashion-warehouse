@@ -40,7 +40,7 @@ const ProductCard = ({
           }}
         />
       )}
-      <div className="mt-24 flex justify-between">
+      <div className=" flex justify-between">
         <div>
           <Heading rank="4" color="Gray 900" size="S" text={name ?? ""} />
           <StyledText
