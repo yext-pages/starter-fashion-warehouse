@@ -1,26 +1,27 @@
-import { ComplexImage } from "../../types/autogen";
-import Heading from "../atoms/Heading";
+import { RelatedProduct } from "../../types/autogen";
 import StudioImage from "../atoms/StudioImage";
+import StyledLink from "../atoms/StyledLink";
 import StyledText from "../atoms/StyledText";
 
 export interface ProductCardProps {
-  product?: {
-    name?: string;
-    slug?: string;
-    photoGallery?: ComplexImage[];
-    price?: {
-      value: number;
-    };
-  };
+  product?: RelatedProduct;
 }
 
 export const initialProps: ProductCardProps = {
   product: {
-    name: "",
-    slug: "",
-    photoGallery: [],
+    name: "Product A",
+    slug: "#",
+    photoGallery: [
+      {
+        image: {
+          url: "https://placehold.co/300x300",
+          height: 300,
+          width: 300,
+        },
+      },
+    ],
     price: {
-      value: 0,
+      value: 99,
     },
   },
 };
@@ -39,7 +40,11 @@ const ProductCard = ({ product }: ProductCardProps) => {
         />
       )}
       <div className="mt-4 flex items-baseline justify-between">
-        <Heading rank="4" color="Gray 900" size="M" text={product.name ?? ""} />
+        <StyledLink
+          type={"Secondary"}
+          label={product.name}
+          href={product.slug ?? "#"}
+        />
         {product.price?.value && (
           <StyledText
             color="Gray 900"
