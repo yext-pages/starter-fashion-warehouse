@@ -8,8 +8,8 @@ const ReviewsSection = () => {
     <Container
       layout="column"
       className="mx-auto"
-      paddingTop="XL"
-      paddingBottom="XL"
+      paddingTop="M"
+      paddingBottom="M"
     >
       <Container layout="row" className="justify-between px-0 sm:px-0">
         <Heading rank="3" text="Reviews" fontWeight="Bold" size="L" />

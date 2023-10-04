@@ -25,7 +25,17 @@ export const config: TemplateConfig = {
   stream: {
     $id: "product",
     localization: { locales: ["en"] },
-    fields: ["name", "price", "c_productDescription", "photoGallery", "slug"],
+    fields: [
+      "photoGallery",
+      "name",
+      "price",
+      "c_productDescription",
+      "c_relatedProducts.name",
+      "c_relatedProducts.slug",
+      "c_relatedProducts.photoGallery",
+      "c_relatedProducts.price",
+      "slug",
+    ],
     filter: { entityTypes: ["product"] },
   },
 };
@@ -57,8 +67,12 @@ export default function Product({ document }: TemplateProps) {
         >
           <StudioImage
             image={{
-              url: document.photoGallery[1].image.url,
-              alt: "placeholder",
+              image: {
+                url: document.photoGallery[1].image.url,
+                alternateText: document.photoGallery[1].image.alternateText,
+                height: document.photoGallery[1].image.height,
+                width: document.photoGallery[1].image.width,
+              },
             }}
             aspectRatio="4:3"
             className={`mx-auto hidden overflow-hidden rounded-lg lg:block lg:max-h-[480px]`}
@@ -69,16 +83,24 @@ export default function Product({ document }: TemplateProps) {
           >
             <StudioImage
               image={{
-                url: document.photoGallery[2].image.url,
-                alt: "placeholder",
+                image: {
+                  url: document.photoGallery[2].image.url,
+                  alternateText: document.photoGallery[2].image.alternateText,
+                  height: document.photoGallery[2].image.height,
+                  width: document.photoGallery[2].image.width,
+                },
               }}
               aspectRatio="3:2"
               className="overflow-hidden rounded-lg lg:max-h-[225px]"
             />
             <StudioImage
               image={{
-                url: document.photoGallery[3].image.url,
-                alt: "placeholder",
+                image: {
+                  url: document.photoGallery[3].image.url,
+                  alternateText: document.photoGallery[3].image.alternateText,
+                  height: document.photoGallery[3].image.height,
+                  width: document.photoGallery[3].image.width,
+                },
               }}
               aspectRatio="3:2"
               className={`overflow-hidden rounded-lg lg:max-h-[225px]`}
@@ -86,8 +108,12 @@ export default function Product({ document }: TemplateProps) {
           </Container>
           <StudioImage
             image={{
-              url: document.photoGallery[0].image.url,
-              alt: "placeholder",
+              image: {
+                url: document.photoGallery[0].image.url,
+                alternateText: document.photoGallery[0].image.alternateText,
+                height: document.photoGallery[0].image.height,
+                width: document.photoGallery[0].image.width,
+              },
             }}
             aspectRatio="5:4"
             className="lg:aspect-h-4 lg:aspect-w-3 max-h-[480px] sm:overflow-hidden sm:rounded-lg"
@@ -103,7 +129,7 @@ export default function Product({ document }: TemplateProps) {
             <Heading
               text={`${document.name}`}
               rank="1"
-              size="XXL"
+              size="L"
               align="Left"
               color="Gray 900"
               fontWeight="Bold"
@@ -177,38 +203,10 @@ export default function Product({ document }: TemplateProps) {
             layout="grid"
             className="mt-6 gap-x-6 gap-y-16 lg:grid-cols-4 xl:gap-x-8"
           >
-            <ProductCard
-              name="Basic Tee"
-              href="#"
-              imageUrl="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
-              imageAlt="Front of men's Basic Tee in black."
-              price="$35"
-              color="Black"
-            />
-            <ProductCard
-              name="Basic Tee"
-              href="#"
-              imageUrl="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg"
-              imageAlt="Front of men's Basic Tee in white."
-              price="$35"
-              color="Aspen White"
-            />
-            <ProductCard
-              name="Basic Tee"
-              href="#"
-              imageUrl="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg"
-              imageAlt="Front of men's Basic Tee in charcoal."
-              price="$35"
-              color="Charcoal"
-            />
-            <ProductCard
-              name="Basic Tee"
-              href="#"
-              imageUrl="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg"
-              imageAlt="Front of men's Basic Tee in iso dots."
-              price="$35"
-              color="Iso Dots"
-            />
+            <ProductCard product={document.c_relatedProducts?.[0]} />
+            <ProductCard product={document.c_relatedProducts?.[1]} />
+            <ProductCard product={document.c_relatedProducts?.[2]} />
+            <ProductCard product={document.c_relatedProducts?.[3]} />
           </Container>
         </Container>
       </Main>

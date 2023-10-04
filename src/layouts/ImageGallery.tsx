@@ -1,22 +1,22 @@
-import { ImageType } from "../types/autogen";
 import Container from "../components/atoms/Container";
 import StudioImage from "../components/atoms/StudioImage";
 
-export interface ImageGalleryProps {
-  images: ImageType[];
-}
-
-const ImageGallery = ({ images }: ImageGalleryProps) => {
+const ImageGallery = () => {
   return (
     <Container
       layout="grid"
       paddingBottom="M"
+      paddingTop="M"
       className={`mt-6 sm:grid-cols-1 lg:gap-x-8`}
     >
       <StudioImage
         image={{
-          url: "https://placehold.co/300x612",
-          alt: "placeholder",
+          image: {
+            url: "https://placehold.co/300x300",
+            alternateText: "placeholder",
+            width: 300,
+            height: 300,
+          },
         }}
         aspectRatio="4:3"
         className={`mx-auto hidden overflow-hidden rounded-lg lg:block lg:max-h-[480px]`}
@@ -27,16 +27,24 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
       >
         <StudioImage
           image={{
-            url: "https://placehold.co/300x300",
-            alt: "placeholder",
+            image: {
+              url: "https://placehold.co/300x300",
+              alternateText: "placeholder",
+              width: 300,
+              height: 300,
+            },
           }}
           aspectRatio="3:2"
           className="overflow-hidden rounded-lg lg:max-h-[225px]"
         />
         <StudioImage
           image={{
-            url: "https://placehold.co/300x300",
-            alt: "placeholder",
+            image: {
+              url: "https://placehold.co/300x300",
+              alternateText: "placeholder",
+              width: 300,
+              height: 300,
+            },
           }}
           aspectRatio="3:2"
           className={`overflow-hidden rounded-lg lg:max-h-[225px]`}
@@ -44,8 +52,12 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
       </Container>
       <StudioImage
         image={{
-          url: "https://placehold.co/300x612",
-          alt: "placeholder",
+          image: {
+            url: "https://placehold.co/300x300",
+            alternateText: "placeholder",
+            width: 300,
+            height: 300,
+          },
         }}
         aspectRatio="5:4"
         className="lg:aspect-h-4 lg:aspect-w-3 max-h-[480px] sm:overflow-hidden sm:rounded-lg"

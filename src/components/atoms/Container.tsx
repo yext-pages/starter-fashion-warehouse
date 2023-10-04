@@ -1,6 +1,5 @@
 import { type VariantProps, cva } from "class-variance-authority";
 import { cn } from "../../utils";
-import React from "react";
 import {
   paddingLeft,
   paddingBottom,

@@ -4,7 +4,7 @@ import ProductCard from "../components/molecules/ProductCard";
 
 const RelatedProducts = () => {
   return (
-    <Container layout="column" paddingTop="XL" paddingBottom="XL">
+    <Container layout="column" paddingTop="M" paddingBottom="M">
       <Container>
         <Heading
           rank="4"
@@ -20,36 +20,76 @@ const RelatedProducts = () => {
         className="mt-6 gap-x-6 gap-y-16 lg:grid-cols-4 xl:gap-x-8"
       >
         <ProductCard
-          name="Basic Tee"
-          href="#"
-          imageUrl="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
-          imageAlt="Front of men's Basic Tee in black."
-          price="$35"
-          color="Black"
+          product={{
+            name: "Basic Tee",
+            slug: "#",
+            price: {
+              value: 35,
+            },
+            photoGallery: [
+              {
+                image: {
+                  url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
+                  width: 498,
+                  height: 498,
+                },
+              },
+            ],
+          }}
         />
         <ProductCard
-          name="Basic Tee"
-          href="#"
-          imageUrl="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg"
-          imageAlt="Front of men's Basic Tee in white."
-          price="$35"
-          color="Aspen White"
+          product={{
+            name: "Basic Tee",
+            slug: "#",
+            price: {
+              value: 35,
+            },
+            photoGallery: [
+              {
+                image: {
+                  url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-02.jpg",
+                  width: 498,
+                  height: 498,
+                },
+              },
+            ],
+          }}
         />
         <ProductCard
-          name="Basic Tee"
-          href="#"
-          imageUrl="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg"
-          imageAlt="Front of men's Basic Tee in charcoal."
-          price="$35"
-          color="Charcoal"
+          product={{
+            name: "Basic Tee",
+            slug: "#",
+            price: {
+              value: 35,
+            },
+            photoGallery: [
+              {
+                image: {
+                  url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg",
+                  width: 498,
+                  height: 498,
+                },
+              },
+            ],
+          }}
         />
         <ProductCard
-          name="Basic Tee"
-          href="#"
-          imageUrl="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-03.jpg"
-          imageAlt="Front of men's Basic Tee in iso dots."
-          price="$35"
-          color="Iso Dots"
+          product={{
+            name: "Basic Tee",
+            slug: "#",
+            price: {
+              value: 35,
+            },
+            photoGallery: [
+              {
+                image: {
+                  url: "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-04.jpg",
+                  width: 498,
+                  height: 498,
+                },
+              },
+            ],
+          }}
         />
       </Container>
     </Container>

@@ -9,8 +9,8 @@ const ProductOverview = () => {
     <Container
       layout="grid"
       className="sm:grid-cols-1"
-      paddingTop="XL"
-      paddingBottom="XL"
+      paddingTop="M"
+      paddingBottom="M"
     >
       <Container className="lg:hidden">
         <Heading

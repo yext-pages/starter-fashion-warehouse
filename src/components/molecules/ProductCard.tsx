@@ -1,56 +1,53 @@
+import { ComplexImage } from "../../types/autogen";
 import Heading from "../atoms/Heading";
-import Image from "../atoms/StudioImage";
+import StudioImage from "../atoms/StudioImage";
 import StyledText from "../atoms/StyledText";
 
 export interface ProductCardProps {
-  name?: string;
-  href?: string;
-  imageUrl?: string;
-  imageAlt?: string;
-  price?: string;
-  color?: string;
+  product?: {
+    name?: string;
+    slug?: string;
+    photoGallery?: ComplexImage[];
+    price?: {
+      value: number;
+    };
+  };
 }
 
 export const initialProps: ProductCardProps = {
-  name: "Basic Tee",
-  href: "#",
-  imageUrl:
-    "https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg",
-  imageAlt: "Front of men's Basic Tee in black.",
-  price: "$35",
-  color: "Black",
+  product: {
+    name: "",
+    slug: "",
+    photoGallery: [],
+    price: {
+      value: 0,
+    },
+  },
 };
 
-const ProductCard = ({
-  name,
-  href,
-  imageUrl,
-  imageAlt,
-  price,
-  color,
-}: ProductCardProps) => {
+const ProductCard = ({ product }: ProductCardProps) => {
+  if (!product) return null;
+
+  const photo = product?.photoGallery?.[0];
+
   return (
     <div className="group relative">
-      {imageUrl && (
-        <Image
-          className="lg:aspect-none w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80"
-          aspectRatio="1:1"
-          image={{
-            url: imageUrl,
-          }}
+      {photo && (
+        <StudioImage
+          className="lg:aspect-none aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80"
+          image={photo}
         />
       )}
-      <div className=" flex justify-between">
-        <div>
-          <Heading rank="4" color="Gray 900" size="S" text={name ?? ""} />
+      <div className="mt-4 flex items-baseline justify-between">
+        <Heading rank="4" color="Gray 900" size="M" text={product.name ?? ""} />
+        {product.price?.value && (
           <StyledText
-            className="mt-1"
-            color={"Gray 500"}
-            size="S"
-            text={color}
+            color="Gray 900"
+            weight="Medium"
+            size="M"
+            text={`$${product.price.value.toString()}`}
           />
-        </div>
-        <StyledText color="Gray 900" weight="Medium" size="S" text={price} />
+        )}
       </div>
     </div>
   );
