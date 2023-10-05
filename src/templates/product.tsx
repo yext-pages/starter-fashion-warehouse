@@ -1,11 +1,4 @@
-import {
-  GetHeadConfig,
-  GetPath,
-  HeadConfig,
-  TemplateConfig,
-  TemplateProps,
-  TemplateRenderProps,
-} from "@yext/pages";
+import { GetPath, TemplateConfig, TemplateProps } from "@yext/pages";
 import Main from "../components/atoms/Main";
 import Page from "../components/atoms/Page";
 import Footer from "../components/molecules/Footer";
@@ -24,20 +17,11 @@ export const config: TemplateConfig = {
     filter: { entityTypes: ["product"] },
   },
 };
+
 export const getPath: GetPath<TemplateProps> = ({
   document,
 }: TemplateProps) => {
   return document.slug;
-};
-
-export const getHeadConfig: GetHeadConfig<
-  TemplateRenderProps<{ name: string }>
-> = ({ document }): HeadConfig => {
-  return {
-    title: document.name,
-    charset: "UTF-8",
-    viewport: "width=device-width, initial-scale=1",
-  };
 };
 
 export default function Product({ document }: TemplateProps) {
