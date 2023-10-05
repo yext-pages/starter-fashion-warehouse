@@ -1,0 +1,145 @@
+{
+  "$id": "air-elite-ascend-7000",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "c_productDescription": "Elevate your game with these cutting-edge basketball shoes, designed specifically for dynamic players on the court. Crafted with precision from top-tier materials, these shoes offer unparalleled grip, responsiveness, and support. The ergonomic design ensures a snug fit, reducing the risk of injuries while enhancing agility and speed. Ventilation zones and a cushioned insole work together to provide optimal comfort, even during the most intense matches. Make a statement on the court, both in performance and style, with these game-changing basketball shoes.",
+    "c_relatedProducts": [
+      "apex-air-max-1000",
+      "active-essential-hoodie",
+      "premium-crew-90",
+      "the-signature-tee"
+    ],
+    "name": "Air Elite Ascend 7000",
+    "photoGallery": [
+      {
+        "image": {
+          "height": 2961,
+          "sourceUrl": "https://images.unsplash.com/photo-1581619714043-c1289ada25f5?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d1974\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 2961,
+              "url": "https://a.mktgcdn.com/p/8I4rPMbrt5CDleIprss9msi9JUD46jcDHT5lb3kSThU/1974x2961.jpg",
+              "width": 1974
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/8I4rPMbrt5CDleIprss9msi9JUD46jcDHT5lb3kSThU/1974x2961.jpg",
+          "width": 1974
+        }
+      },
+      {
+        "image": {
+          "height": 4631,
+          "sourceUrl": "https://images.unsplash.com/photo-1588117260148-b47818741c74?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d3087\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 4631,
+              "url": "https://a.mktgcdn.com/p/UuvMibqukl1jq5PMDe374LRTsOgRiTYUBStLdwD4A1Y/3087x4631.jpg",
+              "width": 3087
+            },
+            {
+              "height": 1900,
+              "url": "https://a.mktgcdn.com/p/UuvMibqukl1jq5PMDe374LRTsOgRiTYUBStLdwD4A1Y/1267x1900.jpg",
+              "width": 1267
+            },
+            {
+              "height": 929,
+              "url": "https://a.mktgcdn.com/p/UuvMibqukl1jq5PMDe374LRTsOgRiTYUBStLdwD4A1Y/619x929.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/UuvMibqukl1jq5PMDe374LRTsOgRiTYUBStLdwD4A1Y/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/UuvMibqukl1jq5PMDe374LRTsOgRiTYUBStLdwD4A1Y/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/UuvMibqukl1jq5PMDe374LRTsOgRiTYUBStLdwD4A1Y/3087x4631.jpg",
+          "width": 3087
+        }
+      },
+      {
+        "image": {
+          "height": 1380,
+          "sourceUrl": "https://images.unsplash.com/photo-1581619883162-4a1aa0a6a0c4?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d2070\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 1380,
+              "url": "https://a.mktgcdn.com/p/y_wsm-XHCf83_YzaoOdh7kbJcYgx55z-JjbBYwZ1Zd0/2070x1380.jpg",
+              "width": 2070
+            },
+            {
+              "height": 1267,
+              "url": "https://a.mktgcdn.com/p/y_wsm-XHCf83_YzaoOdh7kbJcYgx55z-JjbBYwZ1Zd0/1900x1267.jpg",
+              "width": 1900
+            },
+            {
+              "height": 413,
+              "url": "https://a.mktgcdn.com/p/y_wsm-XHCf83_YzaoOdh7kbJcYgx55z-JjbBYwZ1Zd0/619x413.jpg",
+              "width": 619
+            },
+            {
+              "height": 400,
+              "url": "https://a.mktgcdn.com/p/y_wsm-XHCf83_YzaoOdh7kbJcYgx55z-JjbBYwZ1Zd0/600x400.jpg",
+              "width": 600
+            },
+            {
+              "height": 131,
+              "url": "https://a.mktgcdn.com/p/y_wsm-XHCf83_YzaoOdh7kbJcYgx55z-JjbBYwZ1Zd0/196x131.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/y_wsm-XHCf83_YzaoOdh7kbJcYgx55z-JjbBYwZ1Zd0/2070x1380.jpg",
+          "width": 2070
+        }
+      },
+      {
+        "image": {
+          "height": 2961,
+          "sourceUrl": "https://images.unsplash.com/photo-1581619818895-ab2029baf938?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d1974\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 2961,
+              "url": "https://a.mktgcdn.com/p/4MGdPgulCjUGzUQ9PnhvH6sHd03dckUW4k211znmi5k/1974x2961.jpg",
+              "width": 1974
+            },
+            {
+              "height": 1900,
+              "url": "https://a.mktgcdn.com/p/4MGdPgulCjUGzUQ9PnhvH6sHd03dckUW4k211znmi5k/1267x1900.jpg",
+              "width": 1267
+            },
+            {
+              "height": 929,
+              "url": "https://a.mktgcdn.com/p/4MGdPgulCjUGzUQ9PnhvH6sHd03dckUW4k211znmi5k/619x929.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/4MGdPgulCjUGzUQ9PnhvH6sHd03dckUW4k211znmi5k/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/4MGdPgulCjUGzUQ9PnhvH6sHd03dckUW4k211znmi5k/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/4MGdPgulCjUGzUQ9PnhvH6sHd03dckUW4k211znmi5k/1974x2961.jpg",
+          "width": 1974
+        }
+      }
+    ],
+    "price": {
+      "currencyCode": "USD",
+      "value": "129"
+    },
+    "slug": "air-elite-ascend-7000"
+  },
+  "entityType": "product",
+  "folder": "yext/root",
+  "labels": []
+}

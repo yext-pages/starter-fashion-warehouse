@@ -1,13 +1,12 @@
 {
-  "$id": "blogStarter_subHeading",
+  "$id": "c_productDescription",
   "$schema": "https://schema.yext.com/config/km/field/v1",
-  "description": "",
-  "displayName": "Sub Heading",
+  "displayName": "Product Description",
   "group": "NONE",
   "localization": "PRIMARY_ONLY",
   "type": {
     "stringType": {
-      "stereotype": "SIMPLE",
+      "stereotype": "MULTILINE",
       "maxLength": 100000
     }
   },

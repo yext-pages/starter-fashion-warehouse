@@ -1,0 +1,165 @@
+{
+  "$id": "the-signature-tee",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "c_productDescription": "Embrace the epitome of timeless style with our classic white T-shirt. Crafted from the softest cotton, it caresses your skin, offering unmatched comfort and breathability, making it a perfect choice for any day and any look. The pristine white hue exudes a fresh and contemporary vibe, effortlessly enhancing your style quotient. Its versatile design flawlessly transitions from a casual day look to a chic evening ensemble, promising to be a cherished staple in your wardrobe. Experience the perfect blend of comfort, simplicity, and elegance with this quintessential white T-shirt, where everyday fashion meets endless sophistication.",
+    "c_relatedProducts": [
+      "active-essential-hoodie",
+      "air-elite-ascend-7000",
+      "apex-air-max-1000",
+      "premium-crew-90"
+    ],
+    "name": "The Signature Tee",
+    "photoGallery": [
+      {
+        "image": {
+          "height": 1980,
+          "sourceUrl": "https://images.unsplash.com/photo-1576417677416-6ca3adfb5435?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d2970\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 1980,
+              "url": "https://a.mktgcdn.com/p/l5qzBmuwnF3OlRzGYw96x3p0CCwt946FHXmopc9QIso/2970x1980.jpg",
+              "width": 2970
+            },
+            {
+              "height": 1267,
+              "url": "https://a.mktgcdn.com/p/l5qzBmuwnF3OlRzGYw96x3p0CCwt946FHXmopc9QIso/1900x1267.jpg",
+              "width": 1900
+            },
+            {
+              "height": 413,
+              "url": "https://a.mktgcdn.com/p/l5qzBmuwnF3OlRzGYw96x3p0CCwt946FHXmopc9QIso/619x413.jpg",
+              "width": 619
+            },
+            {
+              "height": 400,
+              "url": "https://a.mktgcdn.com/p/l5qzBmuwnF3OlRzGYw96x3p0CCwt946FHXmopc9QIso/600x400.jpg",
+              "width": 600
+            },
+            {
+              "height": 131,
+              "url": "https://a.mktgcdn.com/p/l5qzBmuwnF3OlRzGYw96x3p0CCwt946FHXmopc9QIso/196x131.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/l5qzBmuwnF3OlRzGYw96x3p0CCwt946FHXmopc9QIso/2970x1980.jpg",
+          "width": 2970
+        }
+      },
+      {
+        "image": {
+          "height": 3000,
+          "sourceUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d3000\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 3000,
+              "url": "https://a.mktgcdn.com/p/zdILKuJoAQvwF1INPme6x6acVO3rGFUnASGZ37Fto-M/3000x3000.jpg",
+              "width": 3000
+            },
+            {
+              "height": 1900,
+              "url": "https://a.mktgcdn.com/p/zdILKuJoAQvwF1INPme6x6acVO3rGFUnASGZ37Fto-M/1900x1900.jpg",
+              "width": 1900
+            },
+            {
+              "height": 619,
+              "url": "https://a.mktgcdn.com/p/zdILKuJoAQvwF1INPme6x6acVO3rGFUnASGZ37Fto-M/619x619.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/zdILKuJoAQvwF1INPme6x6acVO3rGFUnASGZ37Fto-M/450x450.jpg",
+              "width": 450
+            },
+            {
+              "height": 196,
+              "url": "https://a.mktgcdn.com/p/zdILKuJoAQvwF1INPme6x6acVO3rGFUnASGZ37Fto-M/196x196.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/zdILKuJoAQvwF1INPme6x6acVO3rGFUnASGZ37Fto-M/3000x3000.jpg",
+          "width": 3000
+        }
+      },
+      {
+        "image": {
+          "height": 1982,
+          "sourceUrl": "https://images.unsplash.com/photo-1505308105194-5f5be740d93d?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d2969\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 1982,
+              "url": "https://a.mktgcdn.com/p/o66-BpDHQVkZlxQD_zCdQCBfSGXsxdbL0n7esOmlWoA/2969x1982.jpg",
+              "width": 2969
+            },
+            {
+              "height": 1268,
+              "url": "https://a.mktgcdn.com/p/o66-BpDHQVkZlxQD_zCdQCBfSGXsxdbL0n7esOmlWoA/1900x1268.jpg",
+              "width": 1900
+            },
+            {
+              "height": 413,
+              "url": "https://a.mktgcdn.com/p/o66-BpDHQVkZlxQD_zCdQCBfSGXsxdbL0n7esOmlWoA/619x413.jpg",
+              "width": 619
+            },
+            {
+              "height": 401,
+              "url": "https://a.mktgcdn.com/p/o66-BpDHQVkZlxQD_zCdQCBfSGXsxdbL0n7esOmlWoA/600x401.jpg",
+              "width": 600
+            },
+            {
+              "height": 131,
+              "url": "https://a.mktgcdn.com/p/o66-BpDHQVkZlxQD_zCdQCBfSGXsxdbL0n7esOmlWoA/196x131.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/o66-BpDHQVkZlxQD_zCdQCBfSGXsxdbL0n7esOmlWoA/2969x1982.jpg",
+          "width": 2969
+        }
+      },
+      {
+        "image": {
+          "height": 3168,
+          "sourceUrl": "https://images.unsplash.com/photo-1581655353564-df123a1eb820?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d2112\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 3168,
+              "url": "https://a.mktgcdn.com/p/Umu8HWmRTyY5r8na6U76ogcd5oBxtb-AviV8fsU9RR8/2112x3168.jpg",
+              "width": 2112
+            },
+            {
+              "height": 1900,
+              "url": "https://a.mktgcdn.com/p/Umu8HWmRTyY5r8na6U76ogcd5oBxtb-AviV8fsU9RR8/1267x1900.jpg",
+              "width": 1267
+            },
+            {
+              "height": 929,
+              "url": "https://a.mktgcdn.com/p/Umu8HWmRTyY5r8na6U76ogcd5oBxtb-AviV8fsU9RR8/619x929.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/Umu8HWmRTyY5r8na6U76ogcd5oBxtb-AviV8fsU9RR8/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/Umu8HWmRTyY5r8na6U76ogcd5oBxtb-AviV8fsU9RR8/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/Umu8HWmRTyY5r8na6U76ogcd5oBxtb-AviV8fsU9RR8/2112x3168.jpg",
+          "width": 2112
+        }
+      }
+    ],
+    "price": {
+      "currencyCode": "USD",
+      "value": "59"
+    },
+    "slug": "[[entityId]]"
+  },
+  "entityType": "product",
+  "folder": "yext/root",
+  "labels": []
+}

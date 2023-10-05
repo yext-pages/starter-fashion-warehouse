@@ -52,21 +52,12 @@
     },
     {
       "entityType": "product",
-      "disabled": true
+      "defaultFieldEligibilityGroup": "product.default",
+      "disabled": false
     },
     {
       "entityType": "financialProfessional",
       "disabled": true
-    },
-    {
-      "entityType": "ce_homePage",
-      "defaultFieldEligibilityGroup": "ce_homePage.default",
-      "disabled": false
-    },
-    {
-      "entityType": "blogStarter_blog",
-      "defaultFieldEligibilityGroup": "ce_blog.default",
-      "disabled": false
     }
   ]
 }

@@ -1,0 +1,276 @@
+{
+  "$id": "apex-air-max-1000",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "c_productDescription": "Elevate your style with these pristine white shoes, exquisitely crafted to offer both comfort and sophistication. Made from high-quality materials, each pair promises longevity and resilience against daily wear and tear. The minimalist design ensures versatility, making them the perfect accompaniment to any outfit, be it casual or formal. Featuring a cushioned insole and a grippy sole, every step taken is a blend of support and confidence. Dive into a world where fashion meets function and let these white shoes be the statement piece of your wardrobe.",
+    "c_relatedProducts": [
+      "active-essential-hoodie",
+      "air-elite-ascend-7000",
+      "premium-crew-90",
+      "the-signature-tee"
+    ],
+    "name": "Apex Max Air 1000",
+    "photoGallery": [
+      {
+        "image": {
+          "height": 2381,
+          "sourceUrl": "https://images.unsplash.com/photo-1580902215262-9b941bc6eab3?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d3174\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 2381,
+              "url": "https://a.mktgcdn.com/p/obhFRB-XF9B3UBToXyvSyxlxbaM_wpuSZVmkVeFo-gc/3174x2381.jpg",
+              "width": 3174
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/obhFRB-XF9B3UBToXyvSyxlxbaM_wpuSZVmkVeFo-gc/3174x2381.jpg",
+          "width": 3174
+        }
+      },
+      {
+        "image": {
+          "height": 4032,
+          "sourceUrl": "https://images.unsplash.com/photo-1580902215245-bd46881c72c5?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d3024\u0026q\u003d80,",
+          "thumbnails": [
+            {
+              "height": 4032,
+              "url": "https://a.mktgcdn.com/p/7ENAw-8kSY4qxFfpGlHOC0Az_uHuLhBTeNmSkys3zdM/3024x4032.jpg",
+              "width": 3024
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/7ENAw-8kSY4qxFfpGlHOC0Az_uHuLhBTeNmSkys3zdM/3024x4032.jpg",
+          "width": 3024
+        }
+      },
+      {
+        "image": {
+          "height": 4232,
+          "sourceUrl": "https://images.unsplash.com/photo-1580902215223-647d515e04fa?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d3024\u0026q\u003d80,https://images.unsplash.com/photo-1580902215301-725c23d291f9?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d3174\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 4232,
+              "url": "https://a.mktgcdn.com/p/qNLtBLoGUvwYjTAf8CPHxt9sRr9GEbc4TIO8xX5IuTM/3174x4232.jpg",
+              "width": 3174
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/qNLtBLoGUvwYjTAf8CPHxt9sRr9GEbc4TIO8xX5IuTM/3174x4232.jpg",
+          "width": 3174
+        }
+      },
+      {
+        "image": {
+          "height": 2381,
+          "sourceUrl": "https://images.unsplash.com/photo-1580902215301-725c23d291f9?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d3174\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 2381,
+              "url": "https://a.mktgcdn.com/p/UzUZb3YGor8oaW8pd_KtqcCTSmjRacnN7jN5dtXYXaw/3174x2381.jpg",
+              "width": 3174
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/UzUZb3YGor8oaW8pd_KtqcCTSmjRacnN7jN5dtXYXaw/3174x2381.jpg",
+          "width": 3174
+        }
+      }
+    ],
+    "price": {
+      "currencyCode": "USD",
+      "value": "192"
+    },
+    "richTextDescriptionV2": {
+      "json": {
+        "root": {
+          "children": [
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "The Basic Tee 6-Pack allows you to fully express your vibrant personality with three grayscale options. Feeling adventurous? Put on a heather gray tee. Want to be a trendsetter? Try our exclusive colorway: \"Black\". Need to add an extra pop of color to your outfit? Our white tee has you covered.",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1
+            },
+            {
+              "children": [],
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1
+            },
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 1,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Highlights",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1
+            },
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "Hand cut and sewn locally",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "listitem",
+                  "value": 1,
+                  "version": 1
+                },
+                {
+                  "children": [
+                    {
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "Dyed with our proprietary colors",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "listitem",
+                  "value": 2,
+                  "version": 1
+                },
+                {
+                  "children": [
+                    {
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "Pre-washed \u0026 pre-shrunk",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "listitem",
+                  "value": 3,
+                  "version": 1
+                },
+                {
+                  "children": [
+                    {
+                      "detail": 0,
+                      "format": 0,
+                      "mode": "normal",
+                      "style": "",
+                      "text": "Ultra-soft 100% cotton",
+                      "type": "text",
+                      "version": 1
+                    }
+                  ],
+                  "direction": "ltr",
+                  "format": "",
+                  "indent": 0,
+                  "type": "listitem",
+                  "value": 4,
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "listType": "bullet",
+              "start": 1,
+              "tag": "ul",
+              "type": "list",
+              "version": 1
+            },
+            {
+              "children": [],
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1
+            },
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 1,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "Details",
+                  "type": "text",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1
+            },
+            {
+              "children": [
+                {
+                  "detail": 0,
+                  "format": 0,
+                  "mode": "normal",
+                  "style": "",
+                  "text": "The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming \"Charcoal Gray\" limited release.",
+                  "type": "text",
+                  "version": 1
+                },
+                {
+                  "type": "linebreak",
+                  "version": 1
+                }
+              ],
+              "direction": "ltr",
+              "format": "",
+              "indent": 0,
+              "type": "paragraph",
+              "version": 1
+            }
+          ],
+          "direction": "ltr",
+          "format": "",
+          "indent": 0,
+          "type": "root",
+          "version": 1
+        }
+      }
+    },
+    "slug": "product/[[entityId]]"
+  },
+  "entityType": "product",
+  "folder": "yext/root",
+  "labels": []
+}

@@ -1,0 +1,135 @@
+{
+  "$id": "premium-crew-90",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "c_productDescription": "Step into the world of effortless style with our pristine white sneakers. Meticulously crafted from premium materials, they offer a harmonious blend of comfort and durability, ensuring every stride is a confident one. The luminous white shade provides a touch of modern elegance, making it a versatile addition to any ensemble. From casual brunches to spirited evening outings, these sneakers seamlessly bridge the gap between laid-back and luxe. Dive feet first into a world where classic design meets contemporary flair, and let our white sneakers elevate your every step.",
+    "c_relatedProducts": [
+      "active-essential-hoodie",
+      "air-elite-ascend-7000",
+      "apex-air-max-1000",
+      "the-signature-tee"
+    ],
+    "name": "Premium Crew 90",
+    "photoGallery": [
+      {
+        "image": {
+          "height": 750,
+          "sourceUrl": "https://images.pexels.com/photos/18368125/pexels-photo-18368125/free-photo-of-man-wearing-nike-sneakers.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2,",
+          "thumbnails": [
+            {
+              "height": 750,
+              "url": "https://a.mktgcdn.com/p/Jbr8_Jl_owtk0Gx1FrJnFMIQ9cBskM0ifm6CHRzOCZU/500x750.jpg",
+              "width": 500
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/Jbr8_Jl_owtk0Gx1FrJnFMIQ9cBskM0ifm6CHRzOCZU/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/Jbr8_Jl_owtk0Gx1FrJnFMIQ9cBskM0ifm6CHRzOCZU/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/Jbr8_Jl_owtk0Gx1FrJnFMIQ9cBskM0ifm6CHRzOCZU/500x750.jpg",
+          "width": 500
+        }
+      },
+      {
+        "image": {
+          "height": 750,
+          "sourceUrl": "https://images.pexels.com/photos/18368118/pexels-photo-18368118/free-photo-of-a-person-wearing-nike-air-force-1-sneakers.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2,https://images.pexels.com/photos/18368131/pexels-photo-18368131/free-photo-of-man-wearing-nike-sneakers.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2,https://images.pexels.com/photos/18368121/pexels-photo-18368121/free-photo-of-a-person-wearing-nike-air-force-1-sneakers.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2",
+          "thumbnails": [
+            {
+              "height": 750,
+              "url": "https://a.mktgcdn.com/p/ZC2l68vo5kvRcLvfOntsyYFJZLl9a6qLKYQYYTVstQY/500x750.jpg",
+              "width": 500
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/ZC2l68vo5kvRcLvfOntsyYFJZLl9a6qLKYQYYTVstQY/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/ZC2l68vo5kvRcLvfOntsyYFJZLl9a6qLKYQYYTVstQY/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/ZC2l68vo5kvRcLvfOntsyYFJZLl9a6qLKYQYYTVstQY/500x750.jpg",
+          "width": 500
+        }
+      },
+      {
+        "image": {
+          "height": 1500,
+          "sourceUrl": "https://images.pexels.com/photos/18368121/pexels-photo-18368121/free-photo-of-a-person-wearing-nike-air-force-1-sneakers.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2",
+          "thumbnails": [
+            {
+              "height": 1500,
+              "url": "https://a.mktgcdn.com/p/kcq9xnHZ1hAdp9Tupid0N1Z-eoyeYReNMkUdEs8eEc4/1000x1500.jpg",
+              "width": 1000
+            },
+            {
+              "height": 929,
+              "url": "https://a.mktgcdn.com/p/kcq9xnHZ1hAdp9Tupid0N1Z-eoyeYReNMkUdEs8eEc4/619x929.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/kcq9xnHZ1hAdp9Tupid0N1Z-eoyeYReNMkUdEs8eEc4/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/kcq9xnHZ1hAdp9Tupid0N1Z-eoyeYReNMkUdEs8eEc4/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/kcq9xnHZ1hAdp9Tupid0N1Z-eoyeYReNMkUdEs8eEc4/1000x1500.jpg",
+          "width": 1000
+        }
+      },
+      {
+        "image": {
+          "height": 1500,
+          "sourceUrl": "https://images.pexels.com/photos/18368131/pexels-photo-18368131/free-photo-of-man-wearing-nike-sneakers.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2",
+          "thumbnails": [
+            {
+              "height": 1500,
+              "url": "https://a.mktgcdn.com/p/SHHwRtd8pQLV56IMwFetEzRmwnZoqC3conTOrBMv4no/1000x1500.jpg",
+              "width": 1000
+            },
+            {
+              "height": 929,
+              "url": "https://a.mktgcdn.com/p/SHHwRtd8pQLV56IMwFetEzRmwnZoqC3conTOrBMv4no/619x929.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/SHHwRtd8pQLV56IMwFetEzRmwnZoqC3conTOrBMv4no/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/SHHwRtd8pQLV56IMwFetEzRmwnZoqC3conTOrBMv4no/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/SHHwRtd8pQLV56IMwFetEzRmwnZoqC3conTOrBMv4no/1000x1500.jpg",
+          "width": 1000
+        }
+      }
+    ],
+    "price": {
+      "currencyCode": "USD",
+      "value": "109"
+    },
+    "slug": "[[entityId]]"
+  },
+  "entityType": "product",
+  "folder": "yext/root",
+  "labels": []
+}

@@ -1,0 +1,150 @@
+{
+  "$id": "active-essential-hoodie",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "c_productDescription": "Discover the epitome of sporty elegance with our Activewear Essential Hoodie in a sophisticated shade of gray. Expertly woven from high-performance fabrics, this hoodie not only promises to keep you warm but also ensures maximum comfort during all your active pursuits. The neutral gray hue offers a versatile touch, making it an effortless match for any outfit, from gym gear to casual streetwear. With its sleek design and a focus on functionality, the Activewear Essential Hoodie is your go-to piece for both intense workouts and laid-back lounging. Elevate your athleisure game and wrap yourself in the perfect blend of style and performance with this must-have hoodie.",
+    "c_relatedProducts": [
+      "air-elite-ascend-7000",
+      "apex-air-max-1000",
+      "premium-crew-90",
+      "the-signature-tee"
+    ],
+    "name": "Activewear Essential Hoodie",
+    "photoGallery": [
+      {
+        "image": {
+          "height": 750,
+          "sourceUrl": "https://images.pexels.com/photos/572463/pexels-photo-572463.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2,",
+          "thumbnails": [
+            {
+              "height": 750,
+              "url": "https://a.mktgcdn.com/p/eVkzH3QJL9rLkUVeaNcCmXRgOsqO-_WOYTO0vDCQdU4/1125x750.jpg",
+              "width": 1125
+            },
+            {
+              "height": 413,
+              "url": "https://a.mktgcdn.com/p/eVkzH3QJL9rLkUVeaNcCmXRgOsqO-_WOYTO0vDCQdU4/619x413.jpg",
+              "width": 619
+            },
+            {
+              "height": 400,
+              "url": "https://a.mktgcdn.com/p/eVkzH3QJL9rLkUVeaNcCmXRgOsqO-_WOYTO0vDCQdU4/600x400.jpg",
+              "width": 600
+            },
+            {
+              "height": 131,
+              "url": "https://a.mktgcdn.com/p/eVkzH3QJL9rLkUVeaNcCmXRgOsqO-_WOYTO0vDCQdU4/196x131.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/eVkzH3QJL9rLkUVeaNcCmXRgOsqO-_WOYTO0vDCQdU4/1125x750.jpg",
+          "width": 1125
+        }
+      },
+      {
+        "image": {
+          "height": 750,
+          "sourceUrl": "https://images.pexels.com/photos/1192335/pexels-photo-1192335.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2,https://images.pexels.com/photos/634785/pexels-photo-634785.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2",
+          "thumbnails": [
+            {
+              "height": 750,
+              "url": "https://a.mktgcdn.com/p/5gOi1b90svp8tMZU-Kw2pgsEWyeSRh1xmufuemXYuYU/1125x750.jpg",
+              "width": 1125
+            },
+            {
+              "height": 413,
+              "url": "https://a.mktgcdn.com/p/5gOi1b90svp8tMZU-Kw2pgsEWyeSRh1xmufuemXYuYU/619x413.jpg",
+              "width": 619
+            },
+            {
+              "height": 400,
+              "url": "https://a.mktgcdn.com/p/5gOi1b90svp8tMZU-Kw2pgsEWyeSRh1xmufuemXYuYU/600x400.jpg",
+              "width": 600
+            },
+            {
+              "height": 131,
+              "url": "https://a.mktgcdn.com/p/5gOi1b90svp8tMZU-Kw2pgsEWyeSRh1xmufuemXYuYU/196x131.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/5gOi1b90svp8tMZU-Kw2pgsEWyeSRh1xmufuemXYuYU/1125x750.jpg",
+          "width": 1125
+        }
+      },
+      {
+        "image": {
+          "height": 1500,
+          "sourceUrl": "https://images.pexels.com/photos/634785/pexels-photo-634785.jpeg?auto\u003dcompress\u0026cs\u003dtinysrgb\u0026w\u003d1260\u0026h\u003d750\u0026dpr\u003d2",
+          "thumbnails": [
+            {
+              "height": 1500,
+              "url": "https://a.mktgcdn.com/p/gci17_ugcTYcFNtwE6wz70sY238L3cpetrljSIoQO94/1000x1500.jpg",
+              "width": 1000
+            },
+            {
+              "height": 929,
+              "url": "https://a.mktgcdn.com/p/gci17_ugcTYcFNtwE6wz70sY238L3cpetrljSIoQO94/619x929.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/gci17_ugcTYcFNtwE6wz70sY238L3cpetrljSIoQO94/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/gci17_ugcTYcFNtwE6wz70sY238L3cpetrljSIoQO94/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/gci17_ugcTYcFNtwE6wz70sY238L3cpetrljSIoQO94/1000x1500.jpg",
+          "width": 1000
+        }
+      },
+      {
+        "image": {
+          "height": 4631,
+          "sourceUrl": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib\u003drb-4.0.3\u0026ixid\u003dM3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D\u0026auto\u003dformat\u0026fit\u003dcrop\u0026w\u003d3087\u0026q\u003d80",
+          "thumbnails": [
+            {
+              "height": 4631,
+              "url": "https://a.mktgcdn.com/p/UN5KaE8JAmHUmThRV7envMWbP3r3_RbJpbOFwL5_uKg/3087x4631.jpg",
+              "width": 3087
+            },
+            {
+              "height": 1900,
+              "url": "https://a.mktgcdn.com/p/UN5KaE8JAmHUmThRV7envMWbP3r3_RbJpbOFwL5_uKg/1267x1900.jpg",
+              "width": 1267
+            },
+            {
+              "height": 929,
+              "url": "https://a.mktgcdn.com/p/UN5KaE8JAmHUmThRV7envMWbP3r3_RbJpbOFwL5_uKg/619x929.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/UN5KaE8JAmHUmThRV7envMWbP3r3_RbJpbOFwL5_uKg/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/UN5KaE8JAmHUmThRV7envMWbP3r3_RbJpbOFwL5_uKg/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/UN5KaE8JAmHUmThRV7envMWbP3r3_RbJpbOFwL5_uKg/3087x4631.jpg",
+          "width": 3087
+        }
+      }
+    ],
+    "price": {
+      "currencyCode": "USD",
+      "value": "79"
+    },
+    "slug": "[[entityId]]"
+  },
+  "entityType": "product",
+  "folder": "yext/root",
+  "labels": []
+}
