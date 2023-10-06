@@ -4,10 +4,12 @@ import { RelatedProduct } from "../../types/autogen";
 import ProductCard from "../molecules/ProductCard";
 
 export interface ProductCardGridProps {
+  cardMode?: "flat" | "card";
   products?: RelatedProduct[];
 }
 
 export const initialProps: ProductCardGridProps = {
+  cardMode: "flat",
   products: [
     {
       name: "Product A",
@@ -76,7 +78,7 @@ export const initialProps: ProductCardGridProps = {
   ],
 };
 
-const ProductCardGrid = ({ products }: ProductCardGridProps) => {
+const ProductCardGrid = ({ products, cardMode }: ProductCardGridProps) => {
   if (!products) return null;
 
   return (
@@ -96,7 +98,7 @@ const ProductCardGrid = ({ products }: ProductCardGridProps) => {
         className="mt-6 gap-x-6 gap-y-10 lg:grid-cols-4 xl:gap-x-8"
       >
         {products.map((product) => (
-          <ProductCard product={product} />
+          <ProductCard mode={cardMode} product={product} />
         ))}
       </Container>
     </Container>
