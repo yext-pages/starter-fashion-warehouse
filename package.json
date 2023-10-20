@@ -19,8 +19,9 @@
   "dependencies": {
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
-    "@vitejs/plugin-react": "^4.0.2",    
-    "@yext/sites-components": "^1.0.0-rc.4",
+    "@vitejs/plugin-react": "^4.0.2",
+    "@yext/sites-components": "^1.0.0-rc.5",
+    "@yext/sites-react-components": "^0.1.17-beta.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^1.2.1",
     "cva": "npm:class-variance-authority@^0.7.0",

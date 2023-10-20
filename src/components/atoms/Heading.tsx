@@ -1,7 +1,9 @@
 import { cva } from "cva";
 import {
+  FontWeights,
   TextAlignVariant,
   TextSizeVariant,
+  fontWeights,
   textAlignment,
   textColors,
   textSizes,
@@ -11,10 +13,7 @@ import { cn } from "../../utils";
 const headingVariants = cva("tracking-tight", {
   variants: {
     size: textSizes,
-    fontWeight: {
-      Bold: "font-bold",
-      Base: "font-normal",
-    },
+    fontWeight: fontWeights,
     align: textAlignment,
     color: textColors,
   },
@@ -41,7 +40,7 @@ export interface HeadingProps {
   /**
    * @displayName Font Weight
    */
-  fontWeight?: "Bold" | "Base";
+  fontWeight?: FontWeights;
   /**
    * @displayName Text Color
    */

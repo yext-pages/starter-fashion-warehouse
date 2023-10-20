@@ -1,7 +1,9 @@
 import { type VariantProps, cva } from "cva";
 import {
+  FontWeights,
   TextAlignVariant,
   TextSizeVariant,
+  fontWeights,
   textColors,
   textSizes,
 } from "../../sharedVariants";
@@ -10,10 +12,7 @@ import { cn } from "../../utils";
 const styledTextVariants = cva("tracking-tight", {
   variants: {
     size: textSizes,
-    weight: {
-      Medium: ["font-medium"],
-      Bold: ["font-bold"],
-    },
+    weight: fontWeights,
     align: {
       Left: ["text-left"],
       Center: ["text-center"],
@@ -35,7 +34,7 @@ const styledTextVariants = cva("tracking-tight", {
 export interface StyledTextProps {
   text?: string;
   size?: TextSizeVariant;
-  weight?: "Medium" | "Bold";
+  weight?: FontWeights;
   align?: TextAlignVariant;
   color?:
     | "Gray 900"
@@ -53,7 +52,7 @@ export interface StyledTextProps {
 export const initialProps: StyledTextProps = {
   text: "Text goes here",
   size: "M",
-  weight: "Medium",
+  weight: "Regular",
   align: "Left",
   color: "Gray 900",
   className: "",
