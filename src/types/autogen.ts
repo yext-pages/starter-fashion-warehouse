@@ -1,3 +1,15 @@
+export interface AddressType {
+  line1?: string;
+  line2?: string;
+  line3?: string;
+  sublocality?: string;
+  city?: string;
+  region?: string;
+  postalCode?: string;
+  extraDescription?: string;
+  countryCode?: string;
+}
+
 export interface ImageThumbnail {
   url: string;
   width: number;
@@ -17,6 +29,58 @@ export interface ComplexImage {
   details?: string;
   description?: string;
   clickthroughUrl?: string;
+}
+
+export interface Interval {
+  start: string;
+  end: string;
+}
+
+export interface DayHour {
+  openIntervals?: Interval[];
+  isClosed?: boolean;
+}
+
+export interface HolidayHours {
+  date: string;
+  openIntervals?: Interval[];
+  isClosed?: boolean;
+  isRegularHours?: boolean;
+}
+
+export interface HoursType {
+  monday?: DayHour;
+  tuesday?: DayHour;
+  wednesday?: DayHour;
+  thursday?: DayHour;
+  friday?: DayHour;
+  saturday?: DayHour;
+  sunday?: DayHour;
+  holidayHours?: HolidayHours[];
+  reopenDate?: string;
+}
+
+export interface Coordinate {
+  latitude?: number;
+  longitude?: number;
+}
+
+export interface Dm_directoryParents {
+  name?: string;
+  slug?: string;
+}
+
+export interface Location {
+  name: string;
+  slug: string;
+  address: AddressType;
+  photoGallery: ComplexImage[];
+  hours: HoursType;
+  yextDisplayCoordinate: Coordinate;
+  dm_baseEntityCount: string;
+  mainPhone: any;
+  services: string[];
+  dm_directoryParents: Dm_directoryParents[];
 }
 
 export enum CurrencyCode {
@@ -179,20 +243,10 @@ export interface Price {
   currencyCode: CurrencyCode;
 }
 
-export interface RelatedProduct {
-  name?: string;
-  slug?: string;
-  photoGallery?: ComplexImage[];
-  price?: {
-    value: number;
-  };
-}
-
-export default interface Product {
+export interface Product {
   photoGallery: ComplexImage[];
   name: string;
-  price: Price;
   c_productDescription: string;
-  c_relatedProducts: RelatedProduct[];
+  price: Price;
   slug: string;
 }

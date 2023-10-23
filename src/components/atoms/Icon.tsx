@@ -1,13 +1,27 @@
 import { type VariantProps, cva } from "cva";
 import { twMerge } from "tailwind-merge";
 import {
+  ChevronDownIcon,
   Bars3Icon,
   MagnifyingGlassIcon,
   ShoppingCartIcon,
   UserIcon,
   XMarkIcon,
+  CalendarIcon,
+  PhoneIcon,
+  StarIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon, StarIcon } from "@heroicons/react/20/solid";
+import {
+  ChevronDownIcon as ChevronDownIconSolid,
+  Bars3Icon as Bars3IconSolid,
+  MagnifyingGlassIcon as MagnifyingGlassIconSolid,
+  ShoppingCartIcon as ShoppingCartIconSolid,
+  UserIcon as UserIconSolid,
+  XMarkIcon as XMarkIconSolid,
+  CalendarIcon as CalendarIconSolid,
+  PhoneIcon as PhoneIconSolid,
+  StarIcon as StarIconSolid,
+} from "@heroicons/react/20/solid";
 import { textColors } from "../../sharedVariants";
 
 const iconVariants = cva("", {
@@ -49,35 +63,79 @@ export interface IconProps {
     | "ShoppingCart"
     | "User"
     | "XMark"
-    | "ChevronDown";
+    | "ChevronDown"
+    | "Calendar"
+    | "Phone";
+  type?: "solid" | "outline";
 }
 
 export const initialProps: IconProps = {
   size: "base",
   color: "Gray 900",
   name: "Star",
+  type: "outline",
 };
 
-const Icon = ({ size, color, name }: IconProps) => {
+const Icon = ({ size, color, name, type }: IconProps) => {
   // switch statement that returns component based on name
   const renderIcon = () => {
     switch (name) {
       case "Star":
-        return <StarIcon className={icon({ size, color })} />;
+        return type === "outline" ? (
+          <StarIcon className={icon({ size, color })} />
+        ) : (
+          <StarIconSolid className={icon({ size, color })} />
+        );
       case "Bars3":
-        return <Bars3Icon className={icon({ size, color })} />;
+        return type === "outline" ? (
+          <Bars3Icon className={icon({ size, color })} />
+        ) : (
+          <Bars3IconSolid className={icon({ size, color })} />
+        );
       case "MagnifyingGlass":
-        return <MagnifyingGlassIcon className={icon({ size, color })} />;
+        return type === "outline" ? (
+          <MagnifyingGlassIcon className={icon({ size, color })} />
+        ) : (
+          <MagnifyingGlassIconSolid className={icon({ size, color })} />
+        );
       case "ShoppingCart":
-        return <ShoppingCartIcon className={icon({ size, color })} />;
+        return type === "outline" ? (
+          <ShoppingCartIcon className={icon({ size, color })} />
+        ) : (
+          <ShoppingCartIconSolid className={icon({ size, color })} />
+        );
       case "User":
-        return <UserIcon className={icon({ size, color })} />;
+        return type === "outline" ? (
+          <UserIcon className={icon({ size, color })} />
+        ) : (
+          <UserIconSolid className={icon({ size, color })} />
+        );
       case "XMark":
-        return <XMarkIcon className={icon({ size, color })} />;
+        return type === "outline" ? (
+          <XMarkIcon className={icon({ size, color })} />
+        ) : (
+          <XMarkIconSolid className={icon({ size, color })} />
+        );
       case "ChevronDown":
-        return <ChevronDownIcon className={icon({ size, color })} />;
+        return type === "outline" ? (
+          <ChevronDownIcon className={icon({ size, color })} />
+        ) : (
+          <ChevronDownIconSolid className={icon({ size, color })} />
+        );
+      case "Calendar":
+        return type === "outline" ? (
+          <CalendarIcon className={icon({ size, color })} />
+        ) : (
+          <CalendarIconSolid className={icon({ size, color })} />
+        );
+      case "Phone":
+        return type === "outline" ? (
+          <PhoneIcon className={icon({ size, color })} />
+        ) : (
+          <PhoneIconSolid className={icon({ size, color })} />
+        );
       default:
-        return <StarIcon className={icon({ size, color })} />;
+        return null;
     }
   };
 

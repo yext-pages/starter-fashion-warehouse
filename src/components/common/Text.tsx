@@ -9,7 +9,7 @@ import {
 } from "../../sharedVariants";
 import { cn } from "../../utils";
 
-const styledTextVariants = cva("tracking-tight", {
+const textVariants = cva("tracking-tight", {
   variants: {
     size: textSizes,
     weight: fontWeights,
@@ -31,7 +31,7 @@ const styledTextVariants = cva("tracking-tight", {
 // }
 
 // But I have to do this:
-export interface StyledTextProps {
+export interface TextProps {
   text?: string;
   size?: TextSizeVariant;
   weight?: FontWeights;
@@ -49,7 +49,7 @@ export interface StyledTextProps {
   className?: string;
 }
 
-export const initialProps: StyledTextProps = {
+export const initialProps: TextProps = {
   text: "Text goes here",
   size: "M",
   weight: "Regular",
@@ -58,23 +58,12 @@ export const initialProps: StyledTextProps = {
   className: "",
 };
 
-const StyledText = ({
-  size,
-  weight,
-  color,
-  align,
-  text,
-  className,
-}: StyledTextProps) => {
+const Text = ({ size, weight, color, align, text, className }: TextProps) => {
   return (
-    <p
-      className={cn(
-        styledTextVariants({ size, weight, color, align, className })
-      )}
-    >
+    <p className={cn(textVariants({ size, weight, color, align, className }))}>
       {text}
     </p>
   );
 };
 
-export default StyledText;
+export default Text;

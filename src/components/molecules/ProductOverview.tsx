@@ -1,13 +1,13 @@
-import Button from "../atoms/Button";
-import Container from "../atoms/Container";
-import Heading, { HeadingProps } from "../atoms/Heading";
-import StyledText, { StyledTextProps } from "../atoms/StyledText";
+import Button from "../common/Button";
+import Container from "../common/Container";
+import Heading, { HeadingProps } from "../common/Heading";
+import Text, { TextProps } from "../common/Text";
 import Stars from "./Stars";
 
 export interface ProductOverviewProps {
   productNameProps: HeadingProps;
-  productDescriptionProps: StyledTextProps;
-  priceProps: StyledTextProps;
+  productDescriptionProps: TextProps;
+  priceProps: TextProps;
   rating: number;
 }
 
@@ -61,7 +61,7 @@ const ProductOverview = ({
         />
       </Container>
       <Container layout="column" className="gap-y-2">
-        <StyledText
+        <Text
           text={priceProps.text}
           size={priceProps.size}
           weight={priceProps.weight}
@@ -92,7 +92,7 @@ const ProductOverview = ({
           color={productNameProps.color}
           fontWeight={productNameProps.fontWeight}
         />
-        <StyledText
+        <Text
           text={productDescriptionProps.text}
           size={productDescriptionProps.size}
           weight={productDescriptionProps.weight}

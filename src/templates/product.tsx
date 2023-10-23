@@ -1,6 +1,6 @@
 import { GetPath, TemplateConfig, TemplateProps } from "@yext/pages";
-import Main from "../components/atoms/Main";
-import Page from "../components/atoms/Page";
+import Main from "../components/common/Main";
+import Page from "../components/common/Page";
 import Footer from "../components/molecules/Footer";
 import Header from "../components/molecules/Header";
 import ImageGallery from "../components/molecules/ImageGallery";
@@ -13,11 +13,10 @@ export const config: TemplateConfig = {
   stream: {
     $id: "product",
     localization: { locales: ["en"] },
-    fields: ["photoGallery", "name", "c_productDescription", "price", "slug"],
+    fields: ["name", "c_productDescription", "price", "slug", "photoGallery"],
     filter: { entityTypes: ["product"] },
   },
 };
-
 export const getPath: GetPath<TemplateProps> = ({
   document,
 }: TemplateProps) => {

@@ -1,5 +1,5 @@
-import Container from "../atoms/Container";
-import Heading from "../atoms/Heading";
+import Container from "../common/Container";
+import Heading from "../common/Heading";
 import { RelatedProduct } from "../../types/autogen";
 import ProductCard from "../molecules/ProductCard";
 

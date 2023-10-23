@@ -1,12 +1,12 @@
-import Container from "../atoms/Container";
-import StyledText, { StyledTextProps } from "../atoms/StyledText";
+import Container from "../common/Container";
+import Text, { TextProps } from "../common/Text";
 import DateTime, {
   DateTimeProps,
   initialProps as initialDateTimeProps,
-} from "../atoms/DateTime";
+} from "../common/DateTime";
 import Stars from "./Stars";
 import Dropdown from "../atoms/Dropdown";
-import Heading from "../atoms/Heading";
+import Heading from "../common/Heading";
 
 const reviews = [
   {
@@ -57,9 +57,9 @@ const reviews = [
 ];
 
 export interface ReviewsProps {
-  reviewContentTextProps?: StyledTextProps;
+  reviewContentTextProps?: TextProps;
   reviewDateTimeTextProps?: DateTimeProps;
-  authorNameTextProps?: StyledTextProps;
+  authorNameTextProps?: TextProps;
 }
 
 export const initialProps: ReviewsProps = {
@@ -122,7 +122,7 @@ const Reviews = ({
               </div>
 
               <div className="mt-4 lg:mt-6 xl:col-span-2 xl:mt-0">
-                <StyledText
+                <Text
                   color={reviewContentTextProps?.color}
                   size={reviewContentTextProps?.size}
                   text={review.content}
@@ -132,7 +132,7 @@ const Reviews = ({
               </div>
             </div>
             <div className="mt-6 flex items-center text-sm lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:mt-0 lg:flex-col lg:items-start xl:col-span-3">
-              <StyledText
+              <Text
                 text={review.authorName}
                 color={authorNameTextProps?.color}
                 size={reviewContentTextProps?.size}

@@ -1,5 +1,5 @@
-import Page from "../components/atoms/Page";
-import Main from "../components/atoms/Main";
+import Page from "../components/common/Page";
+import Main from "../components/common/Main";
 import Header from "../components/molecules/Header";
 
 import "../index.css";

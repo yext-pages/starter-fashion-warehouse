@@ -1,6 +1,6 @@
 import { ComplexImage } from "../../types/autogen";
-import Container from "../atoms/Container";
-import StudioImage from "../atoms/StudioImage";
+import Container from "../common/Container";
+import StudioImage from "../common/StudioImage";
 
 export interface ImageGalleryProps {
   images: ComplexImage[];

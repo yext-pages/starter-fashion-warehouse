@@ -1,8 +1,8 @@
 import { cva } from "cva";
 import { RelatedProduct } from "../../types/autogen";
-import StudioImage from "../atoms/StudioImage";
-import StyledLink from "../atoms/StyledLink";
-import StyledText from "../atoms/StyledText";
+import StudioImage from "../common/StudioImage";
+import StyledLink from "../common/StyledLink";
+import Text from "../common/Text";
 import { cn } from "../../utils";
 
 const productCardVariants = cva("group relative p-2 h-80 w-72", {
@@ -67,7 +67,7 @@ const ProductCard = ({ product, mode }: ProductCardProps) => {
           href={product.slug ?? "#"}
         />
         {product.price?.value && (
-          <StyledText
+          <Text
             color="Gray 900"
             weight="Medium"
             size="M"
