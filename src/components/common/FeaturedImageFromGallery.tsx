@@ -1,5 +1,5 @@
 import { ComplexImage } from "../../types/autogen";
-import StudioImage from "../common/StudioImage";
+import Image from "./Image";
 
 export interface FeaturedImageFromGalleryProps {
   images?: ComplexImage[];
@@ -15,7 +15,7 @@ const FeaturedImageFromGallery = ({
 
   const image = images[0];
 
-  return <StudioImage image={image} aspectRatio="16:9" />;
+  return <Image image={image} aspectRatio="16:9" />;
 };
 
 export default FeaturedImageFromGallery;

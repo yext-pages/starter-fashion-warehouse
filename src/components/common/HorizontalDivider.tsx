@@ -2,7 +2,7 @@ import { cva } from "cva";
 import { cn } from "../../utils";
 import { borderColors, TextColors } from "../../sharedVariants";
 
-const horizontalDividerVariants = cva("w-0.5 rounded-full", {
+const horizontalDividerVariants = cva("w-full h-0.5 rounded-full", {
   variants: {
     color: borderColors,
   },

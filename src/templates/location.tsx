@@ -10,11 +10,11 @@ import CalendarIcon from "../components/icons/CalendarIcon";
 import PhoneIcon from "../components/icons/PhoneIcon";
 import StarIcon from "../components/icons/StarIcon";
 import Text from "../components/common/Text";
-import Address from "../components/molecules/Address";
-import FeaturedImageFromGallery from "../components/molecules/FeaturedImageFromGallery";
-import Footer from "../components/molecules/Footer";
-import Header from "../components/molecules/Header";
-import Hours from "../components/molecules/Hours";
+import Address from "../components/location/Address";
+import FeaturedImageFromGallery from "../components/common/FeaturedImageFromGallery";
+import Footer from "../components/common/Footer";
+import Header from "../components/common/Header";
+import Hours from "../components/location/Hours";
 import "../index.css";
 
 export const config: TemplateConfig = {
@@ -98,7 +98,7 @@ export default function Location({ document }: TemplateProps) {
           <HorizontalDivider color="Gray 300" />
           <Container
             layout="grid"
-            className="grid-cols-1 place-items-center sm:grid-cols-3"
+            className="grid-cols-1 justify-items-center sm:grid-cols-3"
             flexGap="10"
           >
             <Container layout="column" flexGap="6">
@@ -121,7 +121,7 @@ export default function Location({ document }: TemplateProps) {
                 />
               </Container>
               <Container layout="row" itemAlignment="Center" flexGap="4">
-                <StarIcon />
+                <StarIcon type="outline" />
                 <Text
                   text="We're hiring! Join our team."
                   weight="Bold"

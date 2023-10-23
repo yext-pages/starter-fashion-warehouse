@@ -1,12 +1,11 @@
 import { ComplexImage } from "../../types/autogen";
 import Container from "../common/Container";
-import StudioImage from "../common/StudioImage";
+import Image from "../common/Image";
 
 export interface ImageGalleryProps {
   images: ComplexImage[];
 }
 
-// TODO ask about placeholder images
 export const initialProps: ImageGalleryProps = {
   images: [
     {
@@ -46,33 +45,41 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
       layout="grid"
       paddingBottom="M"
       paddingTop="M"
-      className={`mt-6 sm:grid-cols-1 lg:gap-x-8`}
+      className={`mt-6 sm:grid-cols-1 lg:grid-cols-3 lg:gap-x-8`}
     >
-      <StudioImage
-        image={images[1]}
-        aspectRatio="4:3"
-        className={`mx-auto hidden overflow-hidden rounded-lg lg:block lg:max-h-[480px]`}
-      />
+      {images[1] && (
+        <Image
+          image={images[1]}
+          aspectRatio="5:7"
+          className={`mx-auto hidden overflow-hidden rounded-lg lg:block lg:max-h-[480px]`}
+        />
+      )}
       <Container
         layout="grid"
         className={`hidden lg:grid lg:grid-cols-1 lg:gap-y-8 lg:py-0`}
       >
-        <StudioImage
-          image={images[2]}
-          aspectRatio="3:2"
-          className="overflow-hidden rounded-lg lg:max-h-[225px]"
-        />
-        <StudioImage
-          image={images[3]}
-          aspectRatio="3:2"
-          className={`overflow-hidden rounded-lg lg:max-h-[225px]`}
-        />
+        {images[2] && (
+          <Image
+            image={images[2]}
+            aspectRatio="3:2"
+            className="overflow-hidden rounded-lg lg:max-h-[225px]"
+          />
+        )}
+        {images[3] && (
+          <Image
+            image={images[3]}
+            aspectRatio="3:2"
+            className={`overflow-hidden rounded-lg lg:max-h-[225px]`}
+          />
+        )}
       </Container>
-      <StudioImage
-        image={images[0]}
-        aspectRatio="5:4"
-        className="lg:aspect-h-4 lg:aspect-w-3 max-h-[480px] sm:overflow-hidden sm:rounded-lg"
-      />
+      {images[0] && (
+        <Image
+          image={images[0]}
+          aspectRatio="5:4"
+          className="max-h-[480px] sm:overflow-hidden sm:rounded-lg lg:aspect-[5/7]"
+        />
+      )}
     </Container>
   );
 };

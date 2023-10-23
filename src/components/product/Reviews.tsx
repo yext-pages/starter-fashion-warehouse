@@ -5,7 +5,7 @@ import DateTime, {
   initialProps as initialDateTimeProps,
 } from "../common/DateTime";
 import Stars from "./Stars";
-import Dropdown from "../atoms/Dropdown";
+import Dropdown from "../common/Dropdown";
 import Heading from "../common/Heading";
 
 const reviews = [

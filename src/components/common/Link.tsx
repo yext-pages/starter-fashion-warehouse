@@ -1,6 +1,11 @@
 import { Link } from "@yext/sites-components";
 import { VariantProps, cva } from "cva";
-import { TextSizeVariant, fontWeights, textSizes } from "../../sharedVariants";
+import {
+  FontWeights,
+  TextSizeVariant,
+  fontWeights,
+  textSizes,
+} from "../../sharedVariants";
 import { cn } from "../../utils";
 
 const styledLinkVariants = cva("", {
@@ -29,7 +34,7 @@ export interface StyledLinkProps {
   label?: string;
   type?: "Primary" | "Secondary";
   size?: TextSizeVariant;
-  weight?: "Normal" | "Bold";
+  weight?: FontWeights;
   className?: string;
 }
 
@@ -38,7 +43,7 @@ export const initialProps: StyledLinkProps = {
   label: "Link",
   type: "Primary",
   size: "M",
-  weight: "Normal",
+  weight: "Regular",
   className: "",
 };
 

@@ -2,7 +2,7 @@ import { cva } from "cva";
 import { cn } from "../../utils";
 import { ComplexImage } from "../../types/autogen";
 
-const studioImageVariants = cva("", {
+const imageVariants = cva("", {
   variants: {
     aspectRatio: {
       "1:1": "aspect-[1/1]",
@@ -24,7 +24,7 @@ const studioImageVariants = cva("", {
   },
 });
 
-export interface StudioImageProps {
+export interface ImageProps {
   image?: ComplexImage;
   className?: string;
   aspectRatio?:
@@ -42,7 +42,7 @@ export interface StudioImageProps {
     | "16:10";
 }
 
-export const initialProps: StudioImageProps = {
+export const initialProps: ImageProps = {
   image: {
     image: {
       url: "https://a.mktgcdn.com/p-sandbox/SPRRm-cAcTNOv8T8o2EpJ3z5N1nl0x3yL8YAK753KVc/300x300.png",
@@ -55,13 +55,13 @@ export const initialProps: StudioImageProps = {
   aspectRatio: "1:1",
 };
 
-const StudioImage = ({ image, aspectRatio, className }: StudioImageProps) => {
+const Image = ({ image, aspectRatio, className }: ImageProps) => {
   if (!image) {
     return null;
   }
 
   return (
-    <div className={cn(studioImageVariants({ aspectRatio, className }))}>
+    <div className={cn(imageVariants({ aspectRatio, className }))}>
       <img
         className="h-full w-full object-cover object-center"
         src={image.image.url}
@@ -71,4 +71,4 @@ const StudioImage = ({ image, aspectRatio, className }: StudioImageProps) => {
   );
 };
 
-export default StudioImage;
+export default Image;

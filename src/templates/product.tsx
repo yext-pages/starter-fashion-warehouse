@@ -1,12 +1,12 @@
 import { GetPath, TemplateConfig, TemplateProps } from "@yext/pages";
 import Main from "../components/common/Main";
 import Page from "../components/common/Page";
-import Footer from "../components/molecules/Footer";
-import Header from "../components/molecules/Header";
-import ImageGallery from "../components/molecules/ImageGallery";
-import ProductOverview from "../components/molecules/ProductOverview";
-import Reviews from "../components/molecules/Reviews";
-import ProductCardGrid from "../components/organisms/ProductCardGrid";
+import Footer from "../components/common/Footer";
+import Header from "../components/common/Header";
+import ImageGallery from "../components/product/ProductImageGallery";
+import ProductOverview from "../components/product/ProductOverview";
+import Reviews from "../components/product/Reviews";
+import ProductCardGrid from "../components/product/ProductCardGrid";
 import "../index.css";
 
 export const config: TemplateConfig = {
@@ -41,14 +41,14 @@ export default function Product({ document }: TemplateProps) {
           productDescriptionProps={{
             text: `${document.c_productDescription}`,
             size: "M",
-            weight: "Medium",
+            weight: "Regular",
             align: "Left",
             color: "Gray 700",
           }}
           priceProps={{
-            text: `$ ${document.price.value}`,
+            text: `$${document.price.value}`,
             size: "XL",
-            weight: "Medium",
+            weight: "Regular",
             align: "Left",
             color: "Gray 900",
           }}
@@ -83,7 +83,7 @@ export default function Product({ document }: TemplateProps) {
                   },
                 },
               ],
-              price: { value: 0 },
+              price: { value: 99 },
             },
             {
               name: "Product C",

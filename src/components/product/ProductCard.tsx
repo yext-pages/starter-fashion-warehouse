@@ -1,7 +1,6 @@
 import { cva } from "cva";
-import { RelatedProduct } from "../../types/autogen";
-import StudioImage from "../common/StudioImage";
-import StyledLink from "../common/StyledLink";
+import Image from "../common/Image";
+import StyledLink from "../common/Link";
 import Text from "../common/Text";
 import { cn } from "../../utils";
 
@@ -24,7 +23,20 @@ export interface ProductCardProps {
    * @displayName Product
    * @tooltip Defines the product to be displayed
    */
-  product?: RelatedProduct;
+  product?: {
+    name: string;
+    slug: string;
+    photoGallery: {
+      image: {
+        url: string;
+        height: number;
+        width: number;
+      };
+    }[];
+    price: {
+      value: number;
+    };
+  };
 }
 
 export const initialProps: ProductCardProps = {
@@ -55,7 +67,7 @@ const ProductCard = ({ product, mode }: ProductCardProps) => {
   return (
     <div className={cn(productCardVariants({ mode }))}>
       {photo && (
-        <StudioImage
+        <Image
           className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 "
           image={photo}
         />
@@ -69,7 +81,7 @@ const ProductCard = ({ product, mode }: ProductCardProps) => {
         {product.price?.value && (
           <Text
             color="Gray 900"
-            weight="Medium"
+            weight="Regular"
             size="M"
             text={`$${product.price.value.toString()}`}
           />
