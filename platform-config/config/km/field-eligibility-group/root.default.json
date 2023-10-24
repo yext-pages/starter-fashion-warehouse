@@ -1,8 +1,14 @@
 {
-  "$id": "proserveStarer_ce_root",
+  "$id": "ce_root.default",
   "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
-  "name": "Proserve Starter Root",
+  "name": "Root-default",
   "entityType": "ce_root",
-  "fields": ["c_meta"],
+  "fields": [
+    "dm_baseEntityCount",
+    "dm_childEntityIds",
+    "dm_directoryChildren",
+    "dm_directoryManagerId",
+    "dm_directoryParents"
+  ],
   "required": []
 }

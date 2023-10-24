@@ -4,6 +4,8 @@
   "content": {
     "c_meta": null
   },
-  "entityTypes": ["ce_root"],
+  "entityTypes": [
+    "ce_root"
+  ],
   "name": "Directory Root"
 }

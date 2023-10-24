@@ -1,0 +1,29 @@
+{
+  "$id": "defaultDirectory_ny_new_york",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "dm_baseEntityCount": "4",
+    "dm_childEntityIds": [
+      "1019735747",
+      "1019882831",
+      "1019882960",
+      "1019883071"
+    ],
+    "dm_directoryChildren": [
+      "store-1",
+      "store-2",
+      "store-4",
+      "store-3"
+    ],
+    "dm_directoryManagerId": "defaultDirectory",
+    "dm_directoryParents": [
+      "defaultDirectory",
+      "defaultDirectory_ny"
+    ],
+    "name": "New York",
+    "slug": "ny/new-york"
+  },
+  "entityType": "ce_city",
+  "labels": []
+}

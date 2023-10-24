@@ -3,14 +3,18 @@
   "$schema": "https://schema.yext.com/config/pages/directory-manager/v1",
   "name": "Directory",
   "baseEntities": {
-    "entityTypes": ["location"]
+    "entityTypes": [
+      "location"
+    ]
+  },
+  "localization": {
+    "locales": [
+      "en"
+    ]
   },
   "root": {
     "entityType": "ce_root",
     "slug": "index.html"
-  },
-  "localization": {
-    "locales": ["en"]
   },
   "levels": [
     {

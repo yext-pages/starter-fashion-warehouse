@@ -1,8 +1,14 @@
 {
-  "$id": "proserveStarter_ce_region",
+  "$id": "ce_region.default",
   "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
-  "name": "Proserve Starter Region",
+  "name": "Region-default",
   "entityType": "ce_region",
-  "fields": ["c_meta"],
+  "fields": [
+    "dm_baseEntityCount",
+    "dm_childEntityIds",
+    "dm_directoryChildren",
+    "dm_directoryManagerId",
+    "dm_directoryParents"
+  ],
   "required": []
 }

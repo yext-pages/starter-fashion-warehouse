@@ -5,7 +5,7 @@
   "entityType": "product",
   "fields": [
     "c_productDescription",
-    "c_relatedProducts"  
+    "c_relatedProducts"
   ],
   "required": []
 }

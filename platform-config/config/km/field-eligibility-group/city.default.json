@@ -1,8 +1,14 @@
 {
-  "$id": "proserveStarter_ce_city",
+  "$id": "ce_city.default",
   "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
-  "name": "Proserve Starter City",
+  "name": "City-default",
   "entityType": "ce_city",
-  "fields": ["c_meta"],
+  "fields": [
+    "dm_baseEntityCount",
+    "dm_childEntityIds",
+    "dm_directoryChildren",
+    "dm_directoryManagerId",
+    "dm_directoryParents"
+  ],
   "required": []
 }

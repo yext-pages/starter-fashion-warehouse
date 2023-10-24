@@ -1,0 +1,126 @@
+{
+  "$id": "store-4",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "address": {
+      "city": "New York",
+      "countryCode": "US",
+      "line1": "20 W 34th Street",
+      "postalCode": "10001",
+      "region": "NY"
+    },
+    "addressHidden": false,
+    "categoryIds": [
+      "263"
+    ],
+    "dm_directoryParents": [
+      "defaultDirectory",
+      "defaultDirectory_ny",
+      "defaultDirectory_ny_new_york"
+    ],
+    "hours": {
+      "friday": {
+        "openIntervals": [
+          {
+            "end": "19:00",
+            "start": "09:00"
+          }
+        ]
+      },
+      "monday": {
+        "isClosed": true
+      },
+      "saturday": {
+        "openIntervals": [
+          {
+            "end": "19:00",
+            "start": "09:00"
+          }
+        ]
+      },
+      "sunday": {
+        "openIntervals": [
+          {
+            "end": "19:00",
+            "start": "09:00"
+          }
+        ]
+      },
+      "thursday": {
+        "openIntervals": [
+          {
+            "end": "19:00",
+            "start": "09:00"
+          }
+        ]
+      },
+      "tuesday": {
+        "openIntervals": [
+          {
+            "end": "19:00",
+            "start": "09:00"
+          }
+        ]
+      },
+      "wednesday": {
+        "openIntervals": [
+          {
+            "end": "19:00",
+            "start": "09:00"
+          }
+        ]
+      }
+    },
+    "mainPhone": "+12129943900",
+    "name": "Fashion Warehouse - 20 W 34th Street",
+    "photoGallery": [
+      {
+        "description": "clothing rack with wall of shoes in the background",
+        "image": {
+          "height": 4859,
+          "thumbnails": [
+            {
+              "height": 4859,
+              "url": "https://a.mktgcdn.com/p/0g9iCLmYi3UhCZMsDYgDO6TnDVBsjqHETZevGseO3GU/3239x4859.jpg",
+              "width": 3239
+            },
+            {
+              "height": 1900,
+              "url": "https://a.mktgcdn.com/p/0g9iCLmYi3UhCZMsDYgDO6TnDVBsjqHETZevGseO3GU/1267x1900.jpg",
+              "width": 1267
+            },
+            {
+              "height": 929,
+              "url": "https://a.mktgcdn.com/p/0g9iCLmYi3UhCZMsDYgDO6TnDVBsjqHETZevGseO3GU/619x929.jpg",
+              "width": 619
+            },
+            {
+              "height": 450,
+              "url": "https://a.mktgcdn.com/p/0g9iCLmYi3UhCZMsDYgDO6TnDVBsjqHETZevGseO3GU/300x450.jpg",
+              "width": 300
+            },
+            {
+              "height": 294,
+              "url": "https://a.mktgcdn.com/p/0g9iCLmYi3UhCZMsDYgDO6TnDVBsjqHETZevGseO3GU/196x294.jpg",
+              "width": 196
+            }
+          ],
+          "url": "https://a.mktgcdn.com/p/0g9iCLmYi3UhCZMsDYgDO6TnDVBsjqHETZevGseO3GU/3239x4859.jpg",
+          "width": 3239
+        }
+      }
+    ],
+    "services": [
+      "Men\u0027s Clothing",
+      "Women\u0027s Clothing",
+      "Returns \u0026 Exchanges",
+      "Style Consultations"
+    ],
+    "slug": "[[address.region]]/[[address.city]]/[[address.line1]]",
+    "timezone": "America/New_York"
+  },
+  "entityType": "location",
+  "folder": "yext/root",
+  "labels": []
+}

@@ -4,6 +4,8 @@
   "content": {
     "c_meta": null
   },
-  "entityTypes": ["ce_region"],
+  "entityTypes": [
+    "ce_region"
+  ],
   "name": "Directory Region"
 }

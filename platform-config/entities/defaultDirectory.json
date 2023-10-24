@@ -1,0 +1,19 @@
+{
+  "$id": "defaultDirectory",
+  "$schema": "https://schema.yext.com/config/km/entity/v1",
+  "primaryLocale": "en",
+  "content": {
+    "dm_baseEntityCount": "4",
+    "dm_childEntityIds": [
+      "1019883286"
+    ],
+    "dm_directoryChildren": [
+      "defaultDirectory_ny"
+    ],
+    "dm_directoryManagerId": "defaultDirectory",
+    "name": "Directory",
+    "slug": "index.html"
+  },
+  "entityType": "ce_root",
+  "labels": []
+}
