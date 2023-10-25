@@ -154,7 +154,7 @@ const Reviews = ({
                 weight={reviewContentTextProps?.weight}
               />
               <DateTime
-                dateTime={review.reviewDate}
+                text={review.reviewDate}
                 className="ml-4 border-l border-gray-200 pl-4 text-gray-500 lg:ml-0 lg:mt-2 lg:border-0 lg:pl-0"
               />
             </div>

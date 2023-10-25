@@ -8,54 +8,6 @@
       "disabled": false
     },
     {
-      "entityType": "healthcareProfessional",
-      "disabled": true
-    },
-    {
-      "entityType": "healthcareFacility",
-      "disabled": true
-    },
-    {
-      "entityType": "event",
-      "disabled": true
-    },
-    {
-      "entityType": "hotelRoomType",
-      "disabled": true
-    },
-    {
-      "entityType": "atm",
-      "disabled": true
-    },
-    {
-      "entityType": "restaurant",
-      "disabled": true
-    },
-    {
-      "entityType": "organization",
-      "disabled": true
-    },
-    {
-      "entityType": "financialProfessional",
-      "disabled": true
-    },
-    {
-      "entityType": "hotel",
-      "disabled": true
-    },
-    {
-      "entityType": "job",
-      "disabled": true
-    },
-    {
-      "entityType": "faq",
-      "disabled": true
-    },
-    {
-      "entityType": "helpArticle",
-      "disabled": true
-    },
-    {
       "entityType": "product",
       "defaultFieldEligibilityGroup": "product.default",
       "disabled": false
