@@ -53,12 +53,12 @@ export default function Location({ document }: TemplateProps) {
             flexGap="2"
             className="justify-center"
           >
+            <Text text="We're hiring!" weight="Semi Bold" />
             <Text
               text="Join our team"
               className="underline decoration-2 underline-offset-8 hover:cursor-pointer hover:no-underline"
               weight="Semi Bold"
             />
-            <Text text="We're hiring!" weight="Semi Bold" />
           </Container>
           <Container layout="grid" columnCount="2">
             <Container
