@@ -1,14 +1,7 @@
 import { cva } from "cva";
-import {
-  ColorVariant,
-  FontWeightVariant,
-  TextAlignVariant,
-  TextSizeVariant,
-  fontWeights,
-  textColors,
-  textSizes,
-} from "../../sharedVariants";
+import { fontWeights, textColors, textSizes } from "../../sharedVariants";
 import { cn, formatDateTime, isValidUTCDateString } from "../../utils";
+import { TextProps } from "./Text";
 
 const paragraphVariants = cva("", {
   variants: {
@@ -23,33 +16,10 @@ const paragraphVariants = cva("", {
   },
 });
 
-export interface DateTimeProps {
-  /*
-   * @displayName Date/Time
-   * @tooltip Must be in the format 2023-01-01T00:00:00Z
-   */
-  dateTime: string;
-  /*
-   * @displayName Text Size
-   */
-  size?: TextSizeVariant;
-  /*
-   * @displayName Font Weight
-   */
-  weight?: FontWeightVariant;
-  /*
-   * @displayName Text Alignment
-   */
-  align?: TextAlignVariant;
-  /*
-   * @displayName Text Color
-   */
-  color?: ColorVariant;
-  className?: string;
-}
+export interface DateTimeProps extends TextProps {}
 
 export const initialProps: DateTimeProps = {
-  dateTime: "2023-01-01T00:00:00Z",
+  text: "2023-01-01T00:00:00Z",
   size: "M",
   weight: "Regular",
   align: "Left",
@@ -58,7 +28,7 @@ export const initialProps: DateTimeProps = {
 };
 
 const DateTime = ({
-  dateTime,
+  text,
   size,
   weight,
   color,
@@ -67,13 +37,13 @@ const DateTime = ({
 }: DateTimeProps) => {
   return (
     <time
-      dateTime={dateTime}
+      dateTime={text}
       className={cn(
         paragraphVariants({ size, weight, color, align, className })
       )}
     >
-      {isValidUTCDateString(dateTime) ? (
-        formatDateTime(dateTime)
+      {isValidUTCDateString(text) ? (
+        formatDateTime(text)
       ) : (
         <span className="text-red-500">
           Please provide a valid ISO 8601 date string (e.g.

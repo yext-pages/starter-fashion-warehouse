@@ -113,11 +113,11 @@ export const formatDateTime = (dateTime?: string) => {
   });
 };
 
-export const isValidUTCDateString = (dateString: string): boolean => {
+export const isValidUTCDateString = (dateString?: string): boolean => {
   // Regular expression for ISO 8601 format
   const regex = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?Z$/;
 
-  if (!regex.test(dateString)) {
+  if (!dateString || !regex.test(dateString)) {
     return false;
   }
 

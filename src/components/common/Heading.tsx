@@ -1,8 +1,5 @@
 import { cva } from "cva";
 import {
-  FontWeightVariant,
-  TextAlignVariant,
-  TextSizeVariant,
   fontWeights,
   textAlignment,
   textColors,

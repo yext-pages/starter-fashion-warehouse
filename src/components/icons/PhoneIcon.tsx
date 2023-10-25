@@ -1,6 +1,6 @@
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { cva } from "cva";
-import { textColors } from "../../sharedVariants";
+import { ColorVariant, textColors } from "../../sharedVariants";
 import { twMerge } from "tailwind-merge";
 
 const iconVariants = cva("", {
@@ -24,17 +24,7 @@ export interface IconProps {
   /**
    * @displayName Color
    */
-  color?:
-    | "Gray 900"
-    | "Gray 800"
-    | "Gray 700"
-    | "Gray 500"
-    | "Gray 400"
-    | "Gray 300"
-    | "Gray 100"
-    | "Indigo"
-    | "White"
-    | "Yellow 500";
+  color?: ColorVariant;
 }
 
 export const initialProps: IconProps = {

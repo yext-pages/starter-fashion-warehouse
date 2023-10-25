@@ -22,7 +22,7 @@ import {
   PhoneIcon as PhoneIconSolid,
   StarIcon as StarIconSolid,
 } from "@heroicons/react/20/solid";
-import { textColors } from "../../sharedVariants";
+import { ColorVariant, textColors } from "../../sharedVariants";
 
 const iconVariants = cva("", {
   variants: {
@@ -45,17 +45,7 @@ const icon = ({ size, color }: IconVariants) =>
 
 export interface IconProps {
   size?: "small" | "base";
-  color?:
-    | "Gray 900"
-    | "Gray 800"
-    | "Gray 700"
-    | "Gray 500"
-    | "Gray 400"
-    | "Gray 300"
-    | "Gray 100"
-    | "Indigo"
-    | "White"
-    | "Yellow 500";
+  color?: ColorVariant;
   name:
     | "Star"
     | "Bars3"

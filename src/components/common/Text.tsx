@@ -1,4 +1,4 @@
-import { type VariantProps, cva } from "cva";
+import { cva } from "cva";
 import {
   ColorVariant,
   FontWeightVariant,
