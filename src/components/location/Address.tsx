@@ -3,8 +3,14 @@ import Container from "../common/Container";
 import Text, { TextProps } from "../common/Text";
 
 export interface AddressProps {
+  /**
+   * @displayName Address
+   */
   address?: AddressType;
-  textStyleProps?: TextProps;
+  /**
+   * @displayName Text Style
+   */
+  textStyleProps?: Pick<TextProps, "size" | "weight" | "align" | "color">;
 }
 
 export const initialProps: AddressProps = {
@@ -29,8 +35,20 @@ const Address = ({ address, textStyleProps }: AddressProps) => {
 
   return (
     <Container layout="column">
-      <Text text={address.line1} />
-      <Text text={`${address.city}, ${address.region} ${address.postalCode}`} />
+      <Text
+        size={textStyleProps?.size}
+        weight={textStyleProps?.weight}
+        align={textStyleProps?.align}
+        color={textStyleProps?.color}
+        text={address.line1}
+      />
+      <Text
+        size={textStyleProps?.size}
+        weight={textStyleProps?.weight}
+        align={textStyleProps?.align}
+        color={textStyleProps?.color}
+        text={`${address.city}, ${address.region} ${address.postalCode}`}
+      />
     </Container>
   );
 };

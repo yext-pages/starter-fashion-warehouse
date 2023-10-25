@@ -1,23 +1,18 @@
+import { Product } from "../../types/autogen";
 import Container from "../common/Container";
 import Heading from "../common/Heading";
 import ProductCard from "./ProductCard";
 
 export interface ProductCardGridProps {
+  /**
+   * @displayName Card Mode
+   * @tooltip Defines the styling of the product card
+   */
   cardMode?: "flat" | "card";
-  products?: {
-    name: string;
-    slug: string;
-    photoGallery: {
-      image: {
-        url: string;
-        height: number;
-        width: number;
-      };
-    }[];
-    price: {
-      value: number;
-    };
-  }[];
+  /**
+   * @displayName Products
+   */
+  products?: Product[];
 }
 
 export const initialProps: ProductCardGridProps = {
@@ -100,14 +95,14 @@ const ProductCardGrid = ({ products, cardMode }: ProductCardGridProps) => {
           rank="4"
           size="L"
           color="Gray 900"
-          fontWeight="Bold"
+          weight="Bold"
           text="Customers also purchased"
           align="Left"
         />
       </Container>
       <Container
         layout="grid"
-        className="mt-6 grid-cols-2 justify-items-center gap-x-6 gap-y-10 xl:grid-cols-4 xl:gap-x-8"
+        className="mt-6 grid-cols-1 justify-items-center gap-x-6 gap-y-10 sm:grid-cols-2 xl:grid-cols-4 xl:gap-x-8"
       >
         {products.map((product, idx) => (
           <ProductCard

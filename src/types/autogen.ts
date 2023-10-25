@@ -240,13 +240,12 @@ export enum CurrencyCode {
 
 export interface Price {
   value?: number;
-  currencyCode: CurrencyCode;
 }
 
 export interface Product {
-  photoGallery: ComplexImage[];
+  photoGallery?: ComplexImage[];
   name: string;
-  c_productDescription: string;
-  price: Price;
-  slug: string;
+  c_productDescription?: string;
+  price?: Price;
+  slug?: string;
 }

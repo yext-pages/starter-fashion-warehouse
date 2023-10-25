@@ -145,8 +145,8 @@ export const heights = {
 export type ContainerSizeVariant = "S" | "M" | "L" | "XL" | "XXL";
 export type TextSizeVariant = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "XXXL";
 export type TextAlignVariant = "Left" | "Center" | "Right";
-export type FontWeights = "Light" | "Regular" | "Semi Bold" | "Bold";
-export type TextColors =
+export type FontWeightVariant = "Light" | "Regular" | "Semi Bold" | "Bold";
+export type ColorVariant =
   | "Gray 900"
   | "Gray 800"
   | "Gray 700"
@@ -157,4 +157,4 @@ export type TextColors =
   | "Yellow 500"
   | "Indigo"
   | "White";
-export type MarginSizes = "0" | "2" | "4" | "8" | "16" | "auto";
+export type MarginSizeVariant = "0" | "2" | "4" | "8" | "16" | "auto";

@@ -57,9 +57,24 @@ const reviews = [
 ];
 
 export interface ReviewsProps {
-  reviewContentTextProps?: TextProps;
-  reviewDateTimeTextProps?: DateTimeProps;
-  authorNameTextProps?: TextProps;
+  /**
+   * @displayName Review Content Text Style
+   */
+  reviewContentTextProps?: Pick<
+    TextProps,
+    "size" | "weight" | "align" | "color"
+  >;
+  /**
+   * @displayName Review Date/Time Text Style
+   */
+  reviewDateTimeTextProps?: Pick<
+    TextProps,
+    "size" | "weight" | "align" | "color"
+  >;
+  /**
+   * @displayName Author Name Text Style
+   */
+  authorNameTextProps?: Pick<TextProps, "size" | "weight" | "align" | "color">;
 }
 
 export const initialProps: ReviewsProps = {
@@ -67,12 +82,11 @@ export const initialProps: ReviewsProps = {
     size: "S",
     color: "Gray 500",
     align: "Left",
-    weight: "Medium",
+    weight: "Regular",
   },
   reviewDateTimeTextProps: {
-    dateTime: "",
     size: "S",
-    weight: "Medium",
+    weight: "Regular",
     align: "Left",
     color: "Gray 500",
   },
@@ -80,7 +94,7 @@ export const initialProps: ReviewsProps = {
     size: "M",
     color: "Gray 900",
     align: "Left",
-    weight: "Medium",
+    weight: "Regular",
   },
 };
 
@@ -96,7 +110,7 @@ const Reviews = ({
       paddingBottom="M"
     >
       <Container layout="row" className="justify-between px-0 sm:px-0">
-        <Heading rank="3" text="Reviews" fontWeight="Bold" size="L" />
+        <Heading rank="3" text="Reviews" weight="Bold" size="L" />
         <Dropdown />
       </Container>
       <Container

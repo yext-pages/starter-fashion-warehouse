@@ -3,7 +3,6 @@ import { StarIcon as StarIconSolid } from "@heroicons/react/24/solid";
 import { cva } from "cva";
 import { textColors } from "../../sharedVariants";
 import { twMerge } from "tailwind-merge";
-import { type } from "os";
 
 const iconVariants = cva("", {
   variants: {
@@ -19,7 +18,13 @@ const iconVariants = cva("", {
 });
 
 export interface IconProps {
+  /**
+   * @displayName Size
+   */
   size?: "small" | "base";
+  /**
+   * @displayName Color
+   */
   color?:
     | "Gray 900"
     | "Gray 800"
@@ -31,6 +36,9 @@ export interface IconProps {
     | "Indigo"
     | "White"
     | "Yellow 500";
+  /**
+   * @displayName Type
+   */
   type?: "outline" | "solid";
 }
 

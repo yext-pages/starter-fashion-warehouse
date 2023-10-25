@@ -1,4 +1,7 @@
 export interface ListProps {
+  /**
+   * @displayName Items
+   */
   items: string[];
 }
 

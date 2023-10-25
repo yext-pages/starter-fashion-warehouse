@@ -17,7 +17,13 @@ const iconVariants = cva("", {
 });
 
 export interface IconProps {
+  /**
+   * @displayName Size
+   */
   size?: "small" | "base";
+  /**
+   * @displayName Color
+   */
   color?:
     | "Gray 900"
     | "Gray 800"

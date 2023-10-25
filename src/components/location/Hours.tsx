@@ -1,6 +1,9 @@
 import { HoursType, Interval, DayHour } from "../../types/autogen";
 
 interface HoursProps {
+  /**
+   * @displayName Hours
+   */
   hours?: HoursType;
 }
 

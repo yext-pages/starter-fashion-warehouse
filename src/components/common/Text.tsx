@@ -1,6 +1,7 @@
 import { type VariantProps, cva } from "cva";
 import {
-  FontWeights,
+  ColorVariant,
+  FontWeightVariant,
   TextAlignVariant,
   TextSizeVariant,
   fontWeights,
@@ -22,30 +23,27 @@ const textVariants = cva("tracking-tight", {
   },
 });
 
-// export interface ParagraphVariants
-//   extends VariantProps<typeof paragraphVariants> {}
-
-// I wish that I could do this:
-// export interface ParagraphProps extends ParagraphVariants {
-//   StyledText?: string;
-// }
-
-// But I have to do this:
 export interface TextProps {
+  /**
+   * @displayName Text
+   */
   text?: string;
+  /**
+   * @displayName Size
+   */
   size?: TextSizeVariant;
-  weight?: FontWeights;
+  /**
+   * @displayName Font Weight
+   */
+  weight?: FontWeightVariant;
+  /**
+   * @displayName Text Alignment
+   */
   align?: TextAlignVariant;
-  color?:
-    | "Gray 900"
-    | "Gray 800"
-    | "Gray 700"
-    | "Gray 500"
-    | "Gray 400"
-    | "Gray 300"
-    | "Gray 100"
-    | "Indigo"
-    | "White";
+  /**
+   * @displayName Text Color
+   */
+  color?: ColorVariant;
   className?: string;
 }
 

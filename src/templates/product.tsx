@@ -1,19 +1,19 @@
 import { GetPath, TemplateConfig, TemplateProps } from "@yext/pages";
-import Main from "../components/common/Main";
-import Page from "../components/common/Page";
 import Footer from "../components/common/Footer";
 import Header from "../components/common/Header";
+import Main from "../components/common/Main";
+import Page from "../components/common/Page";
+import ProductCardGrid from "../components/product/ProductCardGrid";
 import ImageGallery from "../components/product/ProductImageGallery";
 import ProductOverview from "../components/product/ProductOverview";
 import Reviews from "../components/product/Reviews";
-import ProductCardGrid from "../components/product/ProductCardGrid";
 import "../index.css";
 
 export const config: TemplateConfig = {
   stream: {
     $id: "product",
     localization: { locales: ["en"] },
-    fields: ["name", "c_productDescription", "price", "slug", "photoGallery"],
+    fields: ["photoGallery", "name", "c_productDescription", "price", "slug"],
     filter: { entityTypes: ["product"] },
   },
 };
@@ -36,7 +36,7 @@ export default function Product({ document }: TemplateProps) {
             size: "XXL",
             align: "Left",
             color: "Gray 900",
-            fontWeight: "Bold",
+            weight: "Bold",
           }}
           productDescriptionProps={{
             text: `${document.c_productDescription}`,

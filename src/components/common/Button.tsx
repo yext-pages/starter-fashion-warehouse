@@ -19,8 +19,6 @@ const buttonVariants = cva("", {
   },
 });
 
-// export interface ButtonVarients extends VariantProps<typeof buttonVariants> {}
-
 export interface ButtonProps {
   /**
    * @tooltip Defines whether the button is primary or secondary

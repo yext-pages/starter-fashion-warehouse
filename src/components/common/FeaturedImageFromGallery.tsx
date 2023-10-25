@@ -2,6 +2,9 @@ import { ComplexImage } from "../../types/autogen";
 import Image from "./Image";
 
 export interface FeaturedImageFromGalleryProps {
+  /*
+   * @displayName Images
+   */
   images?: ComplexImage[];
 }
 

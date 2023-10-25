@@ -5,9 +5,21 @@ import Text, { TextProps } from "../common/Text";
 import Stars from "./Stars";
 
 export interface ProductOverviewProps {
-  productNameProps: HeadingProps;
-  productDescriptionProps: TextProps;
-  priceProps: TextProps;
+  /**
+   * @displayName Product Name Text
+   */
+  productNameProps: Omit<HeadingProps, "className">;
+  /**
+   * @displayName Product Description Text
+   */
+  productDescriptionProps: Omit<TextProps, "className">;
+  /**
+   * @displayName Price Text
+   */
+  priceProps: Omit<TextProps, "className">;
+  /**
+   * @displayName Rating
+   */
   rating: number;
 }
 
@@ -18,7 +30,7 @@ export const initialProps: ProductOverviewProps = {
     size: "XXL",
     align: "Left",
     color: "Gray 900",
-    fontWeight: "Bold",
+    weight: "Bold",
   },
   productDescriptionProps: {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -57,7 +69,7 @@ const ProductOverview = ({
           size={productNameProps.size}
           align={productNameProps.align}
           color={productNameProps.color}
-          fontWeight={productNameProps.fontWeight}
+          weight={productNameProps.weight}
         />
       </Container>
       <Container layout="column" className="gap-y-2">
@@ -75,7 +87,7 @@ const ProductOverview = ({
           type="primary"
           size="xxlarge"
           text="Add To Cart"
-          className="mt-4"
+          className="mt-4 w-64 shrink"
         />
       </Container>
       <Container
@@ -90,7 +102,7 @@ const ProductOverview = ({
           size={productNameProps.size}
           align={productNameProps.align}
           color={productNameProps.color}
-          fontWeight={productNameProps.fontWeight}
+          weight={productNameProps.weight}
         />
         <Text
           text={productDescriptionProps.text}

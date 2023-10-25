@@ -1,7 +1,10 @@
 import { cva } from "cva";
 import {
+  ColorVariant,
+  FontWeightVariant,
   TextAlignVariant,
   TextSizeVariant,
+  fontWeights,
   textColors,
   textSizes,
 } from "../../sharedVariants";
@@ -10,10 +13,7 @@ import { cn, formatDateTime, isValidUTCDateString } from "../../utils";
 const paragraphVariants = cva("", {
   variants: {
     size: textSizes,
-    weight: {
-      Medium: ["font-medium"],
-      Bold: ["font-bold"],
-    },
+    weight: fontWeights,
     align: {
       Left: ["text-left"],
       Center: ["text-center"],
@@ -24,27 +24,34 @@ const paragraphVariants = cva("", {
 });
 
 export interface DateTimeProps {
+  /*
+   * @displayName Date/Time
+   * @tooltip Must be in the format 2023-01-01T00:00:00Z
+   */
   dateTime: string;
+  /*
+   * @displayName Text Size
+   */
   size?: TextSizeVariant;
-  weight?: "Medium" | "Bold";
+  /*
+   * @displayName Font Weight
+   */
+  weight?: FontWeightVariant;
+  /*
+   * @displayName Text Alignment
+   */
   align?: TextAlignVariant;
-  color?:
-    | "Gray 900"
-    | "Gray 800"
-    | "Gray 700"
-    | "Gray 500"
-    | "Gray 400"
-    | "Gray 300"
-    | "Gray 100"
-    | "Indigo"
-    | "White";
+  /*
+   * @displayName Text Color
+   */
+  color?: ColorVariant;
   className?: string;
 }
 
 export const initialProps: DateTimeProps = {
   dateTime: "2023-01-01T00:00:00Z",
   size: "M",
-  weight: "Medium",
+  weight: "Regular",
   align: "Left",
   color: "Gray 900",
   className: "",

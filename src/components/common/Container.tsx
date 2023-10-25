@@ -7,10 +7,10 @@ import {
   paddingTop,
   ContainerSizeVariant,
   backgroundColors,
-  TextColors,
+  ColorVariant,
   marginX,
   marginY,
-  MarginSizes,
+  MarginSizeVariant,
 } from "../../sharedVariants";
 
 const containerVariants = cva("", {
@@ -61,12 +61,6 @@ const containerVariants = cva("", {
     columnSpan: "1",
   },
 });
-
-// export interface ContainerProps
-//   extends React.HTMLAttributes<HTMLDivElement>,
-//     VariantProps<typeof containerVariants> {
-//   children?: React.ReactNode;
-// }
 
 export interface ContainerProps {
   children?: React.ReactNode;
@@ -119,18 +113,17 @@ export interface ContainerProps {
    * @displayName Horizontal Margin
    * @tooltip Controls the horizontal margin of the container
    */
-  horizontalMargin?: MarginSizes;
+  horizontalMargin?: MarginSizeVariant;
   /**
    * @displayName Vertical Margin
    * @tooltip Controls the vertical margin of the container
    */
-  verticalMargin?: MarginSizes;
+  verticalMargin?: MarginSizeVariant;
   /**
    * @displayName Background Color
    * @tooltip Controls the background color of the container
    */
-
-  backgroundColor?: TextColors;
+  backgroundColor?: ColorVariant;
   className?: string;
 }
 

@@ -3,6 +3,7 @@ import Image from "../common/Image";
 import StyledLink from "../common/Link";
 import Text from "../common/Text";
 import { cn } from "../../utils";
+import { Product } from "../../types/autogen";
 
 const productCardVariants = cva("group relative p-2 h-80 w-72", {
   variants: {
@@ -23,20 +24,7 @@ export interface ProductCardProps {
    * @displayName Product
    * @tooltip Defines the product to be displayed
    */
-  product?: {
-    name: string;
-    slug: string;
-    photoGallery: {
-      image: {
-        url: string;
-        height: number;
-        width: number;
-      };
-    }[];
-    price: {
-      value: number;
-    };
-  };
+  product?: Product;
 }
 
 export const initialProps: ProductCardProps = {

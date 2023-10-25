@@ -2,6 +2,9 @@ import StarIcon from "../icons/StarIcon";
 import { cn } from "../../utils";
 
 export interface StarsProps {
+  /**
+   * @displayName Rating
+   */
   rating: number;
   classname?: string;
 }

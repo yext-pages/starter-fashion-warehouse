@@ -1,7 +1,7 @@
 import { Link } from "@yext/sites-components";
 import { VariantProps, cva } from "cva";
 import {
-  FontWeights,
+  FontWeightVariant,
   TextSizeVariant,
   fontWeights,
   textSizes,
@@ -19,22 +19,27 @@ const styledLinkVariants = cva("", {
   },
 });
 
-// export interface StyledLinkVariants
-//   extends VariantProps<typeof styledLinkVariants> {}
-
-// I wish that I could do this:
-// export interface StyledLinkProps extends StyledLinkVariants {
-//   href?: string;
-//   label?: string;
-// }
-
-// But I have to do this:
 export interface StyledLinkProps {
+  /**
+   * @displayName Link
+   */
   href: string;
+  /**
+   * @displayName Label
+   */
   label?: string;
+  /**
+   * @displayName Type
+   */
   type?: "Primary" | "Secondary";
+  /**
+   * @displayName Size
+   */
   size?: TextSizeVariant;
-  weight?: FontWeights;
+  /**
+   * @displayName Font Weight
+   */
+  weight?: FontWeightVariant;
   className?: string;
 }
 

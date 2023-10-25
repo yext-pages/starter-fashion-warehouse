@@ -1,6 +1,6 @@
 import { cva } from "cva";
 import { cn } from "../../utils";
-import { ComplexImage } from "../../types/autogen";
+import { ComplexImage as ComplexImageType } from "../../types/autogen";
 
 const imageVariants = cva("", {
   variants: {
@@ -25,8 +25,13 @@ const imageVariants = cva("", {
 });
 
 export interface ImageProps {
-  image?: ComplexImage;
-  className?: string;
+  /**
+   * @displayName Image
+   */
+  image?: ComplexImageType;
+  /**
+   * @displayName Aspect Ratio
+   */
   aspectRatio?:
     | "1:1"
     | "4:3"
@@ -40,6 +45,7 @@ export interface ImageProps {
     | "4:5"
     | "4:1"
     | "16:10";
+  className?: string;
 }
 
 export const initialProps: ImageProps = {

@@ -1,6 +1,6 @@
 import { cva } from "cva";
 import {
-  FontWeights,
+  FontWeightVariant,
   TextAlignVariant,
   TextSizeVariant,
   fontWeights,
@@ -9,60 +9,23 @@ import {
   textSizes,
 } from "../../sharedVariants";
 import { cn } from "../../utils";
+import { TextProps } from "./Text";
 
 const headingVariants = cva("tracking-tight", {
   variants: {
     size: textSizes,
-    fontWeight: fontWeights,
+    weight: fontWeights,
     align: textAlignment,
     color: textColors,
   },
 });
 
-// export interface StyledHeadingVariants
-//   extends VariantProps<typeof styledHeadingVariants> {}
-
-export interface HeadingProps {
-  /**
-   * @tooltip Content of the heading
-   * @displayName Text
-   */
-  text: string;
+export interface HeadingProps extends TextProps {
   /**
    * @tooltip Defines whether the heading is an h1, h2, etc.
    * @displayName Rank
    */
   rank?: "1" | "2" | "3" | "4" | "5" | "6";
-  /**
-   * @displayName Size
-   */
-  size?: TextSizeVariant;
-  /**
-   * @displayName Font Weight
-   */
-  fontWeight?: FontWeights;
-  /**
-   * @displayName Text Color
-   */
-  color?:
-    | "Gray 900"
-    | "Gray 800"
-    | "Gray 700"
-    | "Gray 500"
-    | "Gray 400"
-    | "Gray 300"
-    | "Gray 100"
-    | "Indigo"
-    | "White"
-    | "Yellow 500";
-  /**
-   * @displayName Text Align
-   */
-  align?: TextAlignVariant;
-  /**
-   * @tooltip Used to override the default styles
-   */
-  className?: string;
 }
 
 export const initialProps: HeadingProps = {
@@ -71,7 +34,7 @@ export const initialProps: HeadingProps = {
   size: "XL",
   align: "Left",
   color: "Gray 900",
-  fontWeight: "Bold",
+  weight: "Bold",
   className: "",
 };
 
@@ -80,7 +43,7 @@ const Heading = ({
   rank,
   size,
   color,
-  fontWeight,
+  weight,
   className,
   align,
 }: HeadingProps) => {
@@ -88,9 +51,7 @@ const Heading = ({
 
   return (
     <Tag
-      className={cn(
-        headingVariants({ color, size, fontWeight, align, className })
-      )}
+      className={cn(headingVariants({ color, size, weight, align, className }))}
     >
       {text}
     </Tag>

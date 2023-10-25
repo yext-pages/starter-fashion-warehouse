@@ -77,7 +77,7 @@ export default function Location({ document }: TemplateProps) {
                 rank="1"
                 align="Center"
                 size="XXXL"
-                fontWeight="Bold"
+                weight="Bold"
               />
               <Address
                 address={{
@@ -106,7 +106,7 @@ export default function Location({ document }: TemplateProps) {
                 text={`STORE INFORMATION `}
                 rank="2"
                 size="L"
-                fontWeight="Bold"
+                weight="Bold"
               />
               <Container layout="row" itemAlignment="Center" flexGap="4">
                 <PhoneIcon />
@@ -130,7 +130,7 @@ export default function Location({ document }: TemplateProps) {
               </Container>
             </Container>
             <Container layout="column" flexGap="6">
-              <Heading text="STORE HOURS" rank="2" size="L" fontWeight="Bold" />
+              <Heading text="STORE HOURS" rank="2" size="L" weight="Bold" />
               <Hours
                 hours={{
                   monday: {
@@ -163,7 +163,7 @@ export default function Location({ document }: TemplateProps) {
                 text="AT THIS LOCATION"
                 rank="2"
                 size="L"
-                fontWeight="Bold"
+                weight="Bold"
               />
               <List items={document.services} />
             </Container>
