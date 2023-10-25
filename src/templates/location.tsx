@@ -1,19 +1,19 @@
 import { GetPath, TemplateConfig, TemplateProps } from "@yext/pages";
 import Button from "../components/common/Button";
 import Container from "../components/common/Container";
+import FeaturedImageFromGallery from "../components/common/FeaturedImageFromGallery";
+import Footer from "../components/common/Footer";
+import Header from "../components/common/Header";
 import Heading from "../components/common/Heading";
 import HorizontalDivider from "../components/common/HorizontalDivider";
 import List from "../components/common/List";
 import Main from "../components/common/Main";
 import Page from "../components/common/Page";
+import Text from "../components/common/Text";
 import CalendarIcon from "../components/icons/CalendarIcon";
 import PhoneIcon from "../components/icons/PhoneIcon";
 import StarIcon from "../components/icons/StarIcon";
-import Text from "../components/common/Text";
 import Address from "../components/location/Address";
-import FeaturedImageFromGallery from "../components/common/FeaturedImageFromGallery";
-import Footer from "../components/common/Footer";
-import Header from "../components/common/Header";
 import Hours from "../components/location/Hours";
 import "../index.css";
 
@@ -33,7 +33,6 @@ export const config: TemplateConfig = {
     filter: { entityTypes: ["location"] },
   },
 };
-
 export const getPath: GetPath<TemplateProps> = ({
   document,
 }: TemplateProps) => {
@@ -54,12 +53,12 @@ export default function Location({ document }: TemplateProps) {
             flexGap="2"
             className="justify-center"
           >
-            <Text text="We're hiring!" weight="Semi Bold" />
             <Text
               text="Join our team"
               className="underline decoration-2 underline-offset-8 hover:cursor-pointer hover:no-underline"
               weight="Semi Bold"
             />
+            <Text text="We're hiring!" weight="Semi Bold" />
           </Container>
           <Container layout="grid" columnCount="2">
             <Container
